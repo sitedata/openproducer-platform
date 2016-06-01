@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the openproducer_roles_administrator feature.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions when installing this feature.
+ *
+ * @see system_install()
+ */
+function openproducer_roles_administrator_install() {
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+}

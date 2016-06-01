@@ -1,0 +1,7 @@
+name: 'OpenProducer Roles: Administrator'
+description: 'An administrator role with all permissions.'
+type: module
+core: 8.x
+dependencies:
+  - user
+package: OpenProducer

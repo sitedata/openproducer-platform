@@ -1,6 +1,8 @@
 name: OpenProducer
 description: Drupal installation profile for the OpenProducer distribution.
 package: OpenProducer
-
 type: profile
 core: 8.x
+dependencies:
+  - openproducer_roles_administrator
+
