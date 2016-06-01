@@ -13,6 +13,7 @@ default:
       selenium2: ~
     Drupal\DrupalExtension:
       blackbox: ~
+      api_driver: 'drupal'
   gherkin:
     filters:
       tags: ~@wip
