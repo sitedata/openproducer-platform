@@ -5,7 +5,7 @@ OpenProducer is a framework for building websites for musicians, radio stations,
 
 OpenProducer is built as a Drupal distribution, making it both easy to self-host, integrate with other tools and services, and extend with plugins, themes or custom code.
 
-Check out http://openproducer.org/ for more information.
+Check out [http://openproducer.org/](http://openproducer.org/) for more information.
 
 This documentation is designed primarily for the following audiences:
 
