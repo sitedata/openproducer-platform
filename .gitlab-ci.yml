@@ -15,7 +15,7 @@ tests:
 
 pages:
   script:
-    - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq install python3-pip
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python-pip
     - pip install mkdocs
     - mkdocs build --clean -d public/
   artifacts:
