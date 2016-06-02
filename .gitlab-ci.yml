@@ -1,12 +1,12 @@
 image: php:5.6
 
 before_script:
-  - apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git make sqlite3 php5-sqlite php5-gd php5-json php5-curl tree libjpeg-dev libpng-dev libfreetype6-dev > /dev/null
-  - docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && docker-php-ext-install gd > /dev/null
-  - php -m
+  - apt-get update -qq
 
 tests:
   script:
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git make sqlite3 php5-sqlite php5-gd php5-json php5-curl tree libjpeg-dev libpng-dev libfreetype6-dev > /dev/null
+    - docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && docker-php-ext-install gd > /dev/null
     - git submodule update --init
     - . d  # Bootstrap Drumkit
     - make behat
@@ -15,11 +15,11 @@ tests:
 
 pages:
   script:
-  - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq install python-pip
-  - pip install mkdocs
-  - mkdocs build --clean -d public/
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq install python3-pip
+    - pip install mkdocs
+    - mkdocs build --clean -d public/
   artifacts:
     paths:
-    - public
+      - public
   #only:
   #- 8.x-0.0.x
