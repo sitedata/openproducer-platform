@@ -15,7 +15,7 @@ tests:
 
 pages:
   script:
-  - apt-get install python-pip
+  - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq install python-pip
   - pip install mkdocs
   - mkdocs build --clean -d public/
   artifacts:
