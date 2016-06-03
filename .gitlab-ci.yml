@@ -34,7 +34,7 @@ pages:
 notify:irker:failure:
   stage: notifications
   script:
-    - "curl -m 3 -s -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"FAILURE -- A recent build of \\\"openproducer\\\" failed! See: https://gitlab.com/openproducer/openproducer/builds\"}' http://$IRKER_HOST:6659 ; exit 0"
+    - "curl -m 3 -s -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"FAILURE -- A recent build of \\\"openproducer\\\" failed! See: https://gitlab.com/openproducer/openproducer/builds\"}' http://$IRKER_HOST:6659 ; /bin/true"
   when: on_failure
   only:
     - 8.x-0.0.x
@@ -42,7 +42,7 @@ notify:irker:failure:
 notify:irker:success:
   stage: notifications
   script:
-    - "curl -m 3 -s -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"SUCCESS -- A recent build of \\\"openproducer\\\" succeeded! See: https://gitlab.com/openproducer/openproducer/builds\"}' http://$IRKER_HOST:6659 ; exit 0"
+    - "curl -m 3 -s -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"SUCCESS -- A recent build of \\\"openproducer\\\" succeeded! See: https://gitlab.com/openproducer/openproducer/builds\"}' http://$IRKER_HOST:6659 ; /bin/true"
   when: on_success
   only:
     - 8.x-0.0.x
