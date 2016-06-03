@@ -1,9 +1,15 @@
 image: php:5.6
 
+stages:
+  - test
+  - publish
+  - notifications
+
 before_script:
   - apt-get update -qq
 
 tests:
+  stage: test
   script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git make sqlite3 php5-sqlite php5-gd php5-json php5-curl tree libjpeg-dev libpng-dev libfreetype6-dev > /dev/null
     - docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && docker-php-ext-install gd > /dev/null
@@ -14,6 +20,7 @@ tests:
     - make drupal-tests CURRENT_TEST=features/openproducer.feature
 
 pages:
+  stage: publish
   script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python-pip
     - pip install mkdocs
@@ -27,7 +34,7 @@ pages:
 notify:irker:failure:
   stage: notifications
   script:
-    - curl -d '{"to": "irc://chat.freenode.net/#openproducer", "privmsg": "FAILURE: Build on \`$CI_BUILD_REF_NAME\` failed! Commit \`$(git log -1 --oneline)\` See <https://gitlab.com/openproducer/$(basename "$PWD")/commit/"$CI_BUILD_REF"/builds>" http://$IRKER_HOST:6659'
+    - "curl -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"FAILURE  -- Build on \\\"$CI_BUILD_REF_NAME\\\" failed! Commit \\\"$(git log -1 --oneline)\\\" See <https://gitlab.com/openproducer/$(basename $PWD)/commit/$CI_BUILD_REF/builds> \"}' http://$IRKER_HOST:6659"
   when: on_failure
   only:
     - 8.x-0.0.x
@@ -35,7 +42,7 @@ notify:irker:failure:
 notify:irker:success:
   stage: notifications
   script:
-    - curl -d '{"to": "irc://chat.freenode.net/#openproducer", "privmsg": "SUCCESS: Build on \`$CI_BUILD_REF_NAME\` succeeded! Commit \`$(git log -1 --oneline)\` See <https://gitlab.com/openproducer/$(basename "$PWD")/commit/"$CI_BUILD_REF"/builds>" http://$IRKER_HOST:6659'
+    - "curl -d '{\"to\": \"irc://chat.freenode.net/#openproducer\", \"privmsg\": \"SUCCESS  -- Build on \\\"$CI_BUILD_REF_NAME\\\" succeeded! Commit \\\"$(git log -1 --oneline)\\\" See <https://gitlab.com/openproducer/$(basename $PWD)/commit/$CI_BUILD_REF/builds> \"}' http://$IRKER_HOST:6659"
   when: on_success
   only:
     - 8.x-0.0.x
