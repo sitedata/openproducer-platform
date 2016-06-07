@@ -6,6 +6,7 @@ stages:
 
 before_script:
   - apt-get update -qq
+  - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git > /dev/null
   # Drumkit is installed as a submodule.
   - git submodule update --init
   # Bootstrap Drumkit.
