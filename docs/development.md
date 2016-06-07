@@ -23,3 +23,20 @@ Basically, the workflow for adding a new feature involves:
 10. Once reasonably complete, with passing tests and good documentation, create a merge request.
 11. Once we're satisfied with the state of the implementation and tests, merge the feature branch.
 12. Update draft of release notes for next version.
+
+
+Development Environment
+-----------------------
+
+To get started, clone this repo locally, and check out the feature branch you want to work on:
+
+    $ git clone --recursive https://gitlab.com/openproducer/openproducer.git
+    $ cd openproducer
+    $ git checkout 5-station-schedule
+
+Bootstrap Drumkit, and install a local development site:
+
+    $ . d    # Note the *space*, as we're **sourcing** this file, in order to load some environment variable, etc.
+		$ make drupal
+
+
