@@ -2,6 +2,7 @@ image: php:5.6
 
 stages:
   - test
+  - notify
   - publish
 
 before_script:
@@ -28,7 +29,7 @@ tests:
     - make drupal-tests CURRENT_TEST=features/openproducer.feature
 
 notify:irker:failure:
-  stage: test
+  stage: notify
   script:
     - "make irker-message IRKER_MESSAGE='FAILURE -- A recent build of OpenProducer failed! See: https://gitlab.com/openproducer/openproducer/builds'"
   when: on_failure
@@ -36,7 +37,7 @@ notify:irker:failure:
     - 8.x-0.0.x
 
 notify:irker:success:
-  stage: test
+  stage: notify
   script:
     - "make irker-message IRKER_MESSAGE='SUCCESS -- A recent build of OpenProducer succeeded! See: https://gitlab.com/openproducer/openproducer/builds'"
   when: on_success
@@ -54,5 +55,6 @@ pages:
   artifacts:
     paths:
       - public
+  when: on_success
   only:
     - 8.x-0.0.x
