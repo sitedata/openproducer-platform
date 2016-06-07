@@ -29,7 +29,7 @@ tests:
 notify:irker:failure:
   stage: test
   script:
-    - make irker-message IRKER_MESSAGE='FAILURE -- A recent build of OpenProducer failed! See: https://gitlab.com/openproducer/openproducer/builds'
+    - "make irker-message IRKER_MESSAGE='FAILURE -- A recent build of OpenProducer failed! See: https://gitlab.com/openproducer/openproducer/builds'"
   when: on_failure
   only:
     - 8.x-0.0.x
@@ -37,7 +37,7 @@ notify:irker:failure:
 notify:irker:success:
   stage: test
   script:
-    - make irker-message IRKER_MESSAGE='SUCCESS -- A recent build of OpenProducer succeeded! See: https://gitlab.com/openproducer/openproducer/builds'
+    - "make irker-message IRKER_MESSAGE='SUCCESS -- A recent build of OpenProducer succeeded! See: https://gitlab.com/openproducer/openproducer/builds'"
   when: on_success
   only:
     - 8.x-0.0.x
