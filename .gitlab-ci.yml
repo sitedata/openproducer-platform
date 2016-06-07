@@ -6,6 +6,10 @@ stages:
 
 before_script:
   - apt-get update -qq
+  # Drumkit is installed as a submodule.
+  - git submodule update --init
+  # Bootstrap Drumkit.
+  - . d
 
 tests:
   stage: test
@@ -17,10 +21,6 @@ tests:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y -qq php5-gd libjpeg-dev libpng-dev libfreetype6-dev > /dev/null
     - docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ > /dev/null
     - docker-php-ext-install gd > /dev/null
-    # Drumkit is installed as a submodule.
-    - git submodule update --init
-    # Bootstrap Drumkit.
-    - . d
     # Install a Drupal site, dowload Behat, and run some tests.
     - make drupal
     - make behat
