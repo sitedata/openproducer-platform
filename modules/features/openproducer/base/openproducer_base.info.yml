@@ -1,0 +1,12 @@
+name: 'OpenProducer Base'
+description: 'Base dependencies.'
+type: module
+core: 8.x
+dependencies:
+  - node
+  - block
+  - dblog
+  - page_cache
+  - dynamic_page_cache
+  - views
+package: OpenProducer
