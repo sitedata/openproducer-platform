@@ -31,7 +31,7 @@ tests:
 notify:irker:failure:
   stage: notify
   script:
-    - "make irker-message IRKER_MESSAGE='Build on $CI_BUILD_REF_NAME failed! Commit $(git log -1 --oneline) See <https://gitlab.com/openproducer/$(basename $PWD)/commit/$CI_BUILD_REF/builds>'"
+    - 'make irker-message IRKER_MESSAGE="Build on $CI_BUILD_REF_NAME failed! Commit $(git log -1 --oneline --no-decorate) See <https://gitlab.com/openproducer/$(basename $PWD)/commit/$CI_BUILD_REF/builds>"'
   when: on_failure
   # Tests for work-in-progress features are expected to fail, so there's no need to spam the IRC channel.
   only:
@@ -40,7 +40,7 @@ notify:irker:failure:
 notify:irker:success:
   stage: notify
   script:
-    - "make irker-message IRKER_MESSAGE='Build on $CI_BUILD_REF_NAME succeeded! Commit $(git log -1 --oneline) See <https://gitlab.com/openproducer/$(basename $PWD)/commit/$CI_BUILD_REF/builds>'"
+    - 'make irker-message IRKER_MESSAGE="Build on ${CI_BUILD_REF_NAME} succeeded! Commit $(git log -1 --oneline --no-decorate) See <https://gitlab.com/openproducer/$(basename $PWD)/commit/${CI_BUILD_REF}/builds>"'
   when: on_success
 
 pages:
