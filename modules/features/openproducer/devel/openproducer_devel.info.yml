@@ -1,0 +1,9 @@
+name: 'OpenProducer Developer'
+description: 'Enable some developer tools (Features UI, Views UI, etc.)'
+type: module
+core: 8.x
+dependencies:
+  - features_ui
+  - views_ui
+  - devel
+package: OpenProducer

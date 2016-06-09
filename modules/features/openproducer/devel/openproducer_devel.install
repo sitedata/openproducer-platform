@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the openproducer_devel feature.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions when installing this feature.
+ *
+ * @see system_install()
+ */
+function openproducer_devel_install() {
+}

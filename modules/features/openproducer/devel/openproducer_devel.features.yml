@@ -1,0 +1,5 @@
+bundle: openproducer
+excluded:
+  - system.cron
+  - system.theme
+required: true
