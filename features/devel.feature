@@ -12,13 +12,13 @@ Feature: Developer tools
      features_ui
      views_ui
      devel
-		 """
+     """
 
 #  @security @wip
 #  Scenario: Ensure developer tools cannot be enabled from the front-end
 
   Scenario: Enable developer tools
-    Given I run "drush -y @default en openproducer_devel2"
+    Given I run "drush -y @default en openproducer_devel"
      Then I should get:
      """
      openproducer_devel was enabled successfully.
