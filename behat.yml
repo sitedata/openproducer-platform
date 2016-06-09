@@ -16,5 +16,5 @@ default:
       api_driver: 'drupal'
   gherkin:
     filters:
-      tags: ~@wip
+      tags: "~@infra&&~@wip"
 

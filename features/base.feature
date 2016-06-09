@@ -3,7 +3,6 @@ Feature: Base settings and configuration
   as a Site builder,
   I want to be able to enable a set of default functionality and configuration on install
 
-  @wip
   Scenario: Ensure some core utility modules are enabled
     Given I run "drush @default pm-list --status=enabled --type=module --core --format=list"
      Then I should get:

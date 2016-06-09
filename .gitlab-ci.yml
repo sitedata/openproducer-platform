@@ -26,7 +26,7 @@ tests:
     # Install a Drupal site, dowload Behat, and run some tests.
     - make drupal
     - make behat
-    - make drupal-tests CURRENT_TEST=features/openproducer.feature
+    - make drupal-tests
 
 notify:irker:failure:
   stage: notify

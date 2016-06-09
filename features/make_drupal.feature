@@ -3,6 +3,7 @@ Feature: Bootstrap OpenProducer development
   As a developer
   I need to be able install a basic dev/test site
 
+  @infra
   Scenario: Install a local development site
      When I run "make clean-drupal"
      Then I should get:
