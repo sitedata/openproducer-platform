@@ -12,4 +12,22 @@
  * @see system_install()
  */
 function openproducer_devel_install() {
+  #TBD
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Perform actions when uninstalling this feature.
+ *
+ * @see system_uninstall()
+ */
+function openproducer_devel_uninstall() {
+  // Get this module's dependencies.
+  $modules = system_rebuild_module_data();
+  $devel_modules = $modules['openproducer_devel']->info['dependencies'];
+	// Disable devel modules. We let this fail if dependent modules exist.
+  $message = "Uninstalling the following developer modules: " . implode(', ', $devel_modules);
+  function_exists('drush_log') ? drush_log($message, 'status') : drupal_set_message($message);
+  \Drupal::service('module_installer')->uninstall($devel_modules, FALSE);
 }

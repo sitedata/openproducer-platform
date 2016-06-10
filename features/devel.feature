@@ -14,9 +14,11 @@ Feature: Developer tools
      devel
      """
 
+# TODO: write this test, logging into the front-end, etc.
 #  @security @wip
 #  Scenario: Ensure developer tools cannot be enabled from the front-end
 
+  @slow
   Scenario: Enable developer tools
     Given I run "drush -y @default en openproducer_devel"
       And I run "drush @default pm-list --status=enabled --type=module --format=list"
@@ -28,7 +30,7 @@ Feature: Developer tools
      devel
      """
 
-  @wip
+  @slow
   Scenario: Disable developer tools
 	  Given I run "drush -y @default pm-uninstall openproducer_devel"
       And I run "drush @default pm-list --status='not installed' --type=module --format=list"
