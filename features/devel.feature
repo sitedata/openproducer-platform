@@ -19,10 +19,6 @@ Feature: Developer tools
 
   Scenario: Enable developer tools
     Given I run "drush -y @default en openproducer_devel"
-     Then I should get:
-     """
-     openproducer_devel was enabled successfully.
-     """
       And I run "drush @default pm-list --status=enabled --type=module --format=list"
      Then I should get:
      """
@@ -32,5 +28,15 @@ Feature: Developer tools
      devel
      """
 
-#  @wip
-#  Scenario: Disable developer tools
+  @wip
+  Scenario: Disable developer tools
+	  Given I run "drush -y @default pm-uninstall openproducer_devel"
+      And I run "drush @default pm-list --status='not installed' --type=module --format=list"
+     Then I should get:
+     """
+     openproducer_devel
+     features_ui
+     views_ui
+     devel
+     """
+
