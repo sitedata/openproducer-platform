@@ -1,3 +1,4 @@
+pre.codehilite,
 div.codehilite > pre {
   background-color: black;
   color: #808080;
@@ -7,6 +8,7 @@ div.codehilite > pre {
   overflow: auto;
 }
 
+pre.codehilite > span[style*="color: #AA22FF"],
 div.codehilite > pre > span[style*="color: #AA22FF"] {
   color: #808080 !important;
 }
