@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WordPress
 
 This is a WordPress repository configured to run on the [Pantheon platform](https://pantheon.io).
@@ -30,3 +31,11 @@ If you would like to keep a separate set of configuration for local development,
 
 ![alt](http://i.imgur.com/fzIeQBP.png, '')
 
+=======
+Welcome to OpenProducer
+=======================
+
+OpenProducer is a framework for building websites for musicians, radio stations, and others in the music industry.
+
+OpenProducer is built on top of WordPress, making it both easy to self-host, integrate with other tools and services, and extend with plugins, themes or custom code.
+>>>>>>> upstream/master
