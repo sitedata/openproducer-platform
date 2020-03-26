@@ -1,41 +1,15 @@
-<<<<<<< HEAD
-# WordPress
+# OpenProducer
 
-This is a WordPress repository configured to run on the [Pantheon platform](https://pantheon.io).
+OpenProducer is a framework for building websites for musicians, radio stations, and others in the music industry. 
 
-Pantheon is website platform optimized and configured to run high performance sites with an amazing developer workflow. There is built-in support for features such as Varnish, Redis, Apache Solr, New Relic, Nginx, PHP-FPM, MySQL, PhantomJS and more. 
+## Built on top of Newspack and WordPress
+OpenProducer is built on top of [Newspack](https://newspack.blog/), an advanced open-source publishing and revenue-generating platform for news organizations. Rather than starting from scratch, we are mixing in additional functionality for radio stations, podcasters, and other types of producers in music and media.
 
-## Getting Started
+## Will be usable soon
+This project is in early stages but we'll be adding instructions on how to install, test, and contribute very soon.
 
-### 1. Spin-up a site
+Thanks!!! 
 
-If you do not yet have a Pantheon account, you can create one for free. Once you've verified your email address, you will be able to add sites from your dashboard. Choose "WordPress" to use this distribution.
 
-### 2. Load up the site
 
-When the spin-up process is complete, you will be redirected to the site's dashboard. Click on the link under the site's name to access the Dev environment.
 
-![alt](http://i.imgur.com/2wjCj9j.png?1, '')
-
-### 3. Run the WordPress installer
-
-How about the WordPress database config screen? No need to worry about database connection information as that is taken care of in the background. The only step that you need to complete is the site information and the installation process will be complete.
-
-We will post more information about how this works but we recommend developers take a look at `wp-config.php` to get an understanding.
-
-![alt](http://i.imgur.com/4EOcqYN.png, '')
-
-If you would like to keep a separate set of configuration for local development, you can use a file called `wp-config-local.php`, which is already in our .gitignore file.
-
-### 4. Enjoy!
-
-![alt](http://i.imgur.com/fzIeQBP.png, '')
-
-=======
-Welcome to OpenProducer
-=======================
-
-OpenProducer is a framework for building websites for musicians, radio stations, and others in the music industry.
-
-OpenProducer is built on top of WordPress, making it both easy to self-host, integrate with other tools and services, and extend with plugins, themes or custom code.
->>>>>>> upstream/master
