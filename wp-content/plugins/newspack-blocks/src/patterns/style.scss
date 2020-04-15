@@ -1,0 +1,34 @@
+@import '../shared/sass/colors';
+
+/**
+ * Patterns
+ */
+
+.newspack-patterns-block-styles {
+	padding: 0;
+	margin-bottom: -16px;
+
+	.block-editor-patterns__item-preview {
+		margin: 0;
+		padding: 3px 3px 0;
+		width: 100%;
+	}
+}
+
+.edit-post-pinned-plugins {
+	.components-button.has-icon,
+	.components-icon-button {
+		&.is-toggled,
+		&.is-toggled:hover,
+		&.has-icon:hover,
+		&.has-icon:not( .is-toggled ) {
+			.newspack-icon__circle {
+				fill: $color__primary !important;
+			}
+
+			.newspack-icon__n {
+				fill: white !important;
+			}
+		}
+	}
+}
