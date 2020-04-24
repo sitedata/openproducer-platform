@@ -184,6 +184,17 @@ You may translate the plugin into another language. Please visit our [WordPress 
 
 == Changelog ==
 
+= 2.3.1 =
+* Update: Plugin Loader (1.1.1) with Freemius first path fix
+* Fixed: conditions for Schedule Override time calculations
+* Fixed: schedule table view - 12 hour format with translations
+* Fixed: schedule table view hour column width style
+* Fixed: javascript table/tab arrows to prevent default click
+* Fixed: undefined index warning when saving show with no shifts
+* Fixed: append not echo override date to shortcode archive list
+* Fixed: compatibility with multiple the_content calls (Yoast)
+* Fixed: reset to showcontinued flag in Schedule (table view)
+
 = 2.3.0 =
 * Include: Plugin Loader (1.1.0) with plugin options and settings
 * Include: Freemius SDK (2.3.0) and Freemius integration
