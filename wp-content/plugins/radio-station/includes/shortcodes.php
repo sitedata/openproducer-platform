@@ -373,7 +373,9 @@ function radio_station_archive_list_shortcode( $type, $atts ) {
 			// --- display Override date(s) ---
 			if ( ( RADIO_STATION_OVERRIDE_SLUG == $type ) && ( $atts['show_dates'] ) ) {
 				$datetime = get_post_meta( $archive_post->ID, 'show_override_sched', true );
-				echo "<div class='override-archive-date'>";
+				
+				// 2.3.1: fix to append not echo override date to archive list
+				$list .= "<div class='override-archive-date'>";
 
 				// --- convert date info ---
 				$day = date( 'l', strtotime( $datetime['date'] ) );
@@ -399,11 +401,12 @@ function radio_station_archive_list_shortcode( $type, $atts ) {
 					$data_format2 = 'g:i a';
 				}
 			
-				echo '<span class="rs-time rs-start-time" data="' . esc_attr( $shift_start_time ) . '" data-format="' . esc_attr( $data_format ) . '">';
-				echo esc_html( $display_day ) . ', ' . $start . '</span>';
-				echo '<span class="rs-sep"> - </span>';
-				echo '<span class="rs-time rs-end-time" data="' . esc_attr( $shift_end_time ) . '" data-format="' . esc_attr( $data_format2 ) . '">' . $end . '</span>';
-				echo "</div>";
+				// 2.3.1: fix to append not echo override date to archive list
+				$list .= '<span class="rs-time rs-start-time" data="' . esc_attr( $shift_start_time ) . '" data-format="' . esc_attr( $data_format ) . '">';
+				$list .= esc_html( $display_day ) . ', ' . $start . '</span>';
+				$list .= '<span class="rs-sep"> - </span>';
+				$list .= '<span class="rs-time rs-end-time" data="' . esc_attr( $shift_end_time ) . '" data-format="' . esc_attr( $data_format2 ) . '">' . $end . '</span>';
+				$list .= "</div>";
 			}
 
 			// TODO: display Show shifts ?
@@ -428,6 +431,18 @@ function radio_station_archive_list_shortcode( $type, $atts ) {
 			// 	$tracks = get_post_meta( $archive_post->ID, 'playlist', true );
 			//	$track_count = count( $tracks );
 			// }
+			
+			// TODO: display episode / host / producer meta ?
+			// if ( defined( 'RADIO_STATION_PRO_EPISODE_SLUG' && ( RADIO_STATION_PRO_EPISODE_SLUG == $type ) {
+			//	$list .= apply_filters( 'radio_station_episode_archive_meta', '' );		
+			// }			
+			// if ( defined( 'RADIO_STATION_PRO_HOST_SLUG' && ( RADIO_STATION_PRO_EPISODE_SLUG == $type ) {
+			//	$list .= apply_filters( 'radio_station_host_archive_meta', '' );		
+			// }
+			// if ( defined( 'RADIO_STATION_PRO_PRODUCER_SLUG' && ( RADIO_STATION_PRO_EPISODE_SLUG == $type ) {
+			//	$list .= apply_filters( 'radio_station_producer_archive_meta', '' );		
+			// }
+			
 
 			// --- description ---
 			if ( 'none' == $atts['description'] ) {
@@ -1145,10 +1160,13 @@ function radio_station_current_show_shortcode( $atts ) {
 		// --- default output if no current shift ---
 		$output .= '<li class="current-show on-air-dj default-dj">';
 		if ( !empty( $atts['default_name'] ) ) {
-			$output .= esc_html( $atts['default_name'] );
+			$no_current_show = esc_html( $atts['default_name'] );
 		} else {
-			$output .= esc_html( __( 'No Show currently scheduled.', 'radio-station') );
+			$no_current_show = esc_html( __( 'No Show currently scheduled.', 'radio-station') );
 		}
+		// 2.3.1: add filter for no current shows text
+		$no_current_show = apply_filters( 'radio_station_no_current_show_text', $no_current_show, $atts );
+		$output .= $no_current_show;
 		$output .= '</li>';
 
 	} else {
@@ -1374,7 +1392,7 @@ function radio_station_current_show_shortcode( $atts ) {
 		}
 
 		// --- output current shift display ---
-		if ( $atts['show_sched'] ) {
+		if ( $atts['show_sched'] && isset( $current_shift_display ) ) {
 			$output .= $current_shift_display;
 		}
 
@@ -1567,10 +1585,13 @@ function radio_station_upcoming_shows_shortcode( $atts ) {
 
 		$output .= '<li class="upcoming-show-none on-air-dj default-dj">';
 		if ( ! empty( $atts['default_name'] ) ) {
-			$output .= esc_html( $atts['default_name'] );
+			$no_upcoming_shows = esc_html( $atts['default_name'] );
 		} else {
-			$output .= esc_html( __( 'No Upcoming Shows Scheduled.', 'radio-station' ) );
+			$no_upcoming_shows = esc_html( __( 'No Upcoming Shows Scheduled.', 'radio-station' ) );
 		}
+		// 2.3.1: add filter for no current shows text
+		$no_upcoming_shows = apply_filters( 'radio_station_no_upcoming_shows_text', $no_upcoming_shows, $atts );
+		$output .= $no_upcoming_shows;
 		$output .= '</li>';
 
 	} else {
@@ -1986,8 +2007,11 @@ function radio_station_current_playlist_shortcode( $atts ) {
 	} else {
 		// 2.2.3: added missing translation wrapper
 		// 2.3.0: added no playlist class
+		// 2.3.1: add filter for no playlist text
 		$output .= '<div class="show-playlist-noplaylist myplaylist-noplaylist>';
-		$output .= esc_html( __( 'No Playlist available.', 'radio-station' ) );
+		$no_current_playlist = esc_html( __( 'No Current Playlist available.', 'radio-station' ) );
+		$no_current_playlist = apply_filters( 'radio_station_no_current_playlist_text', $no_current_playlist, $atts );
+		$output .= $no_current_playlist;
 		$output .= '</div>';
 	}
 
