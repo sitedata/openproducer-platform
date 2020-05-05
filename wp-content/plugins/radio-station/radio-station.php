@@ -237,19 +237,42 @@ $options = array(
 	),
 
 	// --- Ping Netmix Directory ---
-	// note: must be disabled by default for WordPress.org compliance
-	// 'ping_netmix_directory' => array(
-	//	'type'    => 'checkbox',
-	//	'label'   => __( 'Ping Netmix Directory', 'radio-station' ),
-	//	'default' => '',
-	//	'value'   => 'yes',
-	//	'helper'  => __( 'If you have a Netmix Directory listing, enable this to ping the directory whenever you update your schedule.', 'radio-station' ),
-	//	'tab'     => 'general',
-	//  'section' => 'feeds',
-	// ),
+	// note: disabled by default for WordPress.org repository compliance
+	'ping_netmix_directory' => array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Ping Netmix Directory', 'radio-station' ),
+		'default' => '',
+		'value'   => 'yes',
+		'helper'  => __( 'If you have a Netmix Directory listing, enable this to ping the directory whenever you update your schedule.', 'radio-station' ),
+		'tab'     => 'general',
+		'section' => 'feeds',
+	),
+
+	// --- Clear Transients ---
+	'clear_transients' => array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Clear Transients', 'radio-station' ),
+		'default' => '',
+		'value'   => 'yes',
+		'helper'  => __( 'Clear Schedule transients with every pageload. Less efficient but more reliable.', 'radio-station' ),
+		'tab'     => 'general',
+		'section' => 'feeds',
+	),
+
+	// --- Transient Caching ---
+	'transient_caching' => array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Show Transients', 'radio-station' ),
+		'default' => 'yes',
+		'value'   => 'yes',
+		'helper'  => __( 'Use Show Transient Data to improve Schedule calculation performance.', 'radio-station' ),
+		'tab'     => 'general',
+		'section' => 'feeds',
+		'pro'     => true,
+	),
 
 	// --- Show Shift Feeds ---
-	'show_shift_feeds' => array(
+	/* 'show_shift_feeds' => array(
 		'type'    => 'checkbox',
 		'label'   => __( 'Show Shift Feeds', 'radio-station' ),
 		'default' => 'yes',
@@ -258,19 +281,7 @@ $options = array(
 		'tab'     => 'general',
 		'section' => 'feeds',
 		'pro'     => true,
-	),
-
-	// --- Transient Caching ---
-	'transient_caching' => array(
-		'type'    => 'checkbox',
-		'label'   => __( 'Transient Caching', 'radio-station' ),
-		'default' => 'yes',
-		'value'   => 'yes',
-		'helper'  => __( 'Use Transient Caching to improve Schedule calculation performance.', 'radio-station' ),
-		'tab'     => 'general',
-		'section' => 'feeds',
-		'pro'     => true,
-	),
+	), */
 
 	// === Master Schedule Page ===
 
@@ -1832,6 +1843,8 @@ function radio_station_show_playlist_query( $query ) {
 // ----------------------------
 if ( is_multisite() ) {
 	add_action( 'init', 'radio_station_set_roles', 10, 0 );
+	// 2.3.1: added possible fix for roles not being set on multisite
+	add_action( 'admin_init', 'radio_station_set_roles', 10, 0 );
 } else {
 	add_action( 'admin_init', 'radio_station_set_roles', 10, 0 );
 }
@@ -2058,6 +2071,13 @@ function radio_station_revoke_show_edit_cap( $allcaps, $caps, $args ) {
 
 	global $post, $wp_roles;
 
+	// --- check if super admin ---
+	// 2.3.1: fix to not revoke edit caps from super admin
+	// (not implemented, causing connection reset error)
+	// if ( function_exists( 'is_super_admin' ) && is_super_admin() ) {
+	//	return $allcaps;
+	// }
+
 	// --- get the current user ---
 	$user = wp_get_current_user();
 
@@ -2149,10 +2169,15 @@ if ( !defined( 'RADIO_STATION_DEBUG' ) ) {
 // maybe Clear Transient Data
 // --------------------------
 // 2.3.0: clear show transients if debugging
-if ( RADIO_STATION_DEBUG ) {
-	delete_transient( 'radio_station_current_schedule' );
-	delete_transient( 'radio_station_current_show' );
-	delete_transient( 'radio_station_next_show' );
+// 2.3.1: added action to init hook
+// 2.3.1: check clear show transients option
+add_action( 'init', 'radio_station_clear_transients' );
+function radio_station_clear_transients() {
+	if ( RADIO_STATION_DEBUG || ( 'yes' == radio_station_get_setting( 'clear_transients' ) ) ) {
+		delete_transient( 'radio_station_current_schedule' );
+		delete_transient( 'radio_station_current_show' );
+		delete_transient( 'radio_station_next_show' );
+	}
 }
 
 // ------------------------
