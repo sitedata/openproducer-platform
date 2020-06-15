@@ -137,6 +137,7 @@ return array(
     'Tribe\\Utils\\Collection_Trait' => $baseDir . '/src/Tribe/Utils/Collection_Trait.php',
     'Tribe\\Utils\\Date_I18n' => $baseDir . '/src/Tribe/Utils/Date_I18n.php',
     'Tribe\\Utils\\Date_I18n_Immutable' => $baseDir . '/src/Tribe/Utils/Date_I18n_Immutable.php',
+    'Tribe\\Utils\\Element_Attributes' => $baseDir . '/src/Tribe/Utils/Element_Attributes.php',
     'Tribe\\Utils\\Element_Classes' => $baseDir . '/src/Tribe/Utils/Element_Classes.php',
     'Tribe\\Utils\\Lazy_Collection' => $baseDir . '/src/Tribe/Utils/Lazy_Collection.php',
     'Tribe\\Utils\\Lazy_Events' => $baseDir . '/src/Tribe/Utils/Lazy_Events.php',
