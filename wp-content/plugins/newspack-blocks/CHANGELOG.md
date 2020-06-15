@@ -1,3 +1,45 @@
+## [1.7.2](https://github.com/Automattic/newspack-blocks/compare/v1.7.1...v1.7.2) (2020-06-13)
+
+
+### Bug Fixes
+
+* **homepage-posts:** exclude posts already on the page from query ([bbbbc3e](https://github.com/Automattic/newspack-blocks/commit/bbbbc3e7fb84f28c02293c10e0cd49faa7c6b819)), closes [#510](https://github.com/Automattic/newspack-blocks/issues/510)
+
+## [1.7.1](https://github.com/Automattic/newspack-blocks/compare/v1.7.0...v1.7.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* always display query controls; disallow choosing 0 posts ([#497](https://github.com/Automattic/newspack-blocks/issues/497)) ([b956111](https://github.com/Automattic/newspack-blocks/commit/b9561113e822530eec74e30ca4df2139515716ab))
+* correct order of arguments in implodes ([0f45074](https://github.com/Automattic/newspack-blocks/commit/0f45074216e939438165d2621e6152797164e1ec))
+* don't use main wp_query when rendering homepage posts ([9c804f6](https://github.com/Automattic/newspack-blocks/commit/9c804f60d37b85e1caa0dd5b22549d478623e1e1))
+* reset postdata after restoring wp_query ([d9d01a6](https://github.com/Automattic/newspack-blocks/commit/d9d01a664b7a1132bf67b1c5f49fed965b763fee))
+* **homepage-posts:** exclude specific posts from other blocks from query ([#500](https://github.com/Automattic/newspack-blocks/issues/500)) ([31181a5](https://github.com/Automattic/newspack-blocks/commit/31181a5536aef03779cf789d2dcd4d9de05b4371)), closes [#498](https://github.com/Automattic/newspack-blocks/issues/498)
+* make bottom margin styles less specific for easier overrides ([#483](https://github.com/Automattic/newspack-blocks/issues/483)) ([93c3aff](https://github.com/Automattic/newspack-blocks/commit/93c3aff087f30c955591770f514094604f0bc829))
+
+# [1.7.0](https://github.com/Automattic/newspack-blocks/compare/v1.6.0...v1.7.0) (2020-06-02)
+
+
+### Features
+
+* add category and tag classes to each homepage post ([#487](https://github.com/Automattic/newspack-blocks/issues/487)) ([d7c4fcd](https://github.com/Automattic/newspack-blocks/commit/d7c4fcd8d3caa2bbdda970e913265e3da7144b76))
+
+# [1.6.0](https://github.com/Automattic/newspack-blocks/compare/v1.5.0...v1.6.0) (2020-05-19)
+
+
+### Bug Fixes
+
+* decode entities in categories when shown ([#474](https://github.com/Automattic/newspack-blocks/issues/474)) ([5347ba3](https://github.com/Automattic/newspack-blocks/commit/5347ba3904b12a7d4b7de5527927a3353fd198a1))
+* decode entities in categories when shown in carousel ([#475](https://github.com/Automattic/newspack-blocks/issues/475)) ([20dcfd3](https://github.com/Automattic/newspack-blocks/commit/20dcfd382134989a55a3d9c40889fadbb3dd79ff))
+* disallow 0 as post to show value ([80db497](https://github.com/Automattic/newspack-blocks/commit/80db497f1d734f8bb9b60d4441670d6deab5e7f7))
+* initializing swiper for multiple blocks ([#476](https://github.com/Automattic/newspack-blocks/issues/476)) ([f480d54](https://github.com/Automattic/newspack-blocks/commit/f480d5480b801d21490cf406f8c55bcfb5620fbc))
+
+
+### Features
+
+* add border style to group block ([#463](https://github.com/Automattic/newspack-blocks/issues/463)) ([1c1f89d](https://github.com/Automattic/newspack-blocks/commit/1c1f89dbb8ec6cbdf39e0303457551c43612480a))
+* add image shape classes to the front end ([#473](https://github.com/Automattic/newspack-blocks/issues/473)) ([c90df2e](https://github.com/Automattic/newspack-blocks/commit/c90df2e2e89d685a979b20e4d7ff005af2356869))
+
 # [1.5.0](https://github.com/Automattic/newspack-blocks/compare/v1.4.0...v1.5.0) (2020-05-07)
 
 
