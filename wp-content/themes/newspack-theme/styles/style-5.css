@@ -6,7 +6,7 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.7.0
+Version: 1.8.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: newspack-theme
@@ -3079,10 +3079,8 @@ body.page .entry-title {
 }
 
 .author-meta {
-  align-items: center;
   color: #444444;
   font-size: 0.7em;
-  display: flex;
 }
 
 .author-meta a {
@@ -3101,6 +3099,42 @@ body.page .entry-title {
 
 .author-meta .author-email svg {
   margin-right: 0.25em;
+}
+
+@media only screen and (min-width: 1168px) {
+  .author-meta {
+    align-items: center;
+    display: flex;
+  }
+  .author-meta .author-social-links {
+    margin-top: 0;
+  }
+  .author-meta .author-social-links:not(:first-child) {
+    border-left: 1px solid #111;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.author-social-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.author-social-links:not(:first-child) {
+  margin-top: 0.33rem;
+}
+
+.author-social-links li {
+  margin-right: 0.33rem;
+}
+
+.author-social-links a:visited {
+  color: #444444;
 }
 
 /* Featured Image - special styles */
@@ -5824,6 +5858,14 @@ body:not(.newspack-front-page):not(.style-pack-style-2) .newspack_global_ad.glob
 
 body.style-pack-style-2 .newspack_global_ad.global_below_header {
   display: none;
+}
+
+.h-sub.single-featured-image-beside .global_below_header, .h-sub.single-featured-image-behind .global_below_header {
+  display: none;
+}
+
+.h-sub.single-featured-image-beside:not(.newspack-front-page):not(.style-pack-style-2) .global_below_header + .site-content, .h-sub.single-featured-image-behind:not(.newspack-front-page):not(.style-pack-style-2) .global_below_header + .site-content {
+  margin-top: 0;
 }
 
 /* Yoast Breadcrumb support */
