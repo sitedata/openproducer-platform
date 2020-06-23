@@ -133,6 +133,7 @@ return array(
     'Tribe\\Shortcode\\Shortcode_Interface' => $baseDir . '/src/Tribe/Shortcode/Shortcode_Interface.php',
     'Tribe\\Tooltip\\View' => $baseDir . '/src/Tribe/Tooltip/View.php',
     'Tribe\\Traits\\Cache_User' => $baseDir . '/src/Tribe/Traits/Cache_User.php',
+    'Tribe\\Traits\\With_Meta_Updates_Handling' => $baseDir . '/src/Tribe/Traits/With_Meta_Updates_Handling.php',
     'Tribe\\Utils\\Collection_Interface' => $baseDir . '/src/Tribe/Utils/Collection_Interface.php',
     'Tribe\\Utils\\Collection_Trait' => $baseDir . '/src/Tribe/Utils/Collection_Trait.php',
     'Tribe\\Utils\\Date_I18n' => $baseDir . '/src/Tribe/Utils/Date_I18n.php',
