@@ -15,6 +15,7 @@ return array(
     'Tribe\\Events\\Models\\Post_Types\\Event' => $baseDir . '/src/Tribe/Models/Post_Types/Event.php',
     'Tribe\\Events\\Models\\Post_Types\\Venue' => $baseDir . '/src/Tribe/Models/Post_Types/Venue.php',
     'Tribe\\Events\\Service_Providers\\Context' => $baseDir . '/src/Tribe/Service_Providers/Context.php',
+    'Tribe\\Events\\Service_Providers\\First_Boot' => $baseDir . '/src/Tribe/Service_Providers/First_Boot.php',
     'Tribe\\Events\\Views\\V2\\Assets' => $baseDir . '/src/Tribe/Views/V2/Assets.php',
     'Tribe\\Events\\Views\\V2\\Hooks' => $baseDir . '/src/Tribe/Views/V2/Hooks.php',
     'Tribe\\Events\\Views\\V2\\Implementation_Error' => $baseDir . '/src/Tribe/Views/V2/Implementation_Error.php',
