@@ -7187,6 +7187,37 @@ a.mdc-list-item {
       background-size: 8px 6px; }
 
 /**
+ * Noscript notification styles.
+ *
+ * Site Kit by Google, Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.googlesitekit-noscript {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 5px 20px 5px 0; }
+  @media (min-width: 600px) {
+    .googlesitekit-noscript {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  .googlesitekit-noscript__title {
+    margin: 0; }
+
+.no-js:not([amp-version]) [id^="js-googlesitekit-"] {
+  display: none; }
+
+/**
  * Notifications counter styles.
  *
  * Site Kit by Google, Copyright 2019 Google LLC
@@ -8784,7 +8815,7 @@ a.mdc-list-item {
         white-space: normal; } }
 
 /**
- * Noscript notification styles.
+ * Text Field Icon styles.
  *
  * Site Kit by Google, Copyright 2020 Google LLC
  *
@@ -8800,19 +8831,18 @@ a.mdc-list-item {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.googlesitekit-noscript {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  margin: 5px 20px 5px 0; }
-  @media (min-width: 600px) {
-    .googlesitekit-noscript {
-      padding-left: 10px;
-      padding-right: 10px; } }
-  .googlesitekit-noscript__title {
-    margin: 0; }
-
-.no-js:not([amp-version]) [id^="js-googlesitekit-"] {
-  display: none; }
+.googlesitekit-plugin .googlesitekit-text-field-icon--warning::before {
+  background-color: #fbbc05;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2222%22%20height%3D%2219%22%20viewBox%3D%220%200%2022%2019%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2019h22L11%200%200%2019zm12-3h-2v-2h2v2zm0-4h-2V8h2v4z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E");
+  background-position: center 4px;
+  background-repeat: no-repeat;
+  background-size: 14px 12px;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 22px;
+  vertical-align: middle;
+  width: 22px; }
 
 /**
  * Dashboard signin box styles.
@@ -9991,7 +10021,7 @@ a.mdc-list-item {
       background-color: #34a853;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2212%22%20viewBox%3D%220%200%2016%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%206.414L1.415%205l5.292%205.292-1.414%201.415z%22%2F%3E%3Cpath%20d%3D%22M14.146.146l1.415%201.414L5.414%2011.707%204%2010.292z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       background-size: 10px 8px; }
-    .googlesitekit-settings-module .googlesitekit-settings-module__status-icon--not-connected::before {
+    .googlesitekit-settings-module .googlesitekit-settings-module__status-icon--not-connected::before, .googlesitekit-settings-module .googlesitekit-settings-module__status-icon--warning::before {
       background-color: #fbbc05;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2222%22%20height%3D%2219%22%20viewBox%3D%220%200%2022%2019%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2019h22L11%200%200%2019zm12-3h-2v-2h2v2zm0-4h-2V8h2v4z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E");
       background-position: center 3px;
@@ -10156,6 +10186,87 @@ a.mdc-list-item {
   .googlesitekit-settings-notice--suggestion .googlesitekit-settings-notice__text::before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%222%22%20height%3D%2211%22%20viewBox%3D%220%200%202%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%231872e6%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%204h2v7H0zM0%200h2v2H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #1872e6; }
+
+/**
+ * Widget Area styles.
+ *
+ * Site Kit by Google, Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.googlesitekit-widget-area--composite .googlesitekit-widget-area-widgets {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: #fff; }
+
+.googlesitekit-widget-area-header {
+  margin: 0 0 1rem 0; }
+  .googlesitekit-widget-area-header .googlesitekit-widget-area-header__title {
+    color: #5b5b61;
+    font-weight: 400;
+    margin: 0; }
+  .googlesitekit-widget-area-header .googlesitekit-widget-area-header__subtitle {
+    color: #757575;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0; }
+
+/**
+ * Widget Context styles.
+ *
+ * Site Kit by Google, Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.googlesitekit-widget-context {
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  @media (min-width: 600px) {
+    .googlesitekit-widget-context {
+      padding-left: 10px;
+      padding-right: 10px; } }
+
+/**
+ * Widget styles.
+ *
+ * Site Kit by Google, Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.googlesitekit-widget-area--boxes .googlesitekit-widget {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: #fff; }
 
 /**
  * Margin utility styles.
