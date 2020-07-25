@@ -1,9 +1,9 @@
 === Radio Station ===
-Contributors: tonyzeoli, majick, nourma
+Contributors: tonyzeoli, majick
 Donate link: https://netmix.co/donate
 Tags: dj, music, playlist, radio, shows, scheduling, broadcasting
 Requires at least: 3.3.1
-Tested up to: 5.4.0
+Tested up to: 5.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -184,6 +184,35 @@ You may translate the plugin into another language. Please visit our [WordPress 
 
 == Changelog ==
 
+= 2.3.2 =
+* Update: Plugin Loader (1.1.2) with settings link fix
+* Improved: use plugin timezone setting for all times
+* Improved: show shift conflict checker logic
+* Added: Radio Clock Widget for user/server time display
+* Added: AJAX widget load option (to bypass page caches)
+* Added: automated show schedule highlighting (table/tabs/list)
+* Added: playlist track arrows for re-ordering tracks
+* Added: AJAX save of show shifts and playlist tracks
+* Added: post type editing metabox position filtering
+* Added: more display attributes to Master Schedule shortcode
+* Added: time format filters for time output displays
+* Added: javascript user timezone display on Master Schedule
+* Fixed: handling of UTC only timezone settings
+* Fixed: added check for empty role capabilities
+* Fixed: added settings submenu redirection fix
+* Fixed: show and override midnight end conflict
+* Fixed: calculate next shows at end of schedule week
+* Fixed: metaboxes disappearing on position sorting
+* Fixed: move tracks marked New to end of Playlist on update
+* Fixed: override shift array output showing above schedule
+* Fixed: master schedule specify days attribute bug
+* Fixed: display real end time of overnight split shifts
+* Fixed: master schedule display with days attribute
+* Fixed: logic for Affected Shifts in override list
+* Fixed: removed auto-tab selection change on tab view resize
+* Fixed: Current Show widget schedule/countdown for Overrides
+* Fixed: multiple overrides in schedule range variable conflict
+
 = 2.3.1 =
 * Update: Plugin Loader (1.1.1) with Freemius first path fix
 * Fixed: conditions for Schedule Override time calculations
@@ -196,6 +225,7 @@ You may translate the plugin into another language. Please visit our [WordPress 
 * Fixed: reset to showcontinued flag in Schedule (table view)
 * Added: show avatar and featured image URLs to Data API output
 * Added: option to ping Netmix directory on show updates
+* Added: option to clear transients on every pageload
 * Added: filters for widget section display order
 
 = 2.3.0 =
@@ -539,6 +569,20 @@ You may translate the plugin into another language. Please visit our [WordPress 
 * Initial release
 
 == Upgrade Notice ==
+
+= 2.3.1 =
+* Improved Times, AJAX Loading and Bugfix Update 
+* https://netmix.com/radio-station-2-3-2-release/
+* Radio Clock Widget and Widget AJAX Loading
+* AJAX Saving of Show Shifts and Playlist Tracks
+* Automated current Show schedule highlighting
+* Improved timezones, overrides, shift checking and more
+
+= 2.3.1 =
+* Bugfix Update and Announcing New Netmix Station Directory!
+* https://netmix.com/announcing-new-netmix-directory/
+* Including minor fixes to major update release
+* Option to ping Netmix Directory on show updates
 
 = 2.3.0 =
 * Major Update including many new features, enhancements and fixes!

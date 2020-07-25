@@ -4,7 +4,7 @@ Tags: e-commerce, store, sales, sell, woo, shop, cart, checkout, downloadable, d
 Requires at least: 5.2
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 4.2.1
+Stable tag: 4.3.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -179,14 +179,13 @@ INTERESTED IN DEVELOPMENT?
 
 == Changelog ==
 
-= 4.2.1 - 2020-06-22 =
+= 4.3.1 - 2020-07-21 =
 
-**WooCommerce**
-* Security - Escape HTML in SelectWoo.
+**WooCommerce Admin 1.3.1**
+* Fix - PHP Fatal errors when columns are missing from the Notes table. #4831
 
-**WooCommerce Admin 1.2.4**
-* Tweak: reduce asset filename length and remove tilde characters. #4535
-* Fix: RTL stylesheet loading for split code chunks. #4542
+**WooCommerce Blocks 2.7.2**
+* Enhancement: Move Draft order logic behind feature flag. #2874
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/master/CHANGELOG.txt).
 
