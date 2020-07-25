@@ -1,0 +1,266 @@
+/*
+Theme Name: Newspack Child
+Theme URI: https://github.com/Automattic/newspack-theme
+Template: newspack-theme
+Author: Automattic
+Author URI: https://newspack.blog
+Version: 1.12.0.1594865653
+Updated: 2020-07-15 19:14:13
+
+*/
+
+.site-info .imprint{
+	display: none;
+}
+
+.single .entry-subhead {
+  display: none;
+}
+
+
+/* this removes the margin between the top container on pages */
+.page .site-content {
+ margin-top:0;
+}
+
+/* this adjusts the header margin on pages */
+.page .entry-header {
+ margin-top: 30px;
+ margin-bottom: 15px;	
+}
+
+/* this removes the margin between the top container on the front page */
+.newspack-front-page .entry .entry-content  > * {
+margin-top:0;
+margin-bottom:0;	
+}
+
+/* this removes the margins between containers on pages; the margin-top also removed space between paragraphs */
+.page-template-single-wide .entry .entry-content > * {
+margin-top:0;
+margin-bottom:0;
+}
+
+/* this removes the margins between columns with the class .nomargin */
+.nomargin .wp-block-columns .wp-block-column {
+margin-left: 0;
+margin-right: 0;
+margin-top:0;
+margin-bottom:0;	
+}
+
+
+
+/* this removes the negative margin in the supporter column on the festival page */
+.page-template-single-wide .entry .entry-content .wp-block-group.has-background + .wp-block-group.has-background {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+
+/* this removes the borders in the supporters block */
+.entry .entry-content .wp-block-separator, .entry .entry-content hr {
+    border: 0;
+    height: 0;
+    margin: 0;
+}
+
+.wp-block-columns.is-style-borders > .wp-block-column::after {
+	  border: 0;
+}
+
+/* this removes the text in the supporters block */
+.wp-block-columns .newspack-supporter-info > p {
+    visibility: hidden;
+}
+
+
+/* ensure the citation is the same color as the pullquote */
+.wp-block-pullquote cite, .wp-block-pullquote footer {
+	color: inherit;
+}
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/* Site footer */
+.site-footer {
+  margin: 0;
+	background-color: #f1f1f1;
+  color:  #111;
+}
+
+.site-footer .footer-branding .wrapper {
+  display: none;
+}
+
+.site-footer .footer-branding .wrapper {
+  padding-top: 1rem;
+	border: none;
+}
+
+/*--------------------------------------------------------------
+## Event styles
+--------------------------------------------------------------*/
+
+/* https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */ 
+/* 
+.tribe-events-pro .tribe-events-pro-photo__event-title {
+  font-size: 18px;
+  font-weight: regular;
+}
+ */
+ 
+/* 
+.tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event-title {
+  font-size: 20px;
+}
+ */
+ 
+.tribe-events-view {
+ position:relative;
+}
+
+.entry-content .tribe-events .tribe-events-l-container {
+ padding-bottom: 20px;
+ padding-top: 20px;
+ margin:0px;	
+ min-height:600px
+}
+
+.nomargin .tribe-events .tribe-events-l-container {
+ padding-bottom: 20px;
+ padding-top: 20px;
+ margin:0px;	
+ min-height:600px
+}
+
+.tribe-common .tribe-common-g-row {
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.tribe-common .tribe-common-g-row--gutters {
+ margin-left: 0px;
+ margin-right: 0px;
+}
+
+.tribe-common .tribe-common-g-row--gutters > .tribe-common-g-col {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+ padding-bottom:20px;
+ padding-top:20px;
+ margin:0px;
+ min-height:700px
+}
+
+
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters {
+ margin-left:0px;
+ margin-right:0px;
+}
+
+.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+ padding-left:20px;
+ padding-right:20px;
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+ padding-left:20px;
+ padding-right:20px;
+}
+
+ 
+.tribe-events-pro .tribe-events-pro-photo__event {
+  margin-bottom: 30px;
+}
+ 
+.tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event {
+  margin-bottom: 30px;
+}
+
+
+
+/* KCRW STYLES We'll need this to contain the date tag when we set it to absolute positioning 
+.tribe-events-pro .tribe-events-pro-photo__event-details-wrapper {
+  position: relative;
+}
+
+/* Re-position the date tag and give it a background 
+.tribe-events-pro .tribe-events-pro-photo__event-date-tag {
+  background: #fff;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  width: 60px;
+}
+
+/* Adds a border and some breathing room around the date 
+.tribe-events-pro .tribe-events-pro-photo__event-date-tag-datetime {
+  border: 1px solid #c5c5c5;
+  padding-top: 3px;
+}
+
+/* Updates the color of the month name 
+  .tribe-events-pro .tribe-events-pro-photo__event-date-tag-month {
+  color: #fa5a41
+}
+
+
+/* trying https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */
+.tribe-events-pro .tribe-events-pro-photo__event-featured-image-link {
+  position: relative;
+}
+ 
+.tribe-events-pro .tribe-events-pro-photo__event-featured-image-date-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+}
+ 
+.tribe-events-pro .tribe-events-pro-photo__event-featured-image-date-tag-datetime {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+ 
+.tribe-events-pro .tribe-events-pro-photo__event-featured-image-date-tag-month {
+  color: #141827;
+  font-family: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #727272;
+  text-transform: uppercase;
+}
+
+/* stuff the child theme did not pick up */
+	
+		
+.accent-header,
+.article-section-title {
+	text-transform: uppercase;
+}
+
+.accent-header, .article-section-title,
+.entry .entry-footer a:hover {
+	color: #2b2b2e;
+}
+
+#secondary .widget-title {
+  font-size: 1em;
+}
+
+
+
