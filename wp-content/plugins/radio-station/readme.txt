@@ -184,6 +184,32 @@ You may translate the plugin into another language. Please visit our [WordPress 
 
 == Changelog ==
 
+= 2.3.3.3 = Minor Bug Fix to Upcoming Shows Widget; display showtimes when show starts before midnight and ends after midnight
+
+= 2.3.3.2 =
+* Update: Freemius SDK (2.4.0)
+* Update: Plugin Loader (1.1.4) with weird isset glitch fix
+* Fixed: Current Show for Shows ending at midnight
+* Fixed: incorrect AJAX Widget plugin setting value
+* Fixed: use pageload data for schedules before transients
+
+= 2.3.3.1 =
+* Fix to conflict with plugins using AJAX save_post calls
+* Improved accuracy for responsive table/tab Schedule views
+* Added color improvements to Show Shift interface
+* Fix to calculate Current Show (transient no longer used)
+
+= 2.3.3 =
+* Update: Plugin Loader (1.1.3) with non-strict select match fix
+* Improved: width responsiveness for table/tabbed Schedule views
+* Improved: show shifts interface background colors
+* Added: navigate away from page on shift change check
+* Added: default time format option to Widgets
+* Removed: current show transients (intermittant unreliability)
+* Fixed: AJAX call causing plugin conflicts via save_post action
+* Fixed: calculation of Upcoming Shows near end of the week
+* Fixed: remove and duplicate actions on new shifts
+
 = 2.3.2 =
 * Update: Plugin Loader (1.1.2) with settings link fix
 * Improved: use plugin timezone setting for all times
@@ -570,7 +596,35 @@ You may translate the plugin into another language. Please visit our [WordPress 
 
 == Upgrade Notice ==
 
-= 2.3.1 =
+<<<<<<< HEAD
+= 2.3.3.2 =
+* Update: Freemius SDK (2.4.0)
+* Update: Plugin Loader (1.1.4) with weird isset glitch fix
+* Fixed: Current Show for Shows ending at midnight
+* Fixed: incorrect AJAX Widget plugin setting value
+* Fixed: use pageload data for schedules before transients
+
+= 2.3.3.1 =
+* Fix to conflict with plugins using AJAX save_post calls
+* Improved accuracy for responsive table/tab Schedule views
+* Added color improvements to Show Shift interface
+* Fix to calculate Current Show (transient no longer used)
+=======
+= 2.3.3.3 =
+* Current and Upcoming Shows Widget Fix
+
+= 2.3.3.2 =
+* Minor Bugfix Update
+>>>>>>> release/2.3.3.3
+
+= 2.3.3 =
+* Important Bugfix Update
+* Fix to conflict with plugins using AJAX save_post calls
+* Improved accuracy for responsive table/tab Schedule views
+* Added colour improvements to Show Shift interface
+* Fix to calculate Current Show (transient no longer used)
+
+= 2.3.2 =
 * Improved Times, AJAX Loading and Bugfix Update 
 * https://netmix.com/radio-station-2-3-2-release/
 * Radio Clock Widget and Widget AJAX Loading
