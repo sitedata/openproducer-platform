@@ -1,3 +1,25 @@
+## [1.8.1](https://github.com/Automattic/newspack-newsletters/compare/v1.8.0...v1.8.1) (2020-08-13)
+
+
+### Bug Fixes
+
+* group block background color ([56b96ea](https://github.com/Automattic/newspack-newsletters/commit/56b96ead54c08de09f4b1d4dae64c8f7f6e37554))
+* use hex value for group background colors in default layouts ([#292](https://github.com/Automattic/newspack-newsletters/issues/292)) ([4cc9b84](https://github.com/Automattic/newspack-newsletters/commit/4cc9b841d23a9388cc1d7413f136dfb67dde0ce2))
+
+# [1.8.0](https://github.com/Automattic/newspack-newsletters/compare/v1.7.0...v1.8.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* links in heading color inheritance ([6c4e4dd](https://github.com/Automattic/newspack-newsletters/commit/6c4e4dd1880a49a542ab86426f24ea2dbc36aaf1)), closes [#279](https://github.com/Automattic/newspack-newsletters/issues/279)
+* **posts-inserter:** handle excerpt ([4b92ab3](https://github.com/Automattic/newspack-newsletters/commit/4b92ab33ff3068196306ca253c726da0c70650a3)), closes [#278](https://github.com/Automattic/newspack-newsletters/issues/278)
+
+
+### Features
+
+* **posts-inserter:** font size, color options ([70f3a46](https://github.com/Automattic/newspack-newsletters/commit/70f3a462158edf90c750aae5ecfb312e30aa67fc))
+* **posts-inserter:** increase posts count cap to 20 ([c622ce4](https://github.com/Automattic/newspack-newsletters/commit/c622ce46c43744e557a6cfa304f2e59ebb0067d9)), closes [#246](https://github.com/Automattic/newspack-newsletters/issues/246)
+
 # [1.7.0](https://github.com/Automattic/newspack-newsletters/compare/v1.6.0...v1.7.0) (2020-08-04)
 
 
