@@ -17,6 +17,7 @@ class Newspack_Newsletters_Settings {
 	public static function init() {
 		add_action( 'admin_menu', [ __CLASS__, 'add_plugin_page' ] );
 		add_action( 'admin_init', [ __CLASS__, 'page_init' ] );
+		add_action( 'update_option_newspack_newsletters_public_posts_slug', [ __CLASS__, 'update_option_newspack_newsletters_public_posts_slug' ], 10, 2 );
 	}
 
 	/**
@@ -25,7 +26,7 @@ class Newspack_Newsletters_Settings {
 	 * @return array Settings list.
 	 */
 	public static function get_settings_list() {
-		return array(
+		$settings_list = array(
 			array(
 				'description' => __( 'Service Provider', 'newspack-newsletters' ),
 				'key'         => 'newspack_newsletters_service_provider',
@@ -70,7 +71,24 @@ class Newspack_Newsletters_Settings {
 				'key'         => 'newspack_newsletters_mjml_api_secret',
 				'type'        => 'text',
 			),
+			array(
+				'default'           => 'newsletter',
+				'description'       => __( 'Public Newsletter Posts Slug', 'newspack-newsletters' ),
+				'key'               => 'newspack_newsletters_public_posts_slug',
+				'sanitize_callback' => 'sanitize_title',
+				'type'              => 'text',
+			),
 		);
+
+		if ( class_exists( 'Jetpack' ) && \Jetpack::is_module_active( 'related-posts' ) ) {
+			$settings_list[] = array(
+				'description' => __( 'Disable Related Posts on public newsletter posts?', 'newspack-newsletters' ),
+				'key'         => 'newspack_newsletters_disable_related_posts',
+				'type'        => 'checkbox',
+			);
+		}
+
+		return $settings_list;
 	}
 
 	/**
@@ -116,9 +134,13 @@ class Newspack_Newsletters_Settings {
 			'newspack-newsletters-settings-admin'
 		);
 		foreach ( self::get_settings_list() as $setting ) {
+			$args = [
+				'sanitize_callback' => ! empty( $setting['sanitize_callback'] ) ? $setting['sanitize_callback'] : 'sanitize_text_field',
+			];
 			register_setting(
 				'newspack_newsletters_options_group',
-				$setting['key']
+				$setting['key'],
+				$args
 			);
 			add_settings_field(
 				$setting['key'],
@@ -140,7 +162,8 @@ class Newspack_Newsletters_Settings {
 		$key         = $setting['key'];
 		$type        = $setting['type'];
 		$description = $setting['description'];
-		$value       = get_option( $key, false );
+		$default     = ! empty( $setting['default'] ) ? $setting['default'] : false;
+		$value       = get_option( $key, $default );
 
 		if ( 'select' === $type ) {
 			$options     = $setting['options'];
@@ -164,6 +187,17 @@ class Newspack_Newsletters_Settings {
 				esc_attr( $value ),
 				wp_kses( $add_options, $allowed_html )
 			);
+		} elseif ( 'checkbox' === $type ) {
+			?>
+				<input
+					type="checkbox"
+					id="<?php echo esc_attr( $key ); ?>"
+					name="<?php echo esc_attr( $key ); ?>"
+					<?php if ( ! empty( $value ) ) : ?>
+						checked
+					<?php endif; ?>
+				/>
+			<?php
 		} else {
 			printf(
 				'<input type="text" id="%s" name="%s" value="%s" class="widefat" />',
@@ -172,6 +206,17 @@ class Newspack_Newsletters_Settings {
 				esc_attr( $value )
 			);
 		}
+	}
+
+	/**
+	 * Hook into public posts slug option after save, to flush permalinks.
+	 *
+	 * @param string $old_value The old value.
+	 * @param string $new_value The new value.
+	 */
+	public static function update_option_newspack_newsletters_public_posts_slug( $old_value, $new_value ) {
+		Newspack_Newsletters::register_cpt();
+		flush_rewrite_rules(); // phpcs:ignore
 	}
 }
 
