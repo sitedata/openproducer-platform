@@ -7,7 +7,7 @@
 
 use Tribe__Date_Utils as Dates;
  
-$image_url = $event->thumbnail->exists ? $event->thumbnail->full->url : $placeholder_url;
+$image_url = $event->thumbnail->exists ? $event->medium_large->url : $placeholder_url;
  
 $display_date = empty( $is_past ) && ! empty( $request_date )
     ? max( $event->dates->start_display, $request_date )

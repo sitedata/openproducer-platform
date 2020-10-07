@@ -34,8 +34,41 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 20 );
 
 
 //trying to remove the end time for events per https://theeventscalendar.com/knowledgebase/k/remove-the-event-end-time-in-views/
+
 add_filter( 'tribe_events_event_schedule_details_formatting', 'tribe_remove_end_date' );
 function tribe_remove_end_date ( $settings ) {
-  $settings['show_end_time'] = false;
+  $settings['time'] = false;
   return $settings;
 }
+
+
+//redirecting login per https://theeventscalendar.com/support/forums/topic/login-to-rsvp-and-login-to-purchase/
+
+function tribe_make_login_to_purchase_go_to_woo_my_account_login( $original_login_url ) {
+
+$new_url = esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) );
+
+if ( empty( $new_url ) ) {
+return $original_login_url;
+}
+
+return $new_url;
+}
+
+add_filter( 'tribe_tickets_ticket_login_url', 'tribe_make_login_to_purchase_go_to_woo_my_account_login' );
+
+
+
+add_action( 'after_setup_theme', 'angelcity_setup' );
+
+function angelcity_setup() {
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+}
+
+add_theme_support( 'post-thumbnails', [ 
+  'post', 
+  'page',
+  'tribe_events',
+] );
