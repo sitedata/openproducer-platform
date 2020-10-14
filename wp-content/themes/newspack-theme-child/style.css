@@ -9,6 +9,7 @@ Updated: 2020-07-15 19:14:13
 
 */
 
+<<<<<<< HEAD
 
 /* === Angel City Customizations === */
 
@@ -244,10 +245,29 @@ textarea {
 
 /* this adjusts the header margin on pages *
 .page-template-default .entry-header {
+=======
+.site-info .imprint{
+	display: none;
+}
+
+.single .entry-subhead {
+  display: none;
+}
+
+
+/* this removes the margin between the top container on pages */
+.page .site-content {
+ margin-top:0;
+}
+
+/* this adjusts the header margin on pages */
+.page .entry-header {
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
  margin-top: 30px;
  margin-bottom: 15px;	
 }
 
+<<<<<<< HEAD
 /* Groups, Covers and Columns */ 
 
 
@@ -286,20 +306,36 @@ textarea {
 /* this removes the vertical margins between containers on pages; the margin-top also removed space between paragraphs */
 .entry .entry-content .no-vertical-margin,
 .entry .entry-content .no-horizontal-margin {
+=======
+/* this removes the margin between the top container on the front page */
+.newspack-front-page .entry .entry-content  > * {
+margin-top:0;
+margin-bottom:0;	
+}
+
+/* this removes the margins between containers on pages; the margin-top also removed space between paragraphs */
+.page-template-single-wide .entry .entry-content > * {
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 margin-top:0;
 margin-bottom:0;
 }
 
+<<<<<<< HEAD
 
 
 /* this removes the horizontal margins between columns with the class .no-horizontal-margin */
 .entry .entry-content .no-horizontal-margin .wp-block-columns > .wp-block-column {
+=======
+/* this removes the margins between columns with the class .nomargin */
+.nomargin .wp-block-columns .wp-block-column {
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 margin-left: 0;
 margin-right: 0;
 margin-top:0;
 margin-bottom:0;	
 }
 
+<<<<<<< HEAD
 /* removes the top and bottom margin for a cover with columns */
 .entry .entry-content .wp-block-cover__inner-container .wp-block-columns .wp-block-column {
     margin-left: 10px;
@@ -330,6 +366,12 @@ margin-bottom:0;
 
 /* this removes the negative margin in the supporter column on the festival page */
 .page-template-single-wide .entry .entry-content .supporters .wp-block-group.has-background + .wp-block-group.has-background {
+=======
+
+
+/* this removes the negative margin in the supporter column on the festival page */
+.page-template-single-wide .entry .entry-content .wp-block-group.has-background + .wp-block-group.has-background {
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -338,6 +380,7 @@ margin-bottom:0;
 
 
 /* this removes the borders in the supporters block */
+<<<<<<< HEAD
 
 
 .entry .entry-content .wp-block-separator, .entry .entry-content hr {
@@ -346,6 +389,14 @@ margin-bottom:0;
 
 
 
+=======
+.entry .entry-content .wp-block-separator, .entry .entry-content hr {
+    border: 0;
+    height: 0;
+    margin: 0;
+}
+
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 .wp-block-columns.is-style-borders > .wp-block-column::after {
 	  border: 0;
 }
@@ -385,6 +436,7 @@ margin-bottom:0;
 ## Event styles
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
 
  
  /* this header/title stuff  from events */
@@ -404,11 +456,27 @@ margin-bottom:0;
 .single-tribe_events .entry .entry-content > *:first-child {
  margin-top:0;
 }
+=======
+/* https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */ 
+/* 
+.tribe-events-pro .tribe-events-pro-photo__event-title {
+  font-size: 18px;
+  font-weight: regular;
+}
+ */
+ 
+/* 
+.tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event-title {
+  font-size: 20px;
+}
+ */
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
  
 .tribe-events-view {
  position:relative;
 }
 
+<<<<<<< HEAD
 /* ### Events grid using homepage blocks - Making subtitle bold  */
 
 .events-grid article .entry-wrapper p,
@@ -497,10 +565,74 @@ margin-bottom:0;
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters {
  margin-left:0px;
  margin-right:0px;
+=======
+.entry-content .tribe-events .tribe-events-l-container {
+ padding-bottom: 20px;
+ padding-top: 20px;
+ margin:0px;	
+ min-height:600px
+}
+
+.nomargin .tribe-events .tribe-events-l-container {
+ padding-bottom: 20px;
+ padding-top: 20px;
+ margin:0px;	
+ min-height:600px
+}
+
+.tribe-common .tribe-common-g-row {
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.tribe-common .tribe-common-g-row--gutters {
+ margin-left: 0px;
+ margin-right: 0px;
+}
+
+.tribe-common .tribe-common-g-row--gutters > .tribe-common-g-col {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+ padding-bottom:20px;
+ padding-top:20px;
+ margin:0px;
+ min-height:700px
 }
 
 
 
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters {
+ margin-left:0px;
+ margin-right:0px;
+}
+
+.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+ padding-left:20px;
+ padding-right:20px;
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+ padding-left:20px;
+ padding-right:20px;
+}
+
+ 
+.tribe-events-pro .tribe-events-pro-photo__event {
+  margin-bottom: 30px;
+}
+ 
+.tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event {
+  margin-bottom: 30px;
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
+}
+
+
+
+<<<<<<< HEAD
 
 /* left / right padding between events; margin underneath in grid */
 .tribe-common .tribe-common-g-row--gutters > .tribe-common-g-col {
@@ -530,6 +662,36 @@ width: 17%;
 
 
 /* adding calendar icon onto photo  https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */
+=======
+/* KCRW STYLES We'll need this to contain the date tag when we set it to absolute positioning 
+.tribe-events-pro .tribe-events-pro-photo__event-details-wrapper {
+  position: relative;
+}
+
+/* Re-position the date tag and give it a background 
+.tribe-events-pro .tribe-events-pro-photo__event-date-tag {
+  background: #fff;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  width: 60px;
+}
+
+/* Adds a border and some breathing room around the date 
+.tribe-events-pro .tribe-events-pro-photo__event-date-tag-datetime {
+  border: 1px solid #c5c5c5;
+  padding-top: 3px;
+}
+
+/* Updates the color of the month name 
+  .tribe-events-pro .tribe-events-pro-photo__event-date-tag-month {
+  color: #fa5a41
+}
+
+
+/* trying https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 .tribe-events-pro .tribe-events-pro-photo__event-featured-image-link {
   position: relative;
 }
@@ -558,6 +720,7 @@ width: 17%;
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 
  
  /* WooCommerce 3.0 Gallery */
@@ -695,13 +858,33 @@ credit: https://gist.github.com/vanbo/c05e9b9512bd53e3680c82e1c6e4e6a3
 
 .woocommerce-tabs ul li {
     margin: 0;
+=======
+/* stuff the child theme did not pick up */
+	
+		
+.accent-header,
+.article-section-title {
+	text-transform: uppercase;
+}
+
+.accent-header, .article-section-title,
+.entry .entry-footer a:hover {
+	color: #2b2b2e;
+}
+
+#secondary .widget-title {
+  font-size: 1em;
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 }
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879

@@ -34,6 +34,7 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 20 );
 
 
 //trying to remove the end time for events per https://theeventscalendar.com/knowledgebase/k/remove-the-event-end-time-in-views/
+<<<<<<< HEAD
 
 add_filter( 'tribe_events_event_schedule_details_formatting', 'tribe_remove_end_date' );
 function tribe_remove_end_date ( $settings ) {
@@ -72,3 +73,10 @@ add_theme_support( 'post-thumbnails', [
   'page',
   'tribe_events',
 ] );
+=======
+add_filter( 'tribe_events_event_schedule_details_formatting', 'tribe_remove_end_date' );
+function tribe_remove_end_date ( $settings ) {
+  $settings['show_end_time'] = false;
+  return $settings;
+}
+>>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
