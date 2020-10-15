@@ -32,10 +32,3 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 20 );
 
 // END ENQUEUE PARENT ACTION
 
-
-//trying to remove the end time for events per https://theeventscalendar.com/knowledgebase/k/remove-the-event-end-time-in-views/
-add_filter( 'tribe_events_event_schedule_details_formatting', 'tribe_remove_end_date' );
-function tribe_remove_end_date ( $settings ) {
-  $settings['show_end_time'] = false;
-  return $settings;
-}
