@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '657950c83dfc5f19b6790b0ac8b11c603acd7de6',
+    'reference' => '9056dbb823efcf22b636b1a09ba34614c363eed8',
     'name' => 'automattic/newspack-newsletters',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '657950c83dfc5f19b6790b0ac8b11c603acd7de6',
+      'reference' => '9056dbb823efcf22b636b1a09ba34614c363eed8',
     ),
     'campaignmonitor/createsend-php' => 
     array (
