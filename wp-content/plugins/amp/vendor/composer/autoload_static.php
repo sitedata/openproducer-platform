@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8adc6c3f07deecf522940444140aed37
+class ComposerStaticInitbe540b4715e7c35d69dbf02dbc51cdfb
 {
     public static $files = array (
         '6f5653f9af3eab04254ad2c7f20515c8' => __DIR__ . '/../..' . '/back-compat/back-compat.php',
@@ -256,7 +256,6 @@ class ComposerStaticInit8adc6c3f07deecf522940444140aed37
         'AmpProject\\Role' => __DIR__ . '/..' . '/ampproject/common/src/Role.php',
         'AmpProject\\RuntimeVersion' => __DIR__ . '/..' . '/ampproject/common/src/RuntimeVersion.php',
         'AmpProject\\Tag' => __DIR__ . '/..' . '/ampproject/common/src/Tag.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'FasterImage\\Exception\\InvalidImageException' => __DIR__ . '/..' . '/fasterimage/fasterimage/src/FasterImage/Exception/InvalidImageException.php',
         'FasterImage\\ExifParser' => __DIR__ . '/..' . '/fasterimage/fasterimage/src/FasterImage/ExifParser.php',
         'FasterImage\\FasterImage' => __DIR__ . '/..' . '/fasterimage/fasterimage/src/FasterImage/FasterImage.php',
@@ -300,6 +299,7 @@ class ComposerStaticInit8adc6c3f07deecf522940444140aed37
         'Sabberworm\\CSS\\Comment\\Comment' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Comment.php',
         'Sabberworm\\CSS\\Comment\\Commentable' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Commentable.php',
         'Sabberworm\\CSS\\OutputFormat' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/OutputFormat.php',
+        'Sabberworm\\CSS\\OutputFormatter' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/OutputFormat.php',
         'Sabberworm\\CSS\\Parser' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parser.php',
         'Sabberworm\\CSS\\Parsing\\OutputException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/OutputException.php',
         'Sabberworm\\CSS\\Parsing\\ParserState' => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/ParserState.php',
@@ -338,9 +338,9 @@ class ComposerStaticInit8adc6c3f07deecf522940444140aed37
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8adc6c3f07deecf522940444140aed37::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8adc6c3f07deecf522940444140aed37::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit8adc6c3f07deecf522940444140aed37::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbe540b4715e7c35d69dbf02dbc51cdfb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbe540b4715e7c35d69dbf02dbc51cdfb::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbe540b4715e7c35d69dbf02dbc51cdfb::$classMap;
 
         }, null, ClassLoader::class);
     }
