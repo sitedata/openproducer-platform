@@ -6,7 +6,7 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.21.2
+Version: 1.22.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: newspack-theme
@@ -3064,7 +3064,8 @@ div.sharedaddy .sd-social h3.sd-title,
   margin-bottom: 0;
 }
 
-.page:not(.home) article.page > .post-thumbnail {
+.page .entry-header + .post-thumbnail,
+.page .main-content > .post-thumbnail:first-child {
   margin-top: 1.5rem;
 }
 
@@ -3314,6 +3315,12 @@ div.sharedaddy .sd-social h3.sd-title,
 .featured-image-behind .entry-meta .byline {
   display: inline-block;
   margin-right: 1rem;
+}
+
+@media only screen and (min-width: 782px) {
+  .page .featured-image-behind .entry-header {
+    margin-bottom: 3rem;
+  }
 }
 
 .featured-image-beside > .wrapper {
@@ -4451,6 +4458,10 @@ div.sharedaddy .sd-social h3.sd-title,
 
 .single #secondary {
   padding-top: calc( 1rem * 1.5);
+}
+
+.page #secondary {
+  padding-top: 1rem;
 }
 
 .above-content {
