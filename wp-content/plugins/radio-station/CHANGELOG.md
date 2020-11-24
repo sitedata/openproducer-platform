@@ -7,6 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### 2.3.3.6
+* Update: Freemius SDK (2.4.1)
+* Update: Plugin Loader (1.1.5) with CSV validation fix
+* Fixed: Edit permissions checks for Related to Show post assignments
+* Fixed: Main Language option value for WordPress Setting
+* Fixed: make Date on Tab clickable on Tabbed Schedule View
+* Fixed: prevent possible conflicts with changes not saved reload message
+* Fixed: do not conflict check Shift against itself for last shift check
+* Fixed: link back to Show posts for related Show posts (allow multiple)
+* Fixed: filter next/previous post link for (multiple) related Show posts
+
 ### 2.3.3.5
 * Fixed: use schedule based on start_day if specified for Schedule view
 * Fixed: day left/right shifting on Schedule table/tab mobile views

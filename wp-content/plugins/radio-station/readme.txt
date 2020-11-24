@@ -3,7 +3,7 @@ Contributors: tonyzeoli, majick
 Donate link: https://netmix.co/donate
 Tags: dj, music, playlist, radio, shows, scheduling, broadcasting
 Requires at least: 3.3.1
-Tested up to: 5.5.3
+Tested up to: 5.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -183,6 +183,17 @@ You may translate the plugin into another language. Please visit our [WordPress 
 8. Show Conflict Display
 
 == Changelog ==
+
+= 2.3.3.6 =
+* Update: Freemius SDK (2.4.1)
+* Update: Plugin Loader (1.1.5) with CSV validation fix
+* Fixed: Edit permissions checks for Related to Show post assignments
+* Fixed: Main Language option value for WordPress Setting
+* Fixed: make Date on Tab clickable on Tabbed Schedule View
+* Fixed: prevent possible conflicts with changes not saved reload message
+* Fixed: do not conflict check Shift against itself for last shift check
+* Fixed: link back to Show posts for related Show posts (allow multiple)
+* Fixed: filter next/previous post link for (multiple) related Show posts
 
 = 2.3.3.5 =
 * Fixed: use schedule based on start_day if specified for Schedule view
