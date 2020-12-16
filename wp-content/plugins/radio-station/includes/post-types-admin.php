@@ -1187,6 +1187,14 @@ function radio_station_post_show_metabox() {
 	} elseif ( !is_array( $selected ) ) {
 		$selected = array( $selected );
 	}
+	// 2.3.3.6: remove possible saved zero value
+	if ( count( $selected ) > 0 ) {
+		foreach ( $selected as $i => $selected ) {
+			if ( 0 == $selected ) {
+				unset( $selected[$i] );
+			}
+		}
+	}
 
 	echo '<div id="meta_inner">';
 
@@ -1283,7 +1291,8 @@ function radio_station_post_save_data( $post_id ) {
 			}
 			foreach ( $show_ids as $i => $show_id ) {
 				$show_id = absint( trim( $show_id ) );
-				if ( $show_id > -1 ) {
+				// 2.3.3.6: check show ID value is above zero not -1
+				if ( $show_id > 0 ) {
 				// 2.3.3.6: check edit Show capability before adding
 					$post = get_post( $show_id );
 					if ( $post && current_user_can( 'edit_shows' ) && !in_array( $show_id, $new_show_ids ) ) {
@@ -1411,10 +1420,16 @@ function radio_station_post_column_data( $column, $post_id ) {
 		$show_ids = $disabled = array();
 		$show_id = get_post_meta( $post_id, 'post_showblog_id', true );
 		if ( $show_id ) {
+			// 2.3.3.6: add check to ignore possible saved zero value
 			if ( is_array( $show_id ) ) {
 				$show_ids = $show_id;
+				foreach ( $show_ids as $i => $show_id ) {
+					if ( 0 == $show_id ) {
+						unset( $show_ids[$i] );
+					}
+				}
 				$data = implode( ',', $show_id );
-			} else {
+			} elseif ( $show_id > 0 ) {
 				$show_ids = array( $show_id );
 				$data = $show_id;
 			}
@@ -1563,9 +1578,12 @@ function radio_station_posts_bulk_edit_handler( $redirect_to, $action, $post_ids
 	$posted_show_ids = array();
 	if ( count( $show_ids ) > 0 ) {
 		foreach ( $show_ids as $show_id ) {
-			$post = get_post( $show_id );
-			if ( current_user_can( 'edit_shows' ) ) {
-				$posted_show_ids[] = $show_id;
+			// 2.3.3.6: added check to ignore zero values
+			if ( 0 != $show_id ) {
+				$post = get_post( $show_id );
+				if ( current_user_can( 'edit_shows' ) ) {
+					$posted_show_ids[] = $show_id;
+				}
 			}
 		}
 	}
@@ -1581,9 +1599,12 @@ function radio_station_posts_bulk_edit_handler( $redirect_to, $action, $post_ids
 			$current_ids = get_post_meta( $post_id, 'post_showblog_id', true );
 			if ( $current_ids && is_array( $current_ids ) && ( count( $current_ids ) > 0 ) ) {
 				foreach ( $current_ids as $i => $current_id ) {
-					$post = get_post( $current_id );
-					if ( !current_user_can( 'edit_shows' ) ) {
-						$existing_show_ids[] = $current_id;
+					// 2.3.3.6: added check to ignore possible zero values
+					if ( 0 != $current_id ) {
+						$post = get_post( $current_id );
+						if ( !current_user_can( 'edit_shows' ) ) {
+							$existing_show_ids[] = $current_id;
+						}
 					}
 				}
 			}
@@ -1701,11 +1722,12 @@ function radio_station_show_info_metabox() {
 
 	// --- get show meta ---
 	// 2.3.2: added show download disable switch
-	$file = get_post_meta( $post->ID, 'show_file', true );
-	$download = get_post_meta( $post->ID, 'show_download', true );
-	$email = get_post_meta( $post->ID, 'show_email', true );
 	$active = get_post_meta( $post->ID, 'show_active', true );
 	$link = get_post_meta( $post->ID, 'show_link', true );
+	$email = get_post_meta( $post->ID, 'show_email', true );
+	$phone = get_post_meta( $post->ID, 'show_phone', true );
+	$file = get_post_meta( $post->ID, 'show_file', true );
+	$download = get_post_meta( $post->ID, 'show_download', true );
 	$patreon_id = get_post_meta( $post->ID, 'show_patreon', true );
 
 	// added max-width to prevent metabox overflows
@@ -1720,8 +1742,13 @@ function radio_station_show_info_metabox() {
 		echo '<p><div style="width:120px; display:inline-block;"><label>' . esc_html( __( 'Website Link', 'radio-station' ) ) . ':</label></div>
 		<input type="text" name="show_link" size="100" style="max-width:80%;" value="' . esc_url( $link ) . '" /></p>';
 
-		echo '<p><div style="width:120px; display:inline-block;"><label>' . esc_html( __( 'DJ / Host Email', 'radio-station' ) ) . ':</label></div>
+		// 2.3.3.6: change text string from DJ / Host email (as maybe multiple hosts)
+		echo '<p><div style="width:120px; display:inline-block;"><label>' . esc_html( __( 'Show Email', 'radio-station' ) ) . ':</label></div>
 		<input type="text" name="show_email" size="100" style="max-width:80%;" value="' . esc_attr( $email ) . '" /></p>';
+
+		// 2.3.3.6: added Show phone number input field
+		echo '<p><div style="width:120px; display:inline-block;"><label>' . esc_html( __( 'Show Phone', 'radio-station' ) ) . ':</label></div>
+		<input type="text" name="show_phone" size="100" style="max-width:80%;" value="' . esc_attr( $phone ) . '" /></p>';
 
 		echo '<p><div style="width:120px; display:inline-block;"><label>' . esc_html( __( 'Latest Audio File', 'radio-station' ) ) . ':</label></div>
 		<input type="text" name="show_file" size="100" style="max-width:80%;" value="' . esc_attr( $file ) . '" /></p>';
@@ -3114,6 +3141,18 @@ function radio_station_show_save_data( $post_id ) {
 		$link = filter_var( trim( $_POST['show_link'] ), FILTER_SANITIZE_URL );
 		$patreon_id = sanitize_title( $_POST['show_patreon'] );
 
+		// 2.3.3.6: added phone number with character filter validation
+		$phone = trim( $_POST['show_phone'] );
+		if ( strlen( $phone ) > 0 ) {
+			$phone = str_split( $phone, 1 );
+			$phone = preg_filter( '/^[0-9+\(\)#\.\s\-]+$/', '$0', $phone );
+			if ( count( $phone ) > 0 ) {
+				$phone = implode( '', $phone );
+			} else {
+				$phone = '';
+			}
+		}
+
 		// 2.2.8: removed strict in_array checking
 		// 2.3.2: fix for unchecked boxes index warning
 		$active = $download = '';
@@ -3134,15 +3173,18 @@ function radio_station_show_save_data( $post_id ) {
 		// --- get existing values and check if changed ---
 		// 2.3.0: added check against previous values
 		// 2.3.2: added download disable switch
+		// 2.3.3.6: added phone number field saving
 		$prev_file = get_post_meta( $post_id, 'show_file', true );
 		$prev_download = get_post_meta( $post_id, 'show_download', true );
 		$prev_email = get_post_meta( $post_id, 'show_email', true );
+		$prev_phone = get_post_meta( $post_id, 'show_phone', true );
 		$prev_active = get_post_meta( $post_id, 'show_active', true );
 		$prev_link = get_post_meta( $post_id, 'show_link', true );
 		$prev_patreon_id = get_post_meta( $post_id, 'show_patreon', true );
-		if ( ( $prev_file != $file ) || ( $prev_email != $email )
-		     || ( $prev_active != $active ) || ( $prev_link != $link )
-		     || ( $prev_download != $download ) || ( $prev_patreon_id != $patreon_id ) ) {
+		if ( ( $prev_active != $active ) || ( $prev_link != $link )
+		     || ( $prev_email != $email ) || ( $prev_phone != $phone )
+		     || ( $prev_file != $file ) || ( $prev_download != $download )
+		     || ( $prev_patreon_id != $patreon_id ) ) {
 			$show_meta_changed = true;
 		}
 
@@ -3151,6 +3193,7 @@ function radio_station_show_save_data( $post_id ) {
 		update_post_meta( $post_id, 'show_file', $file );
 		update_post_meta( $post_id, 'show_download', $download );
 		update_post_meta( $post_id, 'show_email', $email );
+		update_post_meta( $post_id, 'show_phone', $phone );
 		update_post_meta( $post_id, 'show_active', $active );
 		update_post_meta( $post_id, 'show_link', $link );
 		update_post_meta( $post_id, 'show_patreon', $patreon_id );
@@ -3362,8 +3405,9 @@ function radio_station_show_save_data( $post_id ) {
 	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 		if ( isset( $_POST['action'] ) && ( 'radio_station_show_save_shifts' == $_POST['action'] ) ) {
 
-			print_r( $_POST['show_sched'] );
-			print_r( $new_shifts );
+			// --- (hidden) debug information ---
+			echo "Posted Shifsts: " . print_r( $_POST['show_sched'], true ) . PHP_EOL;
+			echo "New Shifts: " . print_r( $new_shifts, true ) . PHP_EOL;
 
 			// --- display shifts saved message ---
 			$show_shifts_nonce = wp_create_nonce( 'radio-station' );

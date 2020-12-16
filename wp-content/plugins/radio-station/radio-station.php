@@ -10,7 +10,7 @@ Plugin Name: Radio Station
 Plugin URI: https://netmix.com/radio-station
 Description: Adds Show pages, DJ role, playlist and on-air programming functionality to your site.
 Author: Tony Zeoli, Tony Hayes
-Version: 2.3.3.5
+Version: 2.3.3.6
 Text Domain: radio-station
 Domain Path: /languages
 Author URI: https://netmix.com/radio-station
@@ -47,6 +47,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 // - Enqueue Plugin Stylesheet
 // - Localize Time Strings
 // === Template Filters ===
+// - Get Template
+// - Station Phone Number Filter
 // - Automatic Pages Content Filter
 // - Single Content Template Filter
 // - Show Content Template Filter
@@ -218,6 +220,31 @@ $options = array(
 		'tab'     => 'general',
 		'section' => 'broadcast',
 	),
+
+	// --- Station Phone Number ---
+	// 2.3.3.6: added station phone number option
+	'station_phone'		=> array(
+		'type'    => 'text',
+		'options' => 'PHONE',
+		'label'   => __( 'Station Phone', 'radio-station' ),
+		'default' => '',
+		'helper'  => __( 'Main call in phone number for the Station (for requests etc.)', 'radio-station' ),
+		'tab'     => 'general',
+		'section' => 'broadcast',
+	),
+
+	// --- Phone for Shows ---
+	// 2.3.3.6: added default to station phone option
+	'shows_phone'		=> array(
+		'type'    => 'checkbox',
+		'default' => '',
+		'value'   => 'yes',
+		'label'   => __( 'Show Phone Display', 'radio-station' ),
+		'helper'  => __( 'Display Station phone number on Shows where a Show phone number is not set.', 'radio-station' ),
+		'tab'     => 'general',
+		'section' => 'broadcast',
+	),
+
 
 	// === Times ===
 
@@ -1213,9 +1240,9 @@ function radio_station_settings_page_redirect() {
 }
 
 
-// -----------------
-// === Templates ===
-// -----------------
+// ------------------------
+// === Template Filters ===
+// ------------------------
 
 // ------------
 // Get Template
@@ -1305,15 +1332,34 @@ function radio_station_get_template( $type, $template, $paths = false ) {
 	return false;
 }
 
+// ---------------------------
+// Station Phone Number Filter
+// ---------------------------
+// 2.3.3.6: added to return station phone for all Shows (if not set for Show)
+add_filter( 'radio_station_show_phone', 'radio_station_phone_number', 10, 2 );
+function radio_station_phone_number( $phone, $post_id ) {
+	if ( $phone ) {
+		return $phone;
+	}
+	$shows_phone = radio_station_get_setting( 'shows_phone' );
+	if ( 'yes' == $shows_phone ) {
+		$phone = radio_station_get_setting( 'station_phone' );
+		return $phone;
+	}
+	return false;
+}
+
 // ------------------------------
 // Automatic Pages Content Filter
 // ------------------------------
 // 2.3.0: standalone filter for automatic page content
 // 2.3.1: re-add filter so the_content can be processed multuple times
-add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-function radio_station_automatic_pages_content( $content ) {
+// 2.3.3.6: set automatic content early and clear existing content
+add_filter( 'the_content', 'radio_station_automatic_pages_content_set', 1 );
+function radio_station_automatic_pages_content_set( $content ) {
 
-	// global $radio_station_data;
+	global $radio_station_data;
+
 	// if ( isset( $radio_station_data['doing_excerpt'] ) && $radio_station_data['doing_excerpt'] ) {
 	//	return $content;
 	// }
@@ -1334,11 +1380,6 @@ function radio_station_automatic_pages_content( $content ) {
 					}
 				}
 				$shortcode = '[master-schedule' . $atts_string . ']';
-				remove_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				$content = do_shortcode( $shortcode );
-				// 2.3.1: re-add filter so the_content may be processed multuple times
-				add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				return $content;
 			}
 		}
 	}
@@ -1361,11 +1402,6 @@ function radio_station_automatic_pages_content( $content ) {
 					}
 				}
 				$shortcode = '[shows-archive' . $atts_string . ']';
-				remove_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				$content = do_shortcode( $shortcode );
-				// 2.3.1: re-add filter so the_content may be processed multuple times
-				add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				return $content;
 			}
 		}
 	}
@@ -1388,11 +1424,6 @@ function radio_station_automatic_pages_content( $content ) {
 					}
 				}
 				$shortcode = '[overrides-archive' . $atts_string . ']';
-				remove_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				$content = do_shortcode( $shortcode );
-				// 2.3.1: re-add filter so the_content may be processed multuple times
-				add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				return $content;
 			}
 		}
 	}
@@ -1415,11 +1446,6 @@ function radio_station_automatic_pages_content( $content ) {
 					}
 				}
 				$shortcode = '[playlists-archive' . $atts_string . ']';
-				remove_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				$content = do_shortcode( $shortcode );
-				// 2.3.1: re-add filter so the_content may be processed multuple times
-				add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				return $content;
 			}
 		}
 	}
@@ -1442,17 +1468,38 @@ function radio_station_automatic_pages_content( $content ) {
 					}
 				}
 				$shortcode = '[genres-archive' . $atts_string. ']';
-				remove_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				$content = do_shortcode( $shortcode );
-				// 2.3.1: re-add filter so the_content may be processed multuple times
-				add_filter( 'the_content', 'radio_station_automatic_pages_content', 11 );
-				return $content;
 			}
 		}
 	}
 
+	// 2.3.3.6: moved out to reduce repetitive code
+	if ( isset( $shortcode ) ) {
+		remove_filter( 'the_content', 'radio_station_automatic_pages_content_set', 1 );
+		remove_filter( 'the_content', 'radio_station_automatic_pages_content_get', 11 );
+		$radio_station_data['automatic_content'] = do_shortcode( $shortcode );
+		// 2.3.1: re-add filter so the_content may be processed multuple times
+		add_filter( 'the_content', 'radio_station_automatic_pages_content_set', 1 );
+		add_filter( 'the_content', 'radio_station_automatic_pages_content_get', 11 );
+		// 2.3.3.6: clear existing content to allow for interim filters
+		$content = '';
+	}
+
 	return $content;
 }
+
+// ----------------------------------
+// Automatic Pages Content Set Filter
+// ----------------------------------
+// 2.3.3.6: append existing automatic page content to allow for interim filters
+add_filter( 'the_content', 'radio_station_automatic_pages_content_get', 11 );
+function radio_station_automatic_pages_content_get( $content ) {
+	global $radio_station_data;
+	if ( isset( $radio_station_data['automatic_content'] ) ) {
+		$content .= $radio_station_data['automatic_content'];
+	}
+	return $content;
+}
+
 
 // ------------------------------
 // Single Content Template Filter
@@ -1819,12 +1866,17 @@ function radio_station_add_show_links( $content ) {
 
 		// --- link show posts ---
 		$related_shows = get_post_meta( $post->ID, 'post_showblog_id', true );
-		if ( $related_shows ) {
-
-			// 2.3.3.6: convert string value if not multiple
-			if ( !is_array( $related_shows ) ) {
-				$related_shows = array( $related_shows );
+		// 2.3.3.6: convert string value if not multiple
+		if ( $related_shows && !is_array( $related_shows ) ) {
+			$related_shows = array( $related_shows );
+		}
+		// 2.3.3.6: remove possible zero values
+		foreach ( $related_shows as $i => $related_show ) {
+			if ( 0 == $related_show ) {
+				unset( $related_shows[$i] );
 			}
+		}
+		if ( $related_shows && is_array( $related_shows ) && ( count( $related_shows ) > 0 ) ) {
 
 			$positions = array( 'after' );
 			$positions = apply_filters( 'radio_station_link_to_show_positions', $positions, $post->post_type, $post );
@@ -2032,6 +2084,15 @@ function radio_station_get_show_post_link( $output, $format, $link, $adjacent_po
 			$related_shows = $related_show;
 		} else {
 			$related_shows = array( $related_show );
+		}
+		// 2.3.3.6: remove possible saved zero value
+		foreach ( $related_shows as $i => $related_show ) {
+			if ( 0 == $related_show ) {
+				unset( $related_shows[$i] );
+			}
+		}
+		if ( 0 == count( $related_shows ) ) {
+			return $output;
 		}
 		if ( RADIO_STATION_DEBUG ) {
 			echo '<span style="display:none;">Related Shows A: ' . print_r( $related_shows, true ) . '</span>';
