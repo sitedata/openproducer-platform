@@ -1,3 +1,27 @@
+## [1.16.2](https://github.com/Automattic/newspack-newsletters/compare/v1.16.1...v1.16.2) (2021-01-12)
+
+
+### Bug Fixes
+
+* alignment for elements using textAlign ([#390](https://github.com/Automattic/newspack-newsletters/issues/390)) ([405c33e](https://github.com/Automattic/newspack-newsletters/commit/405c33e734ebcf9656b6ddba405df3f10ac440af))
+* longer timeout for test send ([#389](https://github.com/Automattic/newspack-newsletters/issues/389)) ([0d18659](https://github.com/Automattic/newspack-newsletters/commit/0d1865902b9eed57cdb7e0c79f3ac9f20c67ea55))
+* **mjml:** error handling ([f47fdf4](https://github.com/Automattic/newspack-newsletters/commit/f47fdf454f90682168c9f46e63b3547937de96af))
+
+## [1.16.1](https://github.com/Automattic/newspack-newsletters/compare/v1.16.0...v1.16.1) (2020-12-09)
+
+
+### Bug Fixes
+
+* empty commit to trigger a release after CI job timeout ([0273e2a](https://github.com/Automattic/newspack-newsletters/commit/0273e2a5aaa4067f3f6671550fbd02bd3ab9e50b))
+* image links ([23a6dc9](https://github.com/Automattic/newspack-newsletters/commit/23a6dc98626a48aac3e87ad1fe293d7031acfcb6))
+
+# [1.16.0](https://github.com/Automattic/newspack-newsletters/compare/v1.15.1...v1.16.0) (2020-12-09)
+
+
+### Features
+
+* setting to opt-in to mailchimp tags ([#380](https://github.com/Automattic/newspack-newsletters/issues/380)) ([a9e0c66](https://github.com/Automattic/newspack-newsletters/commit/a9e0c66a75e917a853053b1c3c178b97ef5d6957))
+
 ## [1.15.1](https://github.com/Automattic/newspack-newsletters/compare/v1.15.0...v1.15.1) (2020-11-17)
 
 

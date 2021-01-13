@@ -1,5 +1,15 @@
 <?php
 
+
+
+
+
+
+
+
+
+
+
 namespace Composer;
 
 use Composer\Semver\VersionParser;
@@ -19,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9056dbb823efcf22b636b1a09ba34614c363eed8',
+    'reference' => 'fc307f2574aa9c7f092116dc5b726c5ba9bc4cff',
     'name' => 'automattic/newspack-newsletters',
   ),
   'versions' => 
@@ -31,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9056dbb823efcf22b636b1a09ba34614c363eed8',
+      'reference' => 'fc307f2574aa9c7f092116dc5b726c5ba9bc4cff',
     ),
     'campaignmonitor/createsend-php' => 
     array (
