@@ -1,5 +1,23 @@
 == Changelog ==
 
+= 9.7.3 =
+
+### Bug Fixes
+
+- Prevent mangle of translation functions to fix RTL locales.
+
+
+= 9.7.2 =
+
+### Bug Fixes
+
+- Keep the inserter opened when clicking the scrollbar.
+
+### Various
+
+- Updated the "tested up to" WordPress version.
+
+
 = 9.7.1 =
 
 ### Bug Fixes
