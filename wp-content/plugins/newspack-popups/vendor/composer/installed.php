@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9ddc220a0a8ce55239cdbc70447f44e73f37d810',
+    'reference' => '33b83a484f19f99265c6ccaf98fbdd67e67dc2d5',
     'name' => 'automattic/newspack-popups',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9ddc220a0a8ce55239cdbc70447f44e73f37d810',
+      'reference' => '33b83a484f19f99265c6ccaf98fbdd67e67dc2d5',
     ),
     'drewm/mailchimp-api' => 
     array (
