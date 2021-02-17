@@ -50,7 +50,6 @@ return array(
     'Google\\Site_Kit\\Core\\Modules\\Module' => $baseDir . '/Core/Modules/Module.php',
     'Google\\Site_Kit\\Core\\Modules\\Module_Registry' => $baseDir . '/Core/Modules/Module_Registry.php',
     'Google\\Site_Kit\\Core\\Modules\\Module_Settings' => $baseDir . '/Core/Modules/Module_Settings.php',
-    'Google\\Site_Kit\\Core\\Modules\\Module_With_Admin_Bar' => $baseDir . '/Core/Modules/Module_With_Admin_Bar.php',
     'Google\\Site_Kit\\Core\\Modules\\Module_With_Assets' => $baseDir . '/Core/Modules/Module_With_Assets.php',
     'Google\\Site_Kit\\Core\\Modules\\Module_With_Assets_Trait' => $baseDir . '/Core/Modules/Module_With_Assets_Trait.php',
     'Google\\Site_Kit\\Core\\Modules\\Module_With_Debug_Fields' => $baseDir . '/Core/Modules/Module_With_Debug_Fields.php',
