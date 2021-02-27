@@ -187,25 +187,30 @@ You may translate the plugin into another language. Please visit our [WordPress 
 
 
 ## Upgrade Notices
+
+#### 2.3.3.8
+* Update: Plugin Panel (1.1.7) with Image and Color Picker fields
+* Added: Stream Format and Fallback/Format selection setting
+* Added: Station Email Address setting with default display option
+* Added: Section order filtering for Master Schedule Views
+* Added: Section display filtering for Master Schedule Views
+* Added: Section display filtering for Widget sections
+* Added: Show image alignment attribute to Schedule Tabs View
+* Added: Show Description/Excerpt to Show Data Endpoint (via querystring)
+* Added: Reduced opacity for past Shows on Schedule Tab/Table Views
+* Added: Screen Reader text for Show icons on Show Page
+* Fixed: Display Widget Countdown when no Current Show/Playlist
+* Fixed: Check for explicit singular.php template usage setting
+* Fixed: Access to Shows Data via querystring of Show ID/name
+* Fixed: Shows Data for Genres/Languages querystring of ID/name
+* Fixed: Changed stable tag from trunk to version number to fix translations issue
+
 #### 2.3.3.7
-* Various bug fixes. Please [view the Changelog](./CHANGELOG.md) for details.
-
-#### 2.3.3.6
-* Update: Freemius SDK (2.4.1)
-* Update: Plugin Loader (1.1.6) with phone number and CSV validation
-* Added: Station phone number setting with default display option
-* Added: Schedule classes for Shows before and after current Show
-* Improved: current Show highlighting on Schedule for overnight shifts
-* Improved: info section reordering filters on single Show template
-* Fixed: Edit permissions checks for Related to Show post assignments
-* Fixed: Main Language option value for WordPress Setting
-* Fixed: make Date on Tab clickable on Tabbed Schedule View
-* Fixed: prevent possible conflicts with changes not saved reload message
-* Fixed: do not conflict check Shift against itself for last shift check
-* Fixed: link back to Show posts for related Show posts (allow multiple)
-* Fixed: filter next/previous post link for (multiple) related Show posts
-* Fixed: automatic pages conflict where themes filter the_content early
-
+* Updated Freemius SDK and Plugin Loader libraries
+* Added Station phone number setting with default display option
+* Added Schedule classes for Shows before and after current Show
+* Multiple Related Show Post assignment edit and link fixes
+* Bugfixes for permissions, main language and shift checker
 
 #### 2.3.3.6
 * Updated Freemius SDK and Plugin Loader libraries
