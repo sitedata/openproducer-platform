@@ -84,11 +84,9 @@ a.button:hover, a.button:visited {
 .woocommerce-breadcrumb {
   margin-bottom: 3rem;
   font-size: 0.88889em;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .woocommerce-pagination {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
 }
 
@@ -116,7 +114,6 @@ a.button:hover, a.button:visited {
   display: inline-block;
   background: #36f;
   color: #fff;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.71111em;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -124,10 +121,6 @@ a.button:hover, a.button:visited {
   padding: 0.5rem;
   text-transform: uppercase;
   z-index: 1;
-}
-
-.price {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .price del {
@@ -146,14 +139,12 @@ a.button:hover, a.button:visited {
   padding: 1rem;
   background: #eee;
   font-size: 0.88889em;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   list-style: none;
   overflow: hidden;
 }
 
 .woocommerce-message {
   background: #eee;
-  color: #111;
 }
 
 .woocommerce-error {
@@ -237,7 +228,6 @@ a.button:hover, a.button:visited {
 .woocommerce-products-header__title.page-title {
   font-size: 1.6875em;
   font-weight: 700;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .woocommerce-result-count {
@@ -271,12 +261,6 @@ ul.products li.product .woocommerce-loop-product__title::before {
   content: none;
 }
 
-ul.products li.product .woocommerce-loop-product__title,
-ul.products li.product .price,
-ul.products li.product .star-rating {
-  color: #111;
-}
-
 ul.products li.product .star-rating {
   margin-bottom: 0.8rem;
 }
@@ -307,7 +291,6 @@ ul.products li.product .button.loading {
 ul.products li.product .added_to_cart {
   margin-left: 0.5rem;
   font-size: 0.88889em;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Name your price */
@@ -353,7 +336,7 @@ ul.products li.product .added_to_cart {
   left: 0;
 }
 
-a.remove {
+.product-remove a.remove {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -367,7 +350,7 @@ a.remove {
   color: #fff;
 }
 
-a.remove:hover {
+.product-remove a.remove:hover {
   background: #000;
   color: #fff !important;
 }
@@ -553,7 +536,6 @@ table.variations select {
 .woocommerce-tabs ul {
   margin: 0 0 1.5rem;
   padding: 0;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .woocommerce-tabs ul li {
@@ -561,14 +543,12 @@ table.variations select {
 }
 
 .woocommerce-tabs ul li a {
-  color: #111;
   text-decoration: none;
   font-weight: 700;
 }
 
 .woocommerce-tabs ul li.active a {
-  color: #36f;
-  box-shadow: 0 2px 0 #36f;
+  box-shadow: 0 2px 0 currentColor;
 }
 
 .woocommerce-tabs .panel > * {
@@ -590,7 +570,6 @@ table.variations select {
 }
 
 .woocommerce-tabs .comment-reply-title {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1em;
   font-weight: bold;
   margin: 0 0 0.75rem;
@@ -828,7 +807,6 @@ table.variations select {
  * Account section
  */
 .woocommerce-account .woocommerce-MyAccount-navigation {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin: 0 0 2rem;
 }
 
@@ -1045,12 +1023,12 @@ table.variations select {
   margin-bottom: 2px;
   margin-left: 0.25rem;
   border-width: 6px 6px 0 6px;
-  border-color: #111 transparent transparent transparent;
+  border-color: currentColor transparent transparent transparent;
 }
 
 .woocommerce-terms-and-conditions-link.woocommerce-terms-and-conditions-link--open::after {
   border-width: 0 6px 6px 6px;
-  border-color: transparent transparent #111 transparent;
+  border-color: transparent transparent currentColor transparent;
 }
 
 .woocommerce-checkout h3 {
