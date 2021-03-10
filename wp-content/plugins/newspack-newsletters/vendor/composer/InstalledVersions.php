@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '4796e3d62136c20b8998f958b83068d12da29e40',
+    'reference' => 'cf96707d3d5dbf04ca6b822f9f63251efb539d3f',
     'name' => 'automattic/newspack-newsletters',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '4796e3d62136c20b8998f958b83068d12da29e40',
+      'reference' => 'cf96707d3d5dbf04ca6b822f9f63251efb539d3f',
     ),
     'campaignmonitor/createsend-php' => 
     array (

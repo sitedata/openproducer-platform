@@ -19,6 +19,8 @@
         margin-bottom: 8px; }
       .newspack-popover__campaigns__secondary-popover .components-popover__content > div > *:last-child {
         margin-bottom: 0; }
+  .newspack-popover__campaigns__secondary-popover .components-form-token-field__help {
+    display: none; }
 
 .newspack-popover__campaigns__info {
   background: #f8f9f9;
@@ -351,7 +353,10 @@
   .newspack-campaigns__draggable .newspack-action-card {
     background: white;
     flex-direction: row; }
+    .newspack-campaigns__draggable .newspack-action-card .newspack-action-card__region-children {
+      padding: 0 0 0 16px; }
     .newspack-campaigns__draggable .newspack-action-card .newspack-action-card__region-top {
+      padding: 8px 16px 8px 0 !important;
       flex: 1;
       order: 2; }
 

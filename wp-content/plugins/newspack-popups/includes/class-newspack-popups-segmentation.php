@@ -56,14 +56,15 @@ final class Newspack_Popups_Segmentation {
 		add_action( 'wp_footer', [ __CLASS__, 'insert_amp_analytics' ], 20 );
 
 		add_filter( 'newspack_custom_dimensions', [ __CLASS__, 'register_custom_dimensions' ] );
-
-		// Sending pageviews with segmentation-related custom dimensions.
-		// 1. Disable pageview sending from Site Kit's GTAG implementation. The custom events sent using Site Kit's
-		// GTAG will not contain the segmentation-related custom dimensions.
-		add_filter( 'googlesitekit_gtag_opt', [ __CLASS__, 'remove_pageview_reporting' ] );
-		add_filter( 'googlesitekit_amp_gtag_opt', [ __CLASS__, 'remove_pageview_reporting_amp' ] );
-		// 2. Add an amp-analytics tag which will send the PV with custom dimensions attached.
-		add_action( 'wp_footer', [ __CLASS__, 'insert_gtag_amp_analytics' ] );
+		if ( ! Newspack_Popups_Settings::is_non_interactive() && ( ! defined( 'NEWSPACK_POPUPS_DISABLE_REPORTING_CUSTOM_DIMENSIONS' ) || true !== NEWSPACK_POPUPS_DISABLE_REPORTING_CUSTOM_DIMENSIONS ) ) {
+			// Sending pageviews with segmentation-related custom dimensions.
+			// 1. Disable pageview sending from Site Kit's GTAG implementation. The custom events sent using Site Kit's
+			// GTAG will not contain the segmentation-related custom dimensions.
+			add_filter( 'googlesitekit_gtag_opt', [ __CLASS__, 'remove_pageview_reporting' ] );
+			add_filter( 'googlesitekit_amp_gtag_opt', [ __CLASS__, 'remove_pageview_reporting_amp' ] );
+			// 2. Add an amp-analytics tag which will send the PV with custom dimensions attached.
+			add_action( 'wp_footer', [ __CLASS__, 'insert_gtag_amp_analytics' ] );
+		}
 
 		add_action( 'newspack_popups_segmentation_data_prune', [ __CLASS__, 'prune_data' ] );
 		if ( ! wp_next_scheduled( 'newspack_popups_segmentation_data_prune' ) ) {
@@ -159,7 +160,7 @@ final class Newspack_Popups_Segmentation {
 				'custom_dimensions'                 => wp_json_encode( $custom_dimensions ),
 				'custom_dimensions_existing_values' => wp_json_encode( $custom_dimensions_existing_values ),
 			],
-			plugins_url( '../api/segmentation/index.php', __FILE__ )
+			self::get_client_data_endpoint()
 		);
 
 		?>
@@ -235,7 +236,7 @@ final class Newspack_Popups_Segmentation {
 			$initial_client_report_url_params['mc_cid'] = sanitize_text_field( $_GET['mc_cid'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$initial_client_report_url_params['mc_eid'] = sanitize_text_field( $_GET['mc_eid'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
-		if ( is_user_logged_in() ) {
+		if ( is_user_logged_in() && ! Newspack_Popups::is_preview_request() ) {
 			if ( function_exists( 'wc_get_orders' ) ) {
 				$user_orders = wc_get_orders( [ 'customer_id' => get_current_user_id() ] );
 				if ( count( $user_orders ) ) {
@@ -496,7 +497,7 @@ final class Newspack_Popups_Segmentation {
 		$client_in_segment = array_filter(
 			$all_client_data,
 			function ( $client_data ) use ( $segment_config ) {
-				return Campaign_Data_Utils::should_display_campaign(
+				return Campaign_Data_Utils::does_client_match_segment(
 					$segment_config,
 					$client_data
 				);

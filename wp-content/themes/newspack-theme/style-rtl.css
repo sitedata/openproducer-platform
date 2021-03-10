@@ -6,7 +6,7 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.29.0
+Version: 1.31.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: newspack
@@ -464,13 +464,18 @@ textarea {
 .woocommerce .onsale,
 .woocommerce .price,
 .woocommerce .product_meta,
+.woocommerce-review-link,
 .woocommerce .first-payment-date,
+.woocommerce-grouped-product-list,
 .woocommerce-message,
 .woocommerce-error,
 .woocommerce-info,
+.woocommerce-Reviews .comment-reply-title,
 ul.products .added_to_cart,
 .woocommerce-tabs ul,
 .woocommerce-MyAccount-navigation,
+.product .nyp,
+.woocommerce-results-wrapper,
 .wpbnbd .freq-label,
 .wpbnbd .tier-label,
 h1,
@@ -949,6 +954,21 @@ form p {
 
 .search-form button:active, .search-form button:hover, .search-form button:focus {
   color: #36f;
+}
+
+.amp-wp-default-form-message p {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.amp-wp-default-form-message small {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+  border-color: #84c46e;
+  background: #a1e789;
 }
 
 /* Navigation */
