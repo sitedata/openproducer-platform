@@ -62,6 +62,9 @@ if ( class_exists( 'WP_REST_Controller' ) ) {
 	if ( ! class_exists( 'WP_REST_Templates_Controller' ) ) {
 		require_once __DIR__ . '/full-site-editing/class-wp-rest-templates-controller.php';
 	}
+	if ( ! class_exists( 'WP_REST_Block_Editor_Settings_Controller' ) ) {
+		require_once dirname( __FILE__ ) . '/class-wp-rest-block-editor-settings-controller.php';
+	}
 	/**
 	* End: Include for phase 2
 	*/
@@ -80,6 +83,7 @@ if ( ! class_exists( 'WP_Widget_Block' ) ) {
 require_once __DIR__ . '/widgets-page.php';
 
 require __DIR__ . '/compat.php';
+require __DIR__ . '/compat/wordpress-5.8.php';
 require __DIR__ . '/utils.php';
 require __DIR__ . '/editor-settings.php';
 
@@ -117,7 +121,6 @@ require __DIR__ . '/navigation.php';
 require __DIR__ . '/navigation-page.php';
 require __DIR__ . '/experiments-page.php';
 require __DIR__ . '/global-styles.php';
-require __DIR__ . '/query-utils.php';
 
 require __DIR__ . '/block-supports/generated-classname.php';
 require __DIR__ . '/block-supports/colors.php';
@@ -127,3 +130,4 @@ require __DIR__ . '/block-supports/custom-classname.php';
 require __DIR__ . '/block-supports/border.php';
 require __DIR__ . '/block-supports/layout.php';
 require __DIR__ . '/block-supports/padding.php';
+require __DIR__ . '/block-supports/duotone.php';
