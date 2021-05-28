@@ -1,4 +1,18 @@
-﻿= 3.1 =
+﻿= 3.1.3 =
+* Fixed edge cases where post content was overridden.
+* Fixed bug where buddypress avatar override wasn't working.
+* Removed the shortcode builder due to wp.org no longer accepting code inserters.
+
+= 3.1.2 =
+* Fixed issue where registration with username requirement disabled wasn't working.
+* Fixed fatal error caused during user registration.
+
+= 3.1.1 =
+* Scoped all admin CSS to reduce conflict with other plugin admin pages.
+* Fixed incompatibility with Max Mega Menu plugin.
+* Fixed PHP 8 Fatal error: Uncaught ValueError: Unknown format specifier.
+
+= 3.1 =
 * Fixed bug where disabling admin new user notifications wasn’t working.
 * Fixed fatar error: Cannot use ProfilePress\Core\Base as Base because the name is already in use.
 * Fixed issue where myaccount js was shown on all pages.

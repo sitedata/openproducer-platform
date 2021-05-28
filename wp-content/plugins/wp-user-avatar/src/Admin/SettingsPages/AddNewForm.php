@@ -23,7 +23,7 @@ class AddNewForm extends AbstractSettingsPage
         add_filter('wp_cspa_main_content_area', [$this, 'form_list']);
 
         $instance = Custom_Settings_Page_Api::instance();
-        if($_GET['page'] == PPRESS_MEMBER_DIRECTORIES_SLUG) {
+        if ($_GET['page'] == PPRESS_MEMBER_DIRECTORIES_SLUG) {
             $instance->page_header(__('Add Member Directory', 'wp-user-avatar'));
         }
         $this->register_core_settings($instance, true);
@@ -39,29 +39,50 @@ class AddNewForm extends AbstractSettingsPage
                 <div class="profile-press-design-gateway">
                     <div class="profile-press-design-gateway-inner">
                         <div class="pp-half clearfix">
-                            <div class="pp-hald-first" data-builder-type="dragDropBuilder">
+                            <div class="pp-hald-first ppbd-active" data-builder-type="dragDropBuilder">
                                 <div class="pp-half-meta-inner">
                                     <div class="pp-half-first-thumb responsive-image">
-                                        <img src="<?= PPRESS_ASSETS_URL; ?>/images/admin/dragdrop-builder-icon.png"></div>
+                                        <img src="<?= PPRESS_ASSETS_URL; ?>/images/admin/dragdrop-builder-icon.png">
+                                    </div>
                                     <div class="pp-half-meta">
                                         <h2><?php _e('Drag & Drop Builder', 'wp-user-avatar') ?></h2>
                                         <p><?php _e('Create beautiful, responsive forms with easy to use drag & drop form builder.', 'wp-user-avatar'); ?></p>
                                     </div>
                                 </div>
-                                <button class="pp-builder-create-btn"><?php _e('Try Now', 'wp-user-avatar'); ?></button>
+                                <button class="pp-builder-create-btn"><?php _e('Get Started', 'wp-user-avatar'); ?></button>
                             </div>
-                            <div class="pp-hald-first" data-builder-type="shortcodeBuilder">
-                                <div class="pp-half-meta-inner">
-                                    <div class="pp-half-first-thumb responsive-image">
-                                        <img src="<?= PPRESS_ASSETS_URL; ?>/images/admin/shortcode-builder-icon.png">
+
+                            <?php if (class_exists('ProfilePress\Libsodium\Libsodium')) : ?>
+                                <div class="pp-hald-first ppbd-active" data-builder-type="shortcodeBuilder">
+                                    <div class="pp-half-meta-inner">
+                                        <div class="pp-half-first-thumb responsive-image">
+                                            <img src="<?= PPRESS_ASSETS_URL; ?>/images/admin/shortcode-builder-icon.png">
+                                        </div>
+                                        <div class="pp-half-meta">
+                                            <h2><?php _e('Shortcode Builder', 'wp-user-avatar'); ?></h2>
+                                            <p><?php _e('Code your own from scratch with complete control and flexibility using shortcodes.', 'wp-user-avatar'); ?></p>
+                                        </div>
                                     </div>
-                                    <div class="pp-half-meta">
-                                        <h2><?php _e('Shortcode Builder', 'wp-user-avatar'); ?></h2>
-                                        <p><?php _e('Code your own from scratch with complete control and flexibility using shortcodes.', 'wp-user-avatar'); ?></p>
-                                    </div>
+                                    <button class="pp-builder-create-btn"><?php _e('Build Now', 'wp-user-avatar'); ?></button>
                                 </div>
-                                <button class="pp-builder-create-btn"><?php _e('Build Now', 'wp-user-avatar'); ?></button>
-                            </div>
+                            <?php endif; ?>
+
+                            <?php if ( ! class_exists('ProfilePress\Libsodium\Libsodium')) : ?>
+                                <div class="pp-hald-first">
+                                    <a target="_blank" href='https://profilepress.net/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=shortcode_builder_upsell'>
+                                        <div class="pp-half-meta-inner">
+                                            <div class="pp-half-first-thumb responsive-image">
+                                                <img src="<?= PPRESS_ASSETS_URL; ?>/images/admin/shortcode-builder-icon.png">
+                                            </div>
+                                            <div class="pp-half-meta">
+                                                <h2><?php _e('Shortcode Builder', 'wp-user-avatar'); ?></h2>
+                                                <p><?php _e('Code your own from scratch with complete control and flexibility using shortcodes.', 'wp-user-avatar'); ?></p>
+                                            </div>
+                                        </div>
+                                        <button class="pp-builder-create-btn"><?php _e('Upgrade to Premium', 'wp-user-avatar'); ?></button>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

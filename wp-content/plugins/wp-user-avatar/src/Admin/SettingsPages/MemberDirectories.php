@@ -3,7 +3,6 @@
 namespace ProfilePress\Core\Admin\SettingsPages;
 
 use ProfilePress\Core\Admin\SettingsPages\DragDropBuilder\DragDropBuilder;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeUserProfile\EditShortcodeUserProfile;
 use ProfilePress\Core\Classes\FormRepository as FR;
 use ProfilePress\Custom_Settings_Page_Api;
 
@@ -27,8 +26,6 @@ class MemberDirectories extends AbstractSettingsPage
 
         add_filter('set-screen-option', array($this, 'set_screen'), 10, 3);
         add_filter('set_screen_option_forms_per_page', array($this, 'set_screen'), 10, 3);
-
-        $this->EditShortcodeMemberDirectoriesInstance = EditShortcodeUserProfile::get_instance();
 
         $this->DragDropClassInstance = DragDropBuilder::get_instance();
     }

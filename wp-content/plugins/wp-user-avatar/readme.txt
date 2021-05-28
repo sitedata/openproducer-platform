@@ -5,7 +5,7 @@ Tags: user registration, user profile, registration form, membership, login form
 Requires at least: 4.7
 Requires PHP: 5.6
 Tested up to: 5.7
-Stable tag: 3.1
+Stable tag: 3.1.3
 License: GPLv2 or later
 
 Modern membership plugin for user registration, login form, user profile, member directories & content restriction.
@@ -118,6 +118,20 @@ No. You can create and manage your forms, user profiles and member directories w
 
 
 == Changelog ==
+
+= 3.1.3 =
+* Fixed edge cases where post content was overridden.
+* Fixed bug where buddypress avatar override wasn't working.
+* Removed the shortcode builder due to wp.org no longer accepting code inserters.
+
+= 3.1.2 =
+* Fixed issue where registration with username requirement disabled wasn't working.
+* Fixed fatal error caused during user registration.
+
+= 3.1.1 =
+* Scoped all admin CSS to reduce conflict with other plugin admin pages.
+* Fixed incompatibility with Max Mega Menu plugin.
+* Fixed PHP 8 Fatal error: Uncaught ValueError: Unknown format specifier.
 
 = 3.1 =
 * Fixed bug where disabling admin new user notifications wasn’t working.

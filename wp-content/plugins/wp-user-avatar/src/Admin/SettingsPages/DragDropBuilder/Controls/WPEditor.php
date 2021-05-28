@@ -24,7 +24,8 @@ class WPEditor
         }
 
         echo sprintf(
-            '<textarea style="height: 300px;padding: 10px;width: 100%" placeholder="%3$s" id="%1$s" name="%1$s" class="pp-form-control pp-form-control-wpeditor">%2$s</textarea>',
+            // 100%% double 1% cos we are escaping %
+            '<textarea style="height: 300px;padding: 10px;width: 100%%" placeholder="%3$s" id="%1$s" name="%1$s" class="pp-form-control pp-form-control-wpeditor">%2$s</textarea>',
             $this->args['name'],
             @$this->args['value'],
             @$this->args['placeholder']

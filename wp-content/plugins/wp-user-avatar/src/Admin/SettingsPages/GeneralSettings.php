@@ -284,7 +284,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'type'        => 'arbitrary',
                     'data'        => '',
                     'description' => sprintf(
-                        '<div class="pp-settings-page-notice">' . esc_html__('%sNote:%s Access setting takes precedence over %sContent Protection rules%s.', 'wp-user-avatar'),
+                        '<div class="ppress-settings-page-notice">' . esc_html__('%sNote:%s Access setting takes precedence over %sContent Protection rules%s.', 'wp-user-avatar'),
                         '<strong>', '</strong>', '<a target="_blank" href="' . PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE . '">', '</a>'
                     )
                 ],

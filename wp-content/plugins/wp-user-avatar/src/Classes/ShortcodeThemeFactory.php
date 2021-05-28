@@ -19,7 +19,7 @@ class ShortcodeThemeFactory
      */
     public static function make($form_type, $form_class)
     {
-        $form_type = str_replace('-', '', ucwords($form_type, '-'));
+        $form_type = ucwords(str_replace('-', '', $form_type));
 
         $class = apply_filters(
             'ppress_register_shortcode_form_class',

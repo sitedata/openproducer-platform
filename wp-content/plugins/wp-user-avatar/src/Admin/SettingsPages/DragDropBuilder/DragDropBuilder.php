@@ -60,6 +60,10 @@ class DragDropBuilder
     {
         if ( ! in_array($this->form_type, [FR::REGISTRATION_TYPE, FR::EDIT_PROFILE_TYPE])) return [];
 
+        if ($woocommerce_field !== false && ( ! EM::is_enabled(EM::WOOCOMMERCE) || ! EM::is_enabled(EM::CUSTOM_FIELDS))) {
+            return [];
+        }
+
         $custom_fields = PROFILEPRESS_sql::get_profile_custom_fields();
 
         $contact_infos = PROFILEPRESS_sql::get_contact_info_fields();
@@ -110,7 +114,7 @@ class DragDropBuilder
 
             if ($woocommerce_field !== false) {
 
-                $bucket = 'billing' == $woocommerce_field ? ppress_woocommerce_billing_fields() : ppress_woocommerce_shipping_fields();
+                $bucket = ('billing' == $woocommerce_field ? ppress_woocommerce_billing_fields() : ppress_woocommerce_shipping_fields());
 
                 if ( ! in_array($field_key, $bucket)) continue;
             }

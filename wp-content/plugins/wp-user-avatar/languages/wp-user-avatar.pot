@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the ProfilePress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: ProfilePress 3.1\n"
+"Project-Id-Version: ProfilePress 3.1.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-user-avatar\n"
-"POT-Creation-Date: 2021-05-18 15:04:57+00:00\n"
+"POT-Creation-Date: 2021-05-26 15:39:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,15 +18,6 @@ msgid "Profile & Cover Photo"
 msgstr ""
 
 #: deprecated/wp-user-avatar/includes/class-wp-user-avatar-admin.php:79
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:33
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:32
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:36
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:35
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:41
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:492
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:503
 msgid "Available Shortcodes"
 msgstr ""
 
@@ -55,7 +46,7 @@ msgstr ""
 #: deprecated/wp-user-avatar/includes/wpua-functions.php:78
 #: deprecated/wp-user-avatar/includes/wpua-functions.php:131
 #: src/Classes/ImageUploader.php:49
-#: src/ShortcodeParser/MyAccount/MyAccountTag.php:487
+#: src/ShortcodeParser/MyAccount/MyAccountTag.php:485
 msgid "Profile Picture"
 msgstr ""
 
@@ -455,7 +446,6 @@ msgstr ""
 #: src/Admin/SettingsPages/DragDropBuilder/Metabox.php:162
 #: src/Admin/SettingsPages/DragDropBuilder/Metabox.php:223
 #: src/Admin/SettingsPages/GeneralSettings.php:234
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:224
 #: src/Functions/GlobalFunctions.php:1224
 #: src/Functions/GlobalFunctions.php:1250
 #: src/Functions/GlobalFunctions.php:1272
@@ -467,38 +457,45 @@ msgid "Custom URL Here"
 msgstr ""
 
 #: src/Admin/SettingsPages/AddNewForm.php:27
-#: src/Admin/SettingsPages/MemberDirectories.php:41
+#: src/Admin/SettingsPages/MemberDirectories.php:38
 msgid "Add Member Directory"
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:47
+#: src/Admin/SettingsPages/AddNewForm.php:48
 msgid "Drag & Drop Builder"
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:48
+#: src/Admin/SettingsPages/AddNewForm.php:49
 msgid ""
 "Create beautiful, responsive forms with easy to use drag & drop form builder."
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:51
-msgid "Try Now"
+#: src/Admin/SettingsPages/AddNewForm.php:52
+msgid "Get Started"
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:59
+#: src/Admin/SettingsPages/AddNewForm.php:62
+#: src/Admin/SettingsPages/AddNewForm.php:78
 msgid "Shortcode Builder"
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:60
+#: src/Admin/SettingsPages/AddNewForm.php:63
+#: src/Admin/SettingsPages/AddNewForm.php:79
 msgid ""
 "Code your own from scratch with complete control and flexibility using "
 "shortcodes."
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:63 src/Classes/AjaxHandler.php:117
+#: src/Admin/SettingsPages/AddNewForm.php:66 src/Classes/AjaxHandler.php:115
 msgid "Build Now"
 msgstr ""
 
-#: src/Admin/SettingsPages/AddNewForm.php:98
+#: src/Admin/SettingsPages/AddNewForm.php:82
+#: src/Admin/SettingsPages/ExtensionsSettingsPage.php:110
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: src/Admin/SettingsPages/AddNewForm.php:119
 msgid "Back to Overview"
 msgstr ""
 
@@ -509,139 +506,119 @@ msgid ""
 "\" target=\"_blank\">WordPress.org</a> to help us spread the word."
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:164
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:168
 msgid "Form title cannot empty"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:183
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:187
 msgid "Changes saved"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1170
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1174
 msgid "Select Icon"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1198
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1202
 #: src/Functions/GlobalFunctions.php:1275
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:202
 msgid "Standard Fields"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1199
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1203
 msgid "Extra Fields"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1201
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1205
 #: src/Classes/ExtensionManager.php:53 src/Functions/GlobalFunctions.php:1278
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:216
 msgid "Custom Fields"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1202
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1206
 msgid "WooCommerce Billing Address"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1203
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1207
 msgid "WooCommerce Shipping Address"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1226
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1230
 msgid "No custom field available. %sClick here to create one%s."
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1251
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:22
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:21
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:25
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:20
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:22
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:20
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1255
 msgid "Enter title here"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1253
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1270
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1257
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1274
 #: src/Admin/SettingsPages/EmailSettings/CustomizerTrait.php:11
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:24
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:23
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:27
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:22
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:24
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:32
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:22
 #: src/AdminBarDashboardAccess/include.settings-page.php:54
 #: src/AdminBarDashboardAccess/include.settings-page.php:109
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1004
 msgid "Save Changes"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1273
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1277
 msgid "Delete Form"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1331
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1370
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1417
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:60
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:67
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1335
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1374
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1421
 msgid "Success Message"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1337
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:77
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1341
 msgid "New User Role"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1338
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1342
 msgid "Role users registered through this form will be assigned."
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1345
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1349
 msgid "Username Requirement"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1346
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1350
 msgid "Check to disable username requirement"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1347
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:99
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:93
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1351
 msgid ""
 "Disable requirement for users to enter a username during registration. "
 "Usernames will automatically be generated from their email addresses."
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1354
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1358
 #: src/Admin/SettingsPages/GeneralSettings.php:120
 msgid "Registration Settings"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1377
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1381
 msgid "Edit Profile Settings"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1393
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:59
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1397
 #: src/Classes/ExtensionManager.php:77
 msgid "Passwordless Login"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1394
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1398
 msgid "Check to make this a passwordless login form."
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1401
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1405
 #: src/Admin/SettingsPages/GeneralSettings.php:134
 msgid "Login Settings"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1424
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1428
 msgid "Password Reset Settings"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1445
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1449
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/CheckboxList.php:35
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Country.php:35
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/DefinedFieldTypes/Checkbox.php:50
@@ -655,39 +632,34 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1451
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:52
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:50
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:54
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:58
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:59
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1455
 msgid "Processing Label"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1458
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1462
 msgid "Submit Button"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1465
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1469
 msgid "Appearance"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1472
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1476
 msgid "Colors"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1500
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1504
 #: src/Themes/DragDrop/AbstractBuildScratch.php:533
 #: src/Themes/DragDrop/Login/PerfectoLite.php:51
 #: src/Themes/DragDrop/Registration/PerfectoLite.php:53
 msgid "Text"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1501
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1505
 msgid "Visual"
 msgstr ""
 
-#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1502
+#: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1506
 msgid "Add Media"
 msgstr ""
 
@@ -699,11 +671,6 @@ msgstr ""
 #: src/Admin/SettingsPages/DragDropBuilder/FieldBase.php:232
 #: src/Admin/SettingsPages/GeneralSettings.php:26
 #: src/Admin/SettingsPages/GeneralSettings.php:27
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:29
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:33
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:31
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:38
 #: src/Classes/Miscellaneous.php:17
 msgid "Settings"
 msgstr ""
@@ -764,10 +731,6 @@ msgstr ""
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Textarea.php:40
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Username.php:30
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Website.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:29
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:65
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:83
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:247
 #: src/Themes/DragDrop/AbstractBuildScratch.php:436
 msgid "Placeholder"
 msgstr ""
@@ -1655,10 +1618,6 @@ msgid "Upgrade Now"
 msgstr ""
 
 #: src/Admin/SettingsPages/ExtensionsSettingsPage.php:110
-msgid "Upgrade to Premium"
-msgstr ""
-
-#: src/Admin/SettingsPages/ExtensionsSettingsPage.php:110
 msgid "Upgrade Plan"
 msgstr ""
 
@@ -1709,12 +1668,6 @@ msgid "Duplicate"
 msgstr ""
 
 #: src/Admin/SettingsPages/FormList.php:237
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:74
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:74
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:109
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:45
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:104
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:45
 #: src/Classes/FormPreviewHandler.php:45
 #: src/Functions/custom-settings-api.php:856
 msgid "Preview"
@@ -1724,78 +1677,78 @@ msgstr ""
 msgid "Drag & Drop"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:54 src/Admin/SettingsPages/Forms.php:80
+#: src/Admin/SettingsPages/Forms.php:37 src/Admin/SettingsPages/Forms.php:63
 msgid "Forms & Profiles"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:57
+#: src/Admin/SettingsPages/Forms.php:40
 msgid "Edit Form"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:61
+#: src/Admin/SettingsPages/Forms.php:44
 msgid "Add Form"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:65 src/Admin/SettingsPages/Forms.php:69
+#: src/Admin/SettingsPages/Forms.php:48 src/Admin/SettingsPages/Forms.php:52
 msgid "Edit Frontend Profile"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:95
+#: src/Admin/SettingsPages/Forms.php:78
 msgid ""
 "Melange combines login, registration & password reset forms in a single form."
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:112
+#: src/Admin/SettingsPages/Forms.php:95
 msgid "Filter by Type"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:116
+#: src/Admin/SettingsPages/Forms.php:99
 #: src/Admin/SettingsPages/GeneralSettings.php:131
 #: src/Admin/SettingsPages/GeneralSettings.php:246
-#: src/Classes/AjaxHandler.php:55 src/NavigationMenuLinks/Backend.php:34
+#: src/Classes/AjaxHandler.php:53 src/NavigationMenuLinks/Backend.php:34
 #: src/ShortcodeParser/Builder/GlobalShortcodes.php:235
 #: src/Themes/DragDrop/AbstractBuildScratch.php:180
 #: src/Widgets/TabbedWidget.php:107
 msgid "Login"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:121
+#: src/Admin/SettingsPages/Forms.php:104
 #: src/Admin/SettingsPages/GeneralSettings.php:117
-#: src/Classes/AjaxHandler.php:60
+#: src/Classes/AjaxHandler.php:58
 msgid "Registration"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:127
+#: src/Admin/SettingsPages/Forms.php:110
 #: src/Admin/SettingsPages/GeneralSettings.php:263
-#: src/Classes/AjaxHandler.php:65
+#: src/Classes/AjaxHandler.php:63
 msgid "Password Reset"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:132 src/Classes/AjaxHandler.php:70
+#: src/Admin/SettingsPages/Forms.php:115 src/Classes/AjaxHandler.php:68
 #: src/NavigationMenuLinks/Backend.php:32
 #: src/ShortcodeParser/Builder/GlobalShortcodes.php:301
 msgid "Edit Profile"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:137 src/Classes/AjaxHandler.php:76
+#: src/Admin/SettingsPages/Forms.php:122 src/Classes/AjaxHandler.php:74
 msgid "Melange"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:143 src/Classes/AjaxHandler.php:83
+#: src/Admin/SettingsPages/Forms.php:130 src/Classes/AjaxHandler.php:81
 msgid "User Profile"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:175
+#: src/Admin/SettingsPages/Forms.php:162
 msgid "Forms"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:217
-#: src/Admin/SettingsPages/MemberDirectories.php:107
+#: src/Admin/SettingsPages/Forms.php:204
+#: src/Admin/SettingsPages/MemberDirectories.php:104
 msgid "Live Preview"
 msgstr ""
 
-#: src/Admin/SettingsPages/Forms.php:358
-#: src/Admin/SettingsPages/MemberDirectories.php:203
+#: src/Admin/SettingsPages/Forms.php:285
+#: src/Admin/SettingsPages/MemberDirectories.php:200
 msgid "Add New"
 msgstr ""
 
@@ -2209,619 +2162,21 @@ msgid "Check to change bbPress profile URL to ProfilePress front-end profile."
 msgstr ""
 
 #: src/Admin/SettingsPages/IDUserColumn.php:20
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:34
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:54
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:39
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:57
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:33
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:51
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:69
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:87
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:120
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:42
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:86
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:108
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:130
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:152
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:174
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:243
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:302
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:375
 msgid "ID"
 msgstr ""
 
-#: src/Admin/SettingsPages/MemberDirectories.php:38
-#: src/Admin/SettingsPages/MemberDirectories.php:56
-#: src/Admin/SettingsPages/MemberDirectories.php:88
+#: src/Admin/SettingsPages/MemberDirectories.php:35
+#: src/Admin/SettingsPages/MemberDirectories.php:53
+#: src/Admin/SettingsPages/MemberDirectories.php:85
 msgid "Member Directories"
 msgstr ""
 
-#: src/Admin/SettingsPages/MemberDirectories.php:45
+#: src/Admin/SettingsPages/MemberDirectories.php:42
 msgid "Edit Member Directory"
 msgstr ""
 
 #: src/Admin/SettingsPages/MembersDirectoryList.php:10
 msgid "No members directory is currently available. %sConsider creating one%s"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:25
-msgid "Button to delete profile picture"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:29
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:49
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:53
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:47
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:116
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:371
-msgid "Button label"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:31
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1071
-msgid "Delete Avatar"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:38
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:58
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:43
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:61
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:37
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:55
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:73
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:91
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:106
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:124
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:32
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:46
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:90
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:112
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:134
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:156
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:178
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:251
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:306
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:379
-msgid "CSS class"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:45
-msgid "Button to delete profile cover image"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:51
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1107
-msgid "Delete Cover Image"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:76
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:78
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:51
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:141
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/EditShortcodeRegistration.php:35
-msgid "Form updated"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:99
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:99
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:76
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/EditShortcodeMemberDirectories.php:44
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:166
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/EditShortcodeRegistration.php:61
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:162
-msgid "Title is empty"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php:101
-msgid "Form Structure is missing"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:28
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:27
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:31
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:26
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:28
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:36
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:26
-msgid "Structure"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:29
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:28
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:32
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/edit_screen.php:27
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:37
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/edit_screen.php:27
-msgid "CSS"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:47
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:45
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:49
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:53
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:54
-msgid "General Settings"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:56
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:54
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:58
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:62
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:63
-msgid "This is the text shown on the submit button when the form is submitted."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/edit_screen.php:64
-msgid "Message to display when a user profile is edited."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:25
-msgid "Username / Email address field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:30
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:283
-msgid "Password field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:35
-msgid "Remeber Me checkbox"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:49
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:367
-msgid "Form submit button"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php:101
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/EditShortcodeMemberDirectories.php:46
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:168
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/EditShortcodeRegistration.php:63
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:164
-msgid "Structure is missing"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:63
-msgid "Make this a passwordless login"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/edit_screen.php:64
-msgid ""
-"Passwordless login allows users to sign in to your WordPress site via a one-"
-"time URL sent to their email address."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:24
-msgid ""
-"All login form shortcodes, HTML and CSS codes should be inside of this "
-"shortcode. That is [pp-login-form]...[/pp-login-form]"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:28
-msgid ""
-"All registration form shortcodes, HTML and CSS codes should be inside of "
-"this shortcode. That is [pp-registration-form]...[/pp-registration-form]"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:32
-msgid ""
-"All password reset form shortcodes, HTML and CSS codes should be inside of "
-"this shortcode. That is [pp-password-reset-form]...[/pp-password-reset-form]"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:36
-msgid ""
-"All edit profile form shortcodes, HTML and CSS codes should be inside of "
-"this shortcode. That is [pp-password-reset-form]...[/pp-password-reset-form]"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php:78
-msgid "Melange Design is missing"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:63
-msgid "Registration Success Message"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:68
-msgid "Message displayed on successful user registration."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:73
-msgid "Password-reset Success Message"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:78
-msgid "Message displayed on successful user password reset."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:83
-msgid "Edit-profile Success Message"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:88
-msgid "Message displayed on users successfully editing their profile"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:93
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:86
-msgid "Disable Username Requirement"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/edit_screen.php:97
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:90
-msgid "Check to Disable"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/EditShortcodeMemberDirectories.php:24
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:141
-#: src/ContentProtection/SettingsPage.php:134
-#: src/Themes/DragDrop/AbstractTheme.php:114
-msgid "Changes saved."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:25
-msgid "Username / Email field - Password reset form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:43
-msgid "Submit button - Password reset form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:61
-msgid "Password field  - Password reset handler form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:79
-msgid "Confirm password field  - Password reset handler form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:97
-msgid "Password strength meter  - Password reset handler form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:101
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:297
-msgid "Enforce strong password"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:103
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:299
-msgid "Yes"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:103
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:299
-msgid "No"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:112
-msgid "Submit button - Password reset handler form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php:170
-msgid "Password Reset Handler Form Structure is missing"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:29
-msgid "Password Reset Handler Form"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:71
-msgid "Message to display on successful user password reset."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:83
-msgid "Reset Form Preview"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/edit_screen.php:84
-msgid "Handler Form Preview"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:68
-msgid "Success message"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:72
-msgid "Message to display on successful user registration."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/edit_screen.php:81
-msgid "Role of users registered through this form."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:24
-msgid "Username of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:28
-msgid "Email address of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:32
-msgid "Website URL of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:36
-msgid "Nickname of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:40
-msgid "Display name of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:44
-msgid "First name of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:48
-msgid "Last name of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:52
-msgid "Biographical info of user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:56
-msgid "Custom field information"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:60
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:70
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:235
-msgid "Field key"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:66
-msgid "Link to uploaded file"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:74
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:94
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:116
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:138
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:160
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:182
-msgid "Check to return URL"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:80
-msgid "URL of User profile picture or avatar"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:84
-msgid "Date of user registration"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:88
-msgid "Number of posts published by user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:92
-msgid "Number of comments submitted by user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:96
-msgid "List of posts authored by user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:100
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:110
-msgid "Limit"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:106
-msgid "List of comments by user"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:116
-msgid "URL to author posts page"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:120
-msgid ""
-"Hide content if profile information is empty. Do not forget to close the "
-"shortcode with [/profile-hide-empty-data]"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php:124
-msgid "Field ID"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:24
-msgid "Displays user's avatar"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:28
-msgid "Size of avatar"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:38
-msgid "Displays user's cover image"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:50
-msgid "Alternate text"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:56
-msgid "Displays password hint"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:60
-msgid "Social login button"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:64
-msgid "Social network"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:67
-#: src/Classes/UserSignupLocationListingPage.php:43
-#: src/Themes/DragDrop/AbstractBuildScratch.php:284
-msgid "Facebook"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:68
-#: src/Classes/UserSignupLocationListingPage.php:47
-#: src/Themes/DragDrop/AbstractBuildScratch.php:285
-msgid "Twitter"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:69
-#: src/Classes/UserSignupLocationListingPage.php:51
-#: src/Themes/DragDrop/AbstractBuildScratch.php:286
-msgid "Google"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:70
-#: src/Classes/UserSignupLocationListingPage.php:55
-#: src/Themes/DragDrop/AbstractBuildScratch.php:287
-msgid "LinkedIn"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:71
-msgid "VK"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:72
-#: src/Classes/UserSignupLocationListingPage.php:59
-#: src/Themes/DragDrop/AbstractBuildScratch.php:288
-msgid "GitHub"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:78
-msgid "Link to registration page"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:82
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:104
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:126
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:148
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:170
-msgid "Link label"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:100
-msgid "Link to login page"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:122
-msgid "Link to password reset page"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:144
-msgid "Link to My Account page"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:166
-msgid "Link to log out"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:188
-msgid "Link to login with Facebook"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:192
-msgid "Link to login with Twitter"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:196
-msgid "Link to login with LinkedIn"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:200
-msgid "Link to login with Google"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:204
-msgid "Link to login with GitHub"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:208
-msgid "Link to login with VK"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:255
-msgid "Default field value"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:266
-msgid "Mark as required"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:278
-msgid "Username field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:288
-msgid "Confirm password field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:293
-msgid "Password strength meter"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:312
-msgid "Email address field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:317
-msgid "Confirm email address field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:322
-msgid "Website field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:327
-msgid "Nickname field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:332
-msgid "Display name field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:337
-msgid "First name field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:342
-msgid "Last name field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:347
-msgid "Biographical info field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:352
-msgid "Profile picture upload field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:357
-msgid "Profile cover image upload field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:362
-msgid "Custom field"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:409
-msgid "Search shortcodes"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:419
-msgid "Select"
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:453
-msgid "Shortcode copied to clipboard."
-msgstr ""
-
-#: src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php:596
-msgid "Copy to clipboard"
 msgstr ""
 
 #: src/Admin/SettingsPages/ToolsSettingsPage.php:40
@@ -2941,55 +2296,55 @@ msgid ""
 "\""
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:46
+#: src/Classes/AjaxHandler.php:44
 msgid ""
 "Melange is a way to combine login, registration & password reset forms in a "
 "single form."
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:50
+#: src/Classes/AjaxHandler.php:48
 msgid "Select Form Type"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:51
+#: src/Classes/AjaxHandler.php:49
 msgid "Loading..."
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:102
+#: src/Classes/AjaxHandler.php:100
 msgid "Create from Scratch"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:108
+#: src/Classes/AjaxHandler.php:106
 msgid "Do it Yourself"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:111
+#: src/Classes/AjaxHandler.php:109
 msgid "Get Started Creating Your Own Form"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:152
+#: src/Classes/AjaxHandler.php:150
 msgid "Select this template"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:153
+#: src/Classes/AjaxHandler.php:151
 #: src/ContentProtection/ContentConditions.php:274
 msgid "Select Template"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:162
+#: src/Classes/AjaxHandler.php:160
 msgid "Enter a Name"
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:218 src/Classes/AjaxHandler.php:241
+#: src/Classes/AjaxHandler.php:216 src/Classes/AjaxHandler.php:239
 #: src/Classes/PasswordReset.php:359
 msgid "Unexpected error. Please try again."
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:250
+#: src/Classes/AjaxHandler.php:248
 msgid "Form with similar name exist already."
 msgstr ""
 
-#: src/Classes/AjaxHandler.php:540
+#: src/Classes/AjaxHandler.php:525
 msgid "Security validation failed. Try again"
 msgstr ""
 
@@ -3299,39 +2654,64 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:207
+#: src/Classes/RegistrationAuth.php:209
 msgid "%s field is required"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:216
+#: src/Classes/RegistrationAuth.php:218
 msgid ""
 "<strong>ERROR</strong>: This username is invalid because it uses illegal "
 "characters. Please enter a valid username."
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:220
+#: src/Classes/RegistrationAuth.php:222
 msgid "Email address is not valid"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:224
+#: src/Classes/RegistrationAuth.php:226
 msgid "Passwords do not match"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:228
+#: src/Classes/RegistrationAuth.php:230
 msgid "Email addresses do not match"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:232
+#: src/Classes/RegistrationAuth.php:234
 msgid "Password is not strong"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:391
+#: src/Classes/RegistrationAuth.php:393
 #: src/Themes/DragDrop/AbstractTheme.php:110
 msgid "Registration successful."
 msgstr ""
 
 #: src/Classes/UserSignupLocationListingPage.php:21
 msgid "Registered Via"
+msgstr ""
+
+#: src/Classes/UserSignupLocationListingPage.php:43
+#: src/Themes/DragDrop/AbstractBuildScratch.php:284
+msgid "Facebook"
+msgstr ""
+
+#: src/Classes/UserSignupLocationListingPage.php:47
+#: src/Themes/DragDrop/AbstractBuildScratch.php:285
+msgid "Twitter"
+msgstr ""
+
+#: src/Classes/UserSignupLocationListingPage.php:51
+#: src/Themes/DragDrop/AbstractBuildScratch.php:286
+msgid "Google"
+msgstr ""
+
+#: src/Classes/UserSignupLocationListingPage.php:55
+#: src/Themes/DragDrop/AbstractBuildScratch.php:287
+msgid "LinkedIn"
+msgstr ""
+
+#: src/Classes/UserSignupLocationListingPage.php:59
+#: src/Themes/DragDrop/AbstractBuildScratch.php:288
+msgid "GitHub"
 msgstr ""
 
 #: src/Classes/UserSignupLocationListingPage.php:63
@@ -3473,6 +2853,11 @@ msgstr ""
 
 #: src/ContentProtection/SettingsPage.php:100
 msgid "Title cannot be empty."
+msgstr ""
+
+#: src/ContentProtection/SettingsPage.php:134
+#: src/Themes/DragDrop/AbstractTheme.php:114
+msgid "Changes saved."
 msgstr ""
 
 #: src/ContentProtection/SettingsPage.php:156
@@ -4715,7 +4100,7 @@ msgstr ""
 msgid "Member Directory"
 msgstr ""
 
-#: src/RegisterScripts.php:64 src/RegisterScripts.php:108
+#: src/RegisterScripts.php:64 src/RegisterScripts.php:113
 msgid "Are you sure?"
 msgstr ""
 
@@ -4835,6 +4220,14 @@ msgstr ""
 msgid "custom field not defined"
 msgstr ""
 
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1071
+msgid "Delete Avatar"
+msgstr ""
+
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1107
+msgid "Delete Cover Image"
+msgstr ""
+
 #: src/ShortcodeParser/Builder/FrontendProfileBuilder.php:113
 msgid "This user has not created any post."
 msgstr ""
@@ -4930,7 +4323,7 @@ msgstr ""
 msgid "Email Notifications"
 msgstr ""
 
-#: src/ShortcodeParser/MyAccount/MyAccountTag.php:486
+#: src/ShortcodeParser/MyAccount/MyAccountTag.php:484
 #: src/ShortcodeParser/MyAccount/edit-profile.tmpl.php:87
 msgid "Cover Image (min. width: 1000px)"
 msgstr ""
@@ -5796,9 +5189,9 @@ msgstr ""
 msgid "ProfilePress"
 msgstr ""
 
-#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1)  #-#-#-#-#
+#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.3)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1)  #-#-#-#-#
+#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.3)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "https://profilepress.net"
 msgstr ""

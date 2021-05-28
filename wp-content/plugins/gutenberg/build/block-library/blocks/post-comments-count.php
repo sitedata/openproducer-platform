@@ -38,11 +38,6 @@ function gutenberg_register_block_core_post_comments_count() {
 	register_block_type_from_metadata(
 		__DIR__ . '/post-comments-count',
 		array(
-			'attributes'      => array(
-				'className' => array(
-					'type' => 'string',
-				),
-			),
 			'render_callback' => 'gutenberg_render_block_core_post_comments_count',
 		)
 	);

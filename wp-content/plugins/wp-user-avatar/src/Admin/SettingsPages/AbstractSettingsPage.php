@@ -120,7 +120,7 @@ abstract class AbstractSettingsPage
     protected function placeholder_tags_table($placeholders)
     {
         ?>
-        <div class="pp-placeholder-tags">
+        <div class="ppress-placeholder-tags">
             <table class="widefat striped">
                 <tbody>
                 <tr>

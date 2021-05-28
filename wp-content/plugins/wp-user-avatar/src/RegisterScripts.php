@@ -96,6 +96,11 @@ class RegisterScripts
         wp_enqueue_script('ppress-clipboardjs', PPRESS_ASSETS_URL . '/js/clipboard.min.js');
 
         wp_enqueue_script('ppress-admin-scripts', PPRESS_ASSETS_URL . '/js/admin.js', array('jquery', 'jquery-ui-sortable'));
+
+        wp_localize_script('ppress-admin-scripts', 'ppress_admin_globals', [
+            'nonce' => wp_create_nonce('ppress-admin-nonce')
+        ]);
+
         wp_enqueue_script('ppress-create-form', PPRESS_ASSETS_URL . '/js/create-form.js', array('jquery'));
         wp_enqueue_script('ppress-content-control', PPRESS_ASSETS_URL . '/js/content-control.js', array('jquery'));
         wp_enqueue_script(

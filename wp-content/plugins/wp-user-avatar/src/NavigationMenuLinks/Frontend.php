@@ -120,7 +120,7 @@ class Frontend
         // in self::setup_nav_menu_item we made the title and url of some nav items the same.
         // an item that fall in this category get removed here.
         foreach ($sorted_menu_items as $k => $item) {
-            if ($item->title == $item->url) {
+            if (strlen($item->title) && ($item->title == $item->url)) {
                 unset($sorted_menu_items[$k]);
             }
         }

@@ -66,7 +66,7 @@ class WPListTable extends \WP_List_Table
         $hint = '';
         if ( ! empty($item['description'])) {
             $hint = sprintf(
-                ' <span class="pp-hint-tooltip hint--top hint--medium hint--bounce" aria-label="%s"><span class="dashicons dashicons-editor-help"></span></span>',
+                ' <span class="ppress-hint-tooltip hint--top hint--medium hint--bounce" aria-label="%s"><span class="dashicons dashicons-editor-help"></span></span>',
                 $item['description']
             );
         }

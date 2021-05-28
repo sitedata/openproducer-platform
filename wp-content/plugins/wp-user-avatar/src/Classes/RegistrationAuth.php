@@ -20,7 +20,7 @@ class RegistrationAuth
      *
      * @param int $user_id
      * @param string $password
-     * @param int $form_id
+     * @param string $form_id
      */
     public static function send_welcome_email($user_id, $password = '', $form_id = '')
     {
@@ -86,8 +86,10 @@ class RegistrationAuth
      *
      * @param array $post user form submitted data
      * @param int $form_id Registration builder ID
-     * @param array $files Handle for global $_FILES
      * @param string $redirect URL to redirect to after registration.
+     *
+     * @param bool $is_melange
+     * @param string $no_login_redirect
      *
      * @return string
      */
@@ -212,7 +214,7 @@ class RegistrationAuth
         }
         // --------END ---------   validation for required fields ----------------------//
 
-        if ( ! validate_username($post['reg_username'])) {
+        if ( ! validate_username($username)) {
             $reg_errors->add('invalid_username', esc_html__('<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username.', 'wp-user-avatar'));
         }
 
@@ -326,7 +328,7 @@ class RegistrationAuth
         // --------END ---------   register custom field ----------------------//
 
         // if moderation is active, set new registered users as pending
-        if (UserModeration::moderation_is_active()) {
+        if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
             UserModeration::make_pending($user_id);
         }
 
@@ -342,7 +344,7 @@ class RegistrationAuth
         }
 
         // if user moderation is active, send pending notification.
-        if (UserModeration::moderation_is_active()) {
+        if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
             UserModerationNotification::pending($user_id);
             UserModerationNotification::pending_admin_notification($user_id);
         }

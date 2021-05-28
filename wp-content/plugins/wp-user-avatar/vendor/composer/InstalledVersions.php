@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e1f9a271e2d8b56f4c830cff6c0d58fc1044bdf9',
+    'reference' => '588f732082c5e996c3f81a115a24a6d4eedf0760',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e1f9a271e2d8b56f4c830cff6c0d58fc1044bdf9',
+      'reference' => '588f732082c5e996c3f81a115a24a6d4eedf0760',
     ),
     'collizo4sky/persist-admin-notices-dismissal' => 
     array (

@@ -3,12 +3,6 @@
 namespace ProfilePress\Core\Admin\SettingsPages;
 
 use ProfilePress\Core\Admin\SettingsPages\DragDropBuilder\DragDropBuilder;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeEditProfile\EditShortcodeEditProfile;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeLogin\EditShortcodeLogin;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodePasswordReset\EditShortcodePasswordReset;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeMelange\EditShortcodeMelange;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeRegistration\EditShortcodeRegistration;
-use ProfilePress\Core\Admin\SettingsPages\ShortcodeBuilder\EditShortcodeUserProfile\EditShortcodeUserProfile;
 use ProfilePress\Core\Classes\FormRepository as FR;
 use ProfilePress\Custom_Settings_Page_Api;
 
@@ -24,12 +18,6 @@ class Forms extends AbstractSettingsPage
      */
     protected $forms_instance;
 
-    protected $EditShortcodeLoginInstance;
-    protected $EditShortcodeRegistrationInstance;
-    protected $EditShortcodePasswordResetInstance;
-    protected $EditShortcodeMelangeInstance;
-    protected $EditShortcodeEditProfileInstance;
-    protected $EditShortcodeUserProfileInstance;
     protected $DragDropClassInstance;
 
     public function __construct()
@@ -39,14 +27,9 @@ class Forms extends AbstractSettingsPage
         add_filter('set-screen-option', array($this, 'set_screen'), 10, 3);
         add_filter('set_screen_option_forms_per_page', array($this, 'set_screen'), 10, 3);
 
-        $this->EditShortcodeLoginInstance         = EditShortcodeLogin::get_instance();
-        $this->EditShortcodeRegistrationInstance  = EditShortcodeRegistration::get_instance();
-        $this->EditShortcodePasswordResetInstance = EditShortcodePasswordReset::get_instance();
-        $this->EditShortcodeEditProfileInstance   = EditShortcodeEditProfile::get_instance();
-        $this->EditShortcodeMelangeInstance       = EditShortcodeMelange::get_instance();
-        $this->EditShortcodeUserProfileInstance   = EditShortcodeUserProfile::get_instance();
-
         $this->DragDropClassInstance = DragDropBuilder::get_instance();
+
+        do_action('ppress_admin_forms_class_constructor');
     }
 
     public function admin_page_title()
@@ -132,12 +115,16 @@ class Forms extends AbstractSettingsPage
                                 <?php _e('Edit Profile', 'wp-user-avatar'); ?>
                             </a>
                         </li>
-                        <li>
-                            <a href="<?php echo $melange_url; ?>" class="<?php echo $melange_menu_active; ?>">
-                                <?php _e('Melange', 'wp-user-avatar'); ?>
-                            </a>
-                            <span class="pp-melange-jbox dashicons dashicons-editor-help" title="<?php echo $melange_jbox; ?>"></span>
-                        </li>
+
+                        <?php if ( class_exists('ProfilePress\Libsodium\Libsodium')) : ?>
+                            <li>
+                                <a href="<?php echo $melange_url; ?>" class="<?php echo $melange_menu_active; ?>">
+                                    <?php _e('Melange', 'wp-user-avatar'); ?>
+                                </a>
+                                <span class="pp-melange-jbox dashicons dashicons-editor-help" title="<?php echo $melange_jbox; ?>"></span>
+                            </li>
+                        <?php endif; ?>
+
                         <li>
                             <a href="<?php echo $user_profile_url; ?>" class="<?php echo $user_profile_menu_active; ?>">
                                 <?php _e('User Profile', 'wp-user-avatar'); ?>
@@ -249,72 +236,12 @@ class Forms extends AbstractSettingsPage
             return AddNewForm::get_instance()->settings_admin_page();
         }
 
+
+        $short_circuit = apply_filters('ppress_forms_settings_admin_page_short_circuit', false);
+
+        if (false !== $short_circuit) return $short_circuit;
+
         if ( ! empty($_GET['view'])) {
-
-            $form_id = absint($_GET['id']);
-
-            $page_header = $this->admin_page_title();
-
-            $shortcode_builder_page_header = sprintf(
-                '<div class="wrap ppSCB"><h2>%s %s</h2><form method="post">%s',
-                $page_header,
-                $this->live_form_preview_btn(false),
-                ppress_nonce_field()
-            );
-
-            if ($_GET['view'] == 'edit-shortcode-login') {
-                $this->no_form_exist_redirect($form_id, FR::LOGIN_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodeLoginInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
-
-            if ($_GET['view'] == 'edit-shortcode-registration') {
-                $this->no_form_exist_redirect($form_id, FR::REGISTRATION_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodeRegistrationInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
-
-            if ($_GET['view'] == 'edit-shortcode-password-reset') {
-                $this->no_form_exist_redirect($form_id, FR::PASSWORD_RESET_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodePasswordResetInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
-
-            if ($_GET['view'] == 'edit-shortcode-melange') {
-                $this->no_form_exist_redirect($form_id, FR::MELANGE_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodeMelangeInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
-
-            if ($_GET['view'] == 'edit-shortcode-edit-profile') {
-                $this->no_form_exist_redirect($form_id, FR::EDIT_PROFILE_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodeEditProfileInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
-
-            if ($_GET['view'] == 'edit-shortcode-user-profile') {
-                Forms::get_instance()->no_form_exist_redirect($form_id, FR::USER_PROFILE_TYPE);
-                echo $shortcode_builder_page_header;
-                $this->EditShortcodeUserProfileInstance->edit_screen();
-                echo '</form></div>';
-
-                return;
-            }
 
             add_filter('wp_cspa_settings_page_sidebar', [$this->DragDropClassInstance, 'sidebar_section']);
             add_action('wp_cspa_before_closing_header', [$this, 'live_form_preview_btn']);

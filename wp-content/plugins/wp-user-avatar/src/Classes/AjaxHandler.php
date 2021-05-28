@@ -15,8 +15,6 @@ class AjaxHandler
     {
         add_action('wp_ajax_pp_ajax_editprofile', [$this, 'ajax_editprofile_func']);
 
-        add_action('wp_ajax_pp-builder-preview', [$this, 'builder_preview_handler']);
-
         add_action('wp_ajax_pp_del_avatar', [$this, 'ajax_delete_avatar']);
         add_action('wp_ajax_pp_del_cover_image', [$this, 'ajax_delete_profile_cover_image']);
 
@@ -264,19 +262,6 @@ class AjaxHandler
         }
 
         wp_send_json_error();
-    }
-
-    function builder_preview_handler()
-    {
-        if (current_user_can('manage_options')) {
-            // iframe preview url content
-            if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'pp-builder-preview') {
-                include PROFILEPRESS_SRC . 'ShortcodeParser/Builder/builder-preview.php';
-            }
-        }
-
-        // IMPORTANT: don't forget to "exit"
-        wp_die();
     }
 
     function ajax_delete_avatar()

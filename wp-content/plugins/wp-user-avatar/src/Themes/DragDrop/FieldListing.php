@@ -79,7 +79,7 @@ class FieldListing
 
             if (isset($field_setting['description_appearance']) && $field_setting['description_appearance'] == 'tooltip' && ! empty($field_setting['description'])) {
                 $output .= sprintf(
-                    ' <span class="pp-hint-tooltip hint--top hint--medium hint--bounce" aria-label="%s"><i class="pp-form-material-icons">help</i></span>',
+                    ' <span class="ppress-hint-tooltip hint--top hint--medium hint--bounce" aria-label="%s"><i class="pp-form-material-icons">help</i></span>',
                     sanitize_text_field($field_setting['description'])
                 );
             }

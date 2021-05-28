@@ -45,7 +45,7 @@ class ToolsSettingsPage extends AbstractSettingsPage
                     'debug_log_content'     => [
                         'type'        => 'arbitrary',
                         'data'        => sprintf(
-                            '<textarea class="pp-error-log-textarea" disabled>%s</textarea>',
+                            '<textarea class="ppress-error-log-textarea" disabled>%s</textarea>',
                             $debug_log_content
                         ),
                         'description' => sprintf(

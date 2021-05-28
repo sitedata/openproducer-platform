@@ -31,9 +31,9 @@ class EditUserProfile
     }
 
     /**
-     * @param array $post_data $_POST data
-     *
-     * @param int $is_melange
+     * @param $form_id
+     * @param $redirect
+     * @param bool $is_melange
      *
      * @return mixed|void the edit profile response be it error or success message
      */

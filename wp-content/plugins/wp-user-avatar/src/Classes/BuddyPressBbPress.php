@@ -7,7 +7,7 @@ class BuddyPressBbPress
     public function __construct()
     {
         if (ppress_settings_by_key('override_bp_avatar') == 'yes') {
-//            add_filter('bp_core_fetch_avatar', array(__CLASS__, 'override_html_avatar'), 999999999, 3);
+            add_filter('bp_core_fetch_avatar', array(__CLASS__, 'override_html_avatar'), 999999999, 3);
             add_filter('bp_core_fetch_avatar_url', array(__CLASS__, 'override_avatar_url'), 999999999, 2);
         }
 

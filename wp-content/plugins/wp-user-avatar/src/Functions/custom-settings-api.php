@@ -850,7 +850,7 @@ class Custom_Settings_Page_Api
             <td>
                 <?php do_action('wp_cspa_before_email_editor_field', $db_options, $option_name, $key, $args); ?>
 
-                <div class="pp-email-editor-wrap">
+                <div class="ppress-email-editor-wrap">
                     <div class="pp-email-editor-tab">
                         <button class="pp-email-editor-tablinks ecode"><?= esc_html__('Code', 'wp-user-avatar'); ?></button>
                         <button class="pp-email-editor-tablinks epreview eactive"><?= esc_html__('Preview', 'wp-user-avatar'); ?></button>

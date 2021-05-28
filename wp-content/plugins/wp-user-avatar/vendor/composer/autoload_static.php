@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9
+class ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3
 {
     public static $files = array (
         'fda73876e8be17735f680f484cec1679' => __DIR__ . '/../..' . '/src/Functions/custom-settings-api.php',
@@ -122,14 +122,6 @@ class ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9
         'ProfilePress\\Core\\Admin\\SettingsPages\\IDUserColumn' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/IDUserColumn.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\MemberDirectories' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/MemberDirectories.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\MembersDirectoryList' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/MembersDirectoryList.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeEditProfile\\EditShortcodeEditProfile' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeEditProfile/EditShortcodeEditProfile.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeLogin\\EditShortcodeLogin' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeLogin/EditShortcodeLogin.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeMelange\\EditShortcodeMelange' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMelange/EditShortcodeMelange.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeMemberDirectories\\EditShortcodeMemberDirectories' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeMemberDirectories/EditShortcodeMemberDirectories.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodePasswordReset\\EditShortcodePasswordReset' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodePasswordReset/EditShortcodePasswordReset.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeRegistration\\EditShortcodeRegistration' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeRegistration/EditShortcodeRegistration.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\EditShortcodeUserProfile\\EditShortcodeUserProfile' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/EditShortcodeUserProfile/EditShortcodeUserProfile.php',
-        'ProfilePress\\Core\\Admin\\SettingsPages\\ShortcodeBuilder\\ShortcodeInserterTrait' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ShortcodeBuilder/ShortcodeInserterTrait.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\ToolsSettingsPage' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ToolsSettingsPage.php',
         'ProfilePress\\Core\\Base' => __DIR__ . '/../..' . '/src/Base.php',
         'ProfilePress\\Core\\Classes\\AdminNotices' => __DIR__ . '/../..' . '/src/Classes/AdminNotices.php',
@@ -290,9 +282,9 @@ class ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit59f78ec32559233aa93d4f6ecd95adf9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$classMap;
 
         }, null, ClassLoader::class);
     }

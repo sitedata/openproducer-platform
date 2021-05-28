@@ -649,8 +649,8 @@ html .pp-form-container .select2 input.select2-search__field {
     display: block;
 }
 
-.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-standard .pp-hint-tooltip,
-.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-reveal .pp-hint-tooltip {
+.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-standard .ppress-hint-tooltip,
+.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-reveal .ppress-hint-tooltip {
     display: none;
 }
 
@@ -658,12 +658,12 @@ html .pp-form-container .select2 input.select2-search__field {
     display: none;
 }
 
-.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-tooltip .pp-hint-tooltip {
+.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-tooltip .ppress-hint-tooltip {
     display: inline;
     font-weight: normal;
 }
 
-.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-tooltip .pp-hint-tooltip .pp-form-material-icons {
+.pp-form-container .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap.fda-tooltip .ppress-hint-tooltip .pp-form-material-icons {
     position: relative;
     margin: 0;
     padding: 0;

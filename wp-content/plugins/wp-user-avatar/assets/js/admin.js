@@ -36,7 +36,8 @@
             data: {
                 builder_structure: builder_structure,
                 builder_css: css_codemirror_editor.getValue(),
-                action: 'pp-builder-preview'
+                action: 'pp-builder-preview',
+                _wpnonce: ppress_admin_globals.nonce
             },
             beforeSend: function () {
                 if (currentRequest != null) {
@@ -328,7 +329,7 @@
         $('.pp-email-editor-tablinks').click(function (e) {
             e.preventDefault();
             $(this).blur();
-            var parent = $(this).parents('.pp-email-editor-wrap');
+            var parent = $(this).parents('.ppress-email-editor-wrap');
             $('.pp-email-editor-tablinks', parent).removeClass('eactive');
             var key = parent.find('.pp-email-editor-textarea').attr('id');
 

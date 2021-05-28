@@ -239,8 +239,6 @@ class MyAccountTag extends FormProcessor
                 }
             }
         }
-
-        $this->remove_post_query();
     }
 
     public function parse_request()

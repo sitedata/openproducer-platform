@@ -17,7 +17,7 @@
     };
 
     fb.fetchThemes = function () {
-        $(document).on('click', '.pp-hald-first', function (e) {
+        $(document).on('click', '.pp-hald-first.ppbd-active', function (e) {
             e.preventDefault();
             $('.pp-half-meta-inner').removeClass('pp-builder-select-active');
             $(this).find('.pp-half-meta-inner').addClass('pp-builder-select-active');
