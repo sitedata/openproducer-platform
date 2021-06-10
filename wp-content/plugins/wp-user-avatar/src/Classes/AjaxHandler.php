@@ -356,7 +356,7 @@ class AjaxHandler
     {
         if (current_user_can('manage_options')) {
 
-            $posted_data = array_map('esc_attr', $_POST['data']);
+            $posted_data = array_map('sanitize_text_field', $_POST['data']);
             $db_data     = get_option(PPRESS_CONTACT_INFO_OPTION_NAME, array());
 
             $newArray = array();

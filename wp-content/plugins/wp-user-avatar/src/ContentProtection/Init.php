@@ -9,7 +9,7 @@ class Init
 {
     public function __construct()
     {
-        add_filter('ppress_admin_hooks', function () {
+        add_action('ppress_admin_hooks', function () {
             SettingsPage::get_instance();
         });
 

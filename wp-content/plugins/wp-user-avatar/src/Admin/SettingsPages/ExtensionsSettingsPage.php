@@ -10,7 +10,7 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
 {
     public function __construct()
     {
-        add_filter('ppress_admin_hooks', function () {
+        add_action('ppress_admin_hooks', function () {
             add_action('admin_menu', array($this, 'register_settings_page'));
         });
 

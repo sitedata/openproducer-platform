@@ -68,19 +68,19 @@ class ImageUploader
                 );
             }
 
-            // verify the file is a GIF, JPEG, or PNG
-            $fileType = exif_imagetype($image["tmp_name"]);
+            $accepted_mime_types = [
+                'image/png',
+                'image/jpeg',
+                'image/gif'
+            ];
 
-            $allowed_image_type = apply_filters('ppress_allowed_image_type', array(
-                IMAGETYPE_GIF,
-                IMAGETYPE_JPEG,
-                IMAGETYPE_PNG
-            ));
+            $mime_check = ppress_check_type_and_ext($image, $accepted_mime_types);
 
-            if ( ! in_array($fileType, $allowed_image_type)) {
+            if (is_wp_error($mime_check)) {
+
                 return new WP_Error(
                     'image_invalid',
-                    apply_filters('ppress_image_not_image_error', esc_html__('Uploaded file not an image.', 'wp-user-avatar'))
+                    apply_filters('ppress_image_not_image_error', esc_html__('Uploaded file is not an image.', 'wp-user-avatar'))
                 );
             }
 
@@ -123,15 +123,13 @@ class ImageUploader
                 /** WP User Avatar Adapter STARTS */
                 global $wp_user_avatar, $wpua_resize_crop, $wpua_resize_h, $wpua_resize_upload, $wpua_resize_w;
 
-                if ( ! $wp_user_avatar->wpua_is_author_or_above() && (bool)$wpua_resize_upload === true) {
+                if ( (bool)$wpua_resize_upload === true) {
 
                     $uploaded_image = wp_get_image_editor($image_upload_dir . $file_name);
 
                     if ( ! is_wp_error($uploaded_image)) {
 
                         $uploaded_image->resize($wpua_resize_w, $wpua_resize_h, $wpua_resize_crop == '1');
-
-                        $uploaded_image->save($image_upload_dir . $file_name);
                     }
                 }
                 /** WP User Avatar Adapter ENDS */

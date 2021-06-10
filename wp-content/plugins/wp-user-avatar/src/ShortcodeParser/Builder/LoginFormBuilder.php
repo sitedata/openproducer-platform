@@ -126,7 +126,8 @@ class LoginFormBuilder
         $id    = 'id="' . $atts['id'] . '"';
         $title = 'title="' . $atts['title'] . '"';
 
-        $html = "<input name='login_remember' value='true' type='checkbox' $title $class $id $other_atts_html checked='checked'>";
+        $html = "<input name='login_remember' value='false' type='hidden'>";
+        $html .= "<input name='login_remember' value='true' type='checkbox' $title $class $id $other_atts_html checked='checked'>";
 
         return apply_filters('ppress_login_remember_field', $html, $atts);
     }
@@ -134,10 +135,10 @@ class LoginFormBuilder
     public function login_submit($atts)
     {
         $form_type = FormRepository::LOGIN_TYPE;
-        $form_id = isset($GLOBALS['pp_login_form_id']) ? $GLOBALS['pp_login_form_id'] : 0;
+        $form_id   = isset($GLOBALS['pp_login_form_id']) ? $GLOBALS['pp_login_form_id'] : 0;
 
         if (isset($GLOBALS['pp_melange_form_id'])) {
-            $form_id = $GLOBALS['pp_melange_form_id'];
+            $form_id   = $GLOBALS['pp_melange_form_id'];
             $form_type = FormRepository::MELANGE_TYPE;
         }
 

@@ -971,7 +971,21 @@ class FieldsShortcodeCallback
 
             $attributes = $this->field_attributes($key, $this->valid_field_atts($atts));
 
-            $html = "<input name='" . $key . "' type='file' $attributes>";
+            $html = '';
+
+            if ('edit_profile' == $this->form_name) {
+
+                $user_upload_data = get_user_meta($this->current_user->ID, 'pp_uploaded_files', true);
+                // if the user uploads isn't empty and there exist a file with the custom field key.
+                if ( ! empty($user_upload_data) && ($filename = @$user_upload_data[$key])) {
+                    $link = PPRESS_FILE_UPLOAD_URL . $filename;
+                    $html .= "<div class='ppress-user-upload'><a href='$link'>$filename</a></div>";
+                }
+
+                $html = apply_filters('ppress_edit_profile_hide_file', $html);
+            }
+
+            $html .= "<input name='" . $key . "' type='file' $attributes>";
             // if field is required, add an hidden field
             if ($this->form_type == FormRepository::REGISTRATION_TYPE && $this->is_field_required($atts)) {
                 $html .= "<input name='required-" . $key . "' type='hidden' value='true' style='display:none'>";

@@ -41,11 +41,11 @@ class FrontendProfileTag
         if (empty($who)) {
             if (is_user_logged_in()) {
                 $user = $this->get_current_user_data();
-            } elseif ( ! is_user_logged_in()) {
+            } else {
                 $profile_slug_with_slash = ppress_get_profile_slug() . '/';
 
                 if (strpos($_SERVER['REQUEST_URI'], $profile_slug_with_slash) !== false) {
-                    wp_safe_redirect(wp_login_url());
+                    wp_safe_redirect(home_url());
                     exit;
                 }
             }
@@ -55,11 +55,15 @@ class FrontendProfileTag
 
             // attempt to check if the slug is a nice-name and then retrieve the username of the user.
             $check = ppress_is_slug_nice_name($username_or_nicename);
-            if (is_string($check)) {
-                $username_or_nicename = $check;
-            }
+
+            if (is_string($check)) $username_or_nicename = $check;
 
             $user = get_user_by('login', $username_or_nicename);
+
+            if ( ! $user) {
+                wp_safe_redirect(home_url());
+                exit;
+            }
         }
 
         $user = apply_filters('ppress_frontend_profile_wp_user_object', $user);

@@ -361,8 +361,11 @@ class EditUserProfile
     {
         $custom_usermeta = array();
 
+        $valid_custom_usermeta = array_keys(ppress_custom_fields_key_value_pair(true));
+
         foreach ($post_data as $key => $value) {
-            if ($key == 'eup_submit' || in_array($key, ppress_reserved_field_keys())) continue;
+
+            if ($key == 'eup_submit' || in_array($key, ppress_reserved_field_keys()) || ! in_array($key, $valid_custom_usermeta)) continue;
 
             if ( ! in_array($key, $valid_userdata)) {
                 $custom_usermeta[$key] = $value;

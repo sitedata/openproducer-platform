@@ -5,7 +5,7 @@ Tags: user registration, user profile, registration form, membership, login form
 Requires at least: 4.7
 Requires PHP: 5.6
 Tested up to: 5.7
-Stable tag: 3.1.3
+Stable tag: 3.1.4
 License: GPLv2 or later
 
 Modern membership plugin for user registration, login form, user profile, member directories & content restriction.
@@ -109,7 +109,6 @@ No. You can create and manage your forms, user profiles and member directories w
 3. User Registration Form
 4. Custom Login Form
 5. Drag and Drop Form builder
-6. Advanced Shortcode Builder
 7. Email Customizer and Settings
 8. My Account Page
 9. Content Protection
@@ -118,6 +117,14 @@ No. You can create and manage your forms, user profiles and member directories w
 
 
 == Changelog ==
+
+= 3.1.4 =
+* Security fix: Ensures only valid custom user meta are updated.
+* Security fix: validate files and images correctly before they are uploaded.
+* Fix: Avatar upload now respects resize settings when using frontend forms.
+* Fix: Added link to uploaded file when file custom field is displayed.
+* Enhancement: when a user profile doesn't exist, redirect to homepage.
+* Enhancement: Remember login by default.
 
 = 3.1.3 =
 * Fixed edge cases where post content was overridden.
@@ -137,13 +144,5 @@ No. You can create and manage your forms, user profiles and member directories w
 * Fixed bug where disabling admin new user notifications wasn’t working.
 * Fixed fatar error: Cannot use ProfilePress\Core\Base as Base because the name is already in use.
 * Fixed issue where myaccount js was shown on all pages.
-
-= 3.0 (The rebrand to ProfilePress) =
-* Added custom login forms.
-* Added frontend user registration form.
-* Added User Profiles.
-* Added Member Directories.
-* Added Content Protection.
-* Added Admin bar and dashboard access restriction.
 
 See the [changelog file](https://plugins.svn.wordpress.org/wp-user-avatar/trunk/changelog.txt) for full change log information.

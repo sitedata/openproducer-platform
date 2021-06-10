@@ -143,7 +143,7 @@ class PasswordResetBuilder
         $class       = 'class="' . $atts['class'] . '"';
         $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
         $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
-        $value       = isset($_POST['password1']) ? 'value="' . esc_attr($_POST['password1']) . '"' : 'value=""';
+        $value       = 'value=""';
 
         $title = 'title="' . $atts['title'] . '"';
 
@@ -181,7 +181,7 @@ class PasswordResetBuilder
         $class       = 'class="' . $atts['class'] . '"';
         $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
         $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
-        $value       = isset($_POST['password2']) ? 'value="' . esc_attr($_POST['password2']) . '"' : 'value=""';
+        $value       = 'value=""';
 
         $title = 'title="' . $atts['title'] . '"';
 
