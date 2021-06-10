@@ -192,6 +192,7 @@
   .newspack-autocomplete-tokenfield .components-button:focus:not(:disabled) {
     box-shadow: inset 0 0 0 2px #36f; }
 
+@charset "UTF-8";
 /**
 * Styles for AutocompleteWithSuggestions component.
 */
@@ -199,11 +200,29 @@
  * Colors
  */
 .newspack-autocomplete-with-suggestions {
-  width: 100%; }
+  width: 100%;
+  /* Extra space on sides to handle outline styles of focused checkboxes. */ }
+  .newspack-autocomplete-with-suggestions.hide-help > .components-base-control,
+  .newspack-autocomplete-with-suggestions.hide-help > .newspack-autocomplete-tokenfield,
+  .newspack-autocomplete-with-suggestions.hide-help > .newspack-autocomplete-with-suggestions__search-suggestions,
+  .newspack-autocomplete-with-suggestions.hide-help > .newspack-autocomplete-with-suggestions__search-suggestions-multiselect {
+    margin-top: 1.5rem; }
   .newspack-autocomplete-with-suggestions .components-spinner {
-    position: absolute;
     left: 0;
     top: 2em; }
+  .newspack-autocomplete-with-suggestions .components-select-control__input {
+    max-width: none; }
+  .newspack-autocomplete-with-suggestions .components-input-control__backdrop {
+    border-color: #1e1e1e !important; }
+  .newspack-autocomplete-with-suggestions .newspack-autocomplete-with-suggestions__label,
+  .newspack-autocomplete-with-suggestions .components-form-token-field__label,
+  .newspack-autocomplete-with-suggestions .components-input-control__label,
+  .newspack-autocomplete-with-suggestions .components-checkbox-control__label {
+    color: #1e1e1e !important; }
+  .newspack-autocomplete-with-suggestions__suggestions-spinner .components-spinner {
+    display: block;
+    margin: 0 auto 1rem;
+    position: relative; }
   .newspack-autocomplete-with-suggestions .newspack-autocomplete-tokenfield__help {
     font-size: inherit; }
   .newspack-autocomplete-with-suggestions .components-form-token-field__input-container {
@@ -216,22 +235,58 @@
   .newspack-autocomplete-with-suggestions p.newspack-autocomplete-with-suggestions__label {
     font-size: inherit;
     margin-bottom: 4px; }
-  .newspack-autocomplete-with-suggestions__search-suggestions {
+  .newspack-autocomplete-with-suggestions__selected-items {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding-bottom: 1.75rem; }
+    .newspack-autocomplete-with-suggestions__selected-items .newspack-autocomplete-with-suggestions__label {
+      font-weight: bold; }
+      .newspack-autocomplete-with-suggestions__selected-items .newspack-autocomplete-with-suggestions__label .components-button.is-link {
+        color: #cc1818;
+        font-weight: normal; }
+  .newspack-autocomplete-with-suggestions__selected-item-button.components-button.is-tertiary {
+    background-color: #ddd;
     border-radius: 2px;
-    border: 1px solid #1e1e1e;
-    max-height: 164px;
-    overflow: scroll; }
-    .newspack-autocomplete-with-suggestions__search-suggestions .components-button {
+    color: #1e1e1e;
+    font-size: 13px;
+    height: auto;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-right: 8px;
+    padding-left: 8px; }
+    .newspack-autocomplete-with-suggestions__selected-item-button.components-button.is-tertiary::after {
+      content: '✕';
+      margin-right: 8px; }
+    .newspack-autocomplete-with-suggestions__selected-item-button.components-button.is-tertiary:hover {
+      box-shadow: none;
+      color: black; }
+  .newspack-autocomplete-with-suggestions__search-suggestions, .newspack-autocomplete-with-suggestions__search-suggestions-multiselect {
+    max-height: 166px;
+    overflow-x: visible;
+    overflow-y: auto; }
+    .newspack-autocomplete-with-suggestions__search-suggestions .components-button.is-link, .newspack-autocomplete-with-suggestions__search-suggestions-multiselect .components-button.is-link {
       color: #1e1e1e;
       display: block;
-      margin: 0;
+      margin: auto;
       padding: 8px;
       text-decoration: none;
       width: 100%; }
-      .newspack-autocomplete-with-suggestions__search-suggestions .components-button:active:not(:disabled), .newspack-autocomplete-with-suggestions__search-suggestions .components-button:hover:not(:disabled) {
+      .newspack-autocomplete-with-suggestions__search-suggestions .components-button.is-link:active:not(:disabled), .newspack-autocomplete-with-suggestions__search-suggestions .components-button.is-link:hover:not(:disabled), .newspack-autocomplete-with-suggestions__search-suggestions-multiselect .components-button.is-link:active:not(:disabled), .newspack-autocomplete-with-suggestions__search-suggestions-multiselect .components-button.is-link:hover:not(:disabled) {
         background: white;
         background: var(--wp-admin-theme-color);
         color: white; }
+    .newspack-autocomplete-with-suggestions__search-suggestions .components-button.is-secondary, .newspack-autocomplete-with-suggestions__search-suggestions-multiselect .components-button.is-secondary {
+      display: block;
+      margin: 1rem auto; }
+  .newspack-autocomplete-with-suggestions__search-suggestions-multiselect {
+    margin-right: -4px;
+    margin-left: -4px;
+    padding: 0 4px; }
+  .newspack-autocomplete-with-suggestions__search-suggestions {
+    border-radius: 2px;
+    border: 1px solid #1e1e1e;
+    max-height: 192px;
+    padding: 4px; }
 
 /**
  * Button
@@ -263,6 +318,9 @@ body[class*='admin-color-'] .newspack-button {
     justify-content: center;
     padding: 0;
     width: 36px; }
+    body[class*='admin-color-'] .newspack-button.icon-only.size-48 {
+      height: 48px;
+      width: 48px; }
   body[class*='admin-color-'] .newspack-button:disabled, body[class*='admin-color-'] .newspack-button:disabled:active:enabled, body[class*='admin-color-'] .newspack-button[aria-disabled='true'], body[class*='admin-color-'] .newspack-button[aria-disabled='true']:active:enabled {
     cursor: not-allowed;
     text-shadow: none; }
@@ -637,6 +695,12 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
     @media screen and (min-width: 744px) {
       .newspack-card hr {
         margin: 64px 0; } }
+  .newspack-card .sep {
+    background: #ddd;
+    height: 1px;
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 12px; }
   .newspack-card a {
     color: #36f; }
     .newspack-card a:active, .newspack-card a:focus, .newspack-card a:hover {
@@ -1224,7 +1288,9 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
   @media screen and (min-width: 744px) {
     .newspack-modal {
       max-width: 680px;
-      padding: 0 64px; } }
+      padding: 0 64px; }
+      .newspack-modal--wide {
+        max-width: 1168px; } }
   .newspack-modal .components-modal__header {
     background: white;
     border: none;
@@ -1378,15 +1444,11 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
 .newspack-card .newspack-plugin-installer__status {
   align-items: center;
   display: flex; }
-  .newspack-card .newspack-plugin-installer__status svg {
-    fill: #949494;
-    margin-right: 4px;
-    margin-left: 0;
-    order: -1; }
-    @media screen and (min-width: 744px) {
-      .newspack-card .newspack-plugin-installer__status svg {
-        margin-left: 4px;
-        order: 0; } }
+  .newspack-card .newspack-plugin-installer__status .newspack-checkbox-icon {
+    margin-right: 4px; }
+    .newspack-card .newspack-plugin-installer__status .newspack-checkbox-icon svg {
+      height: inherit;
+      width: inherit; }
 
 .newspack-card.newspack-plugin-installer__status-active .newspack-action-card__region-top, .newspack-card.newspack-plugin-installer__status-error .newspack-action-card__region-top, .newspack-card.newspack-plugin-installer__status-installing .newspack-action-card__region-top {
   padding-right: 28px; }
@@ -1396,14 +1458,21 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
 
 .newspack-card.newspack-plugin-installer__status-active {
   box-shadow: inset -4px 0 0 #4ab866; }
+  .newspack-card.newspack-plugin-installer__status-active .newspack-plugin-installer__checkbox {
+    background: #4ab866;
+    box-shadow: none; }
   .newspack-card.newspack-plugin-installer__status-active svg {
-    fill: #4ab866; }
+    fill: white; }
 
 .newspack-card.newspack-plugin-installer__status-error {
   box-shadow: inset -4px 0 0 #cc1818; }
 
 .newspack-card.newspack-plugin-installer__status-installing {
   box-shadow: inset -4px 0 0 #e0e0e0; }
+
+.newspack-card.is-small .newspack-plugin-installer__status .newspack-checkbox-icon {
+  height: 16px;
+  width: 16px; }
 
 .newspack-plugin-installer_is-waiting {
   display: flex; }
@@ -1604,6 +1673,7 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
  */
 .newspack-section-header {
   margin: 64px 0 32px; }
+  .newspack-section-header--no-margin,
   .newspack-section-header h2 {
     margin: 0 !important; }
   .newspack-wizard__content .newspack-section-header:first-child {
@@ -1788,20 +1858,23 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
     .newspack-tabbed-navigation li {
       width: auto;
       margin-bottom: 0; } }
+  .newspack-tabbed-navigation li:last-child > * {
+    margin-left: 0 !important; }
 
 .newspack-tabbed-navigation a {
-  display: block;
-  text-decoration: none;
   border-bottom: 4px solid #36f;
-  font-weight: bold; }
+  color: white;
+  display: block;
+  font-weight: bold;
+  text-decoration: none; }
   @media screen and (min-width: 500px) {
     .newspack-tabbed-navigation a {
       margin-left: 32px;
       padding-bottom: 12px; } }
   .newspack-tabbed-navigation a:active, .newspack-tabbed-navigation a:focus, .newspack-tabbed-navigation a:hover {
-    outline: none;
+    border-color: #93ccfd;
     color: white;
-    border-color: #93ccfd; }
+    outline: none; }
   .newspack-tabbed-navigation a:focus {
     box-shadow: none;
     outline: 1px solid;
@@ -1824,6 +1897,17 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
     flex-wrap: wrap; }
     .newspack-text-control--wide .components-base-control__field {
       width: 100%; }
+  .newspack-text-control--required {
+    margin: 32px 0; }
+    .newspack-text-control--required > * {
+      margin: 0; }
+    .newspack-text-control--required + .newspack-text-control--required {
+      margin-bottom: 32px;
+      margin-top: -16px; }
+    .newspack-text-control--required + .newspack-select-control,
+    .newspack-text-control--required + .newspack-textarea-control {
+      margin-bottom: 32px;
+      margin-top: -16px; }
   .newspack-text-control label {
     color: #1e1e1e;
     font-size: 14px;
@@ -1832,7 +1916,7 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
     margin: 0; }
     .newspack-text-control label[data-required-text]::after {
       content: attr(data-required-text);
-      padding-right: 5px;
+      padding-right: 0.25em;
       font-weight: normal;
       color: #757575; }
   .newspack-text-control input[type='date'],
@@ -1932,6 +2016,8 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
       background: #f0f0f0;
       color: #949494;
       cursor: not-allowed; }
+  .newspack-text-control.code input {
+    font-family: Consolas, monaco, monospace; }
   .newspack-text-control + .newspack-text-control {
     margin-bottom: 32px;
     margin-top: -16px; }
@@ -2055,13 +2141,10 @@ body[class*='admin-color-'] .newspack-button-group .newspack-button {
 /**
  * Waiting
  */
-/**
- * Colors
- */
 .newspack-is-waiting {
   animation: newspack-is-waiting__animation 1s infinite linear;
   display: block;
-  fill: #949494;
+  fill: currentColor;
   flex: 0 0 24px; }
   .newspack-is-waiting.newspack-is-waiting__is-left {
     margin-left: 4px; }
@@ -2464,6 +2547,21 @@ svg.newspack--success {
     display: none; }
   .newspack-buttons-card .newspack-button {
     margin-right: 16px; }
+
+.newspack-checkbox-icon {
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px #ddd;
+  display: block;
+  height: 24px;
+  width: 24px; }
+  .newspack-checkbox-icon svg {
+    fill: #757575; }
+  .newspack-checkbox-icon--checked {
+    background: #4ab866;
+    box-shadow: none; }
+    .newspack-checkbox-icon--checked svg {
+      fill: white; }
 
 /**
  * Wizard Pagination

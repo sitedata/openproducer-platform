@@ -25,7 +25,7 @@
   .newspack-dashboard__news details[open] svg {
     transform: rotate(180deg); }
   .newspack-dashboard__news details + details {
-    margin-top: -24px; }
+    margin-top: -16px; }
 
 .newspack-dashboard__news summary {
   cursor: pointer;
@@ -38,7 +38,7 @@
   .newspack-dashboard__news summary > div:first-child {
     flex: 0 0 48px; }
   .newspack-dashboard__news summary strong:first-child {
-    color: #36f; }
+    color: #1e1e1e; }
   .newspack-dashboard__news summary > span {
     flex: 0 0 calc( 100% - 48px); }
 

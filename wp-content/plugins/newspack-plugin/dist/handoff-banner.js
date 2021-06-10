@@ -211,6 +211,17 @@ eval("(function() { module.exports = window[\"wp\"][\"element\"]; }());\n\n//# s
 
 /***/ }),
 
+/***/ "@wordpress/html-entities":
+/*!**************************************!*\
+  !*** external ["wp","htmlEntities"] ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function() { module.exports = window[\"wp\"][\"htmlEntities\"]; }());\n\n//# sourceURL=webpack:///external_%5B%22wp%22,%22htmlEntities%22%5D?");
+
+/***/ }),
+
 /***/ "@wordpress/i18n":
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
@@ -274,17 +285,6 @@ eval("(function() { module.exports = window[\"lodash\"]; }());\n\n//# sourceURL=
 /***/ (function(module, exports) {
 
 eval("(function() { module.exports = window[\"React\"]; }());\n\n//# sourceURL=webpack:///external_%22React%22?");
-
-/***/ }),
-
-/***/ "react-dom":
-/*!***************************!*\
-  !*** external "ReactDOM" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("(function() { module.exports = window[\"ReactDOM\"]; }());\n\n//# sourceURL=webpack:///external_%22ReactDOM%22?");
 
 /***/ })
 

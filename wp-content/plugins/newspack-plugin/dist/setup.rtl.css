@@ -53,7 +53,7 @@
     position: relative;
     width: 24px; }
     .newspack-integration__status.done {
-      background: #36f;
+      background: #4ab866;
       box-shadow: none;
       color: white; }
     .newspack-integration__status svg {
