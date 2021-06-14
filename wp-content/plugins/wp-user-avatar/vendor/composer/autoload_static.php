@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3
+class ComposerStaticInit320a30269f6c41be35363d85a90cb2da
 {
     public static $files = array (
         'fda73876e8be17735f680f484cec1679' => __DIR__ . '/../..' . '/src/Functions/custom-settings-api.php',
@@ -120,6 +120,7 @@ class ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3
         'ProfilePress\\Core\\Admin\\SettingsPages\\Forms' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/Forms.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\GeneralSettings' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/GeneralSettings.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\IDUserColumn' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/IDUserColumn.php',
+        'ProfilePress\\Core\\Admin\\SettingsPages\\MailOptin' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/MailOptin.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\MemberDirectories' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/MemberDirectories.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\MembersDirectoryList' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/MembersDirectoryList.php',
         'ProfilePress\\Core\\Admin\\SettingsPages\\ToolsSettingsPage' => __DIR__ . '/../..' . '/src/Admin/SettingsPages/ToolsSettingsPage.php',
@@ -137,6 +138,9 @@ class ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3
         'ProfilePress\\Core\\Classes\\GDPR' => __DIR__ . '/../..' . '/src/Classes/GDPR.php',
         'ProfilePress\\Core\\Classes\\GlobalSiteAccess' => __DIR__ . '/../..' . '/src/Classes/GlobalSiteAccess.php',
         'ProfilePress\\Core\\Classes\\ImageUploader' => __DIR__ . '/../..' . '/src/Classes/ImageUploader.php',
+        'ProfilePress\\Core\\Classes\\Installer\\PPress_Install_Skin' => __DIR__ . '/../..' . '/src/Classes/Installer/PPress_Install_Skin.php',
+        'ProfilePress\\Core\\Classes\\Installer\\PluginSilentUpgrader' => __DIR__ . '/../..' . '/src/Classes/Installer/PluginSilentUpgrader.php',
+        'ProfilePress\\Core\\Classes\\Installer\\PluginSilentUpgraderSkin' => __DIR__ . '/../..' . '/src/Classes/Installer/PluginSilentUpgraderSkin.php',
         'ProfilePress\\Core\\Classes\\LoginAuth' => __DIR__ . '/../..' . '/src/Classes/LoginAuth.php',
         'ProfilePress\\Core\\Classes\\Miscellaneous' => __DIR__ . '/../..' . '/src/Classes/Miscellaneous.php',
         'ProfilePress\\Core\\Classes\\ModifyRedirectDefaultLinks' => __DIR__ . '/../..' . '/src/Classes/ModifyRedirectDefaultLinks.php',
@@ -282,9 +286,9 @@ class ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf1f8ec9023d123f9876c568dd7243be3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit320a30269f6c41be35363d85a90cb2da::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit320a30269f6c41be35363d85a90cb2da::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit320a30269f6c41be35363d85a90cb2da::$classMap;
 
         }, null, ClassLoader::class);
     }

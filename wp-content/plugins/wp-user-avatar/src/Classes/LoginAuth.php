@@ -25,7 +25,7 @@ class LoginAuth
      *
      * @param string $username
      * @param string $password
-     * @param bool $remember_login
+     * @param string $remember_login
      * @param null|int $login_form_id
      * @param string $redirect
      *
@@ -51,7 +51,7 @@ class LoginAuth
         $creds['user_login']    = $username;
         $creds['user_password'] = $password;
 
-        if ($remember_login == 'true') {
+        if (empty($remember_login) || $remember_login == 'true') {
             $creds['remember'] = true;
         }
 

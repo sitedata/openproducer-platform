@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the ProfilePress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: ProfilePress 3.1.3\n"
+"Project-Id-Version: ProfilePress 3.1.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-user-avatar\n"
-"POT-Creation-Date: 2021-05-26 15:39:50+00:00\n"
+"POT-Creation-Date: 2021-05-30 08:27:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -125,7 +125,7 @@ msgid "ProfilePress Avatar Upload"
 msgstr ""
 
 #: deprecated/wp-user-avatar/includes/class-wp-user-avatar-widget.php:56
-#: src/Widgets/Form.php:65 src/Widgets/TabbedWidget.php:466
+#: src/Widgets/Form.php:65 src/Widgets/TabbedWidget.php:461
 #: src/Widgets/UserPanel.php:74
 msgid "Title:"
 msgstr ""
@@ -446,9 +446,9 @@ msgstr ""
 #: src/Admin/SettingsPages/DragDropBuilder/Metabox.php:162
 #: src/Admin/SettingsPages/DragDropBuilder/Metabox.php:223
 #: src/Admin/SettingsPages/GeneralSettings.php:234
-#: src/Functions/GlobalFunctions.php:1224
-#: src/Functions/GlobalFunctions.php:1250
-#: src/Functions/GlobalFunctions.php:1272
+#: src/Functions/GlobalFunctions.php:1226
+#: src/Functions/GlobalFunctions.php:1252
+#: src/Functions/GlobalFunctions.php:1274
 msgid "Select..."
 msgstr ""
 
@@ -519,7 +519,7 @@ msgid "Select Icon"
 msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1202
-#: src/Functions/GlobalFunctions.php:1275
+#: src/Functions/GlobalFunctions.php:1277
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:202
 msgid "Standard Fields"
 msgstr ""
@@ -529,7 +529,7 @@ msgid "Extra Fields"
 msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/DragDropBuilder.php:1205
-#: src/Classes/ExtensionManager.php:53 src/Functions/GlobalFunctions.php:1278
+#: src/Classes/ExtensionManager.php:53 src/Functions/GlobalFunctions.php:1280
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:216
 msgid "Custom Fields"
 msgstr ""
@@ -555,7 +555,7 @@ msgstr ""
 #: src/Admin/SettingsPages/EmailSettings/CustomizerTrait.php:11
 #: src/AdminBarDashboardAccess/include.settings-page.php:54
 #: src/AdminBarDashboardAccess/include.settings-page.php:109
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1004
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1018
 msgid "Save Changes"
 msgstr ""
 
@@ -703,7 +703,7 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Bio.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/Bio.php:22
-#: src/Functions/GlobalFunctions.php:1262
+#: src/Functions/GlobalFunctions.php:1264
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:211
 #: src/Themes/DragDrop/AbstractTheme.php:189
 msgid "Biography"
@@ -953,7 +953,7 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/DisplayName.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/DisplayName.php:22
-#: src/Functions/GlobalFunctions.php:1260
+#: src/Functions/GlobalFunctions.php:1262
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:318
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:208
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:460
@@ -978,17 +978,17 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Email.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/Email.php:22
-#: src/Functions/GlobalFunctions.php:1261
+#: src/Functions/GlobalFunctions.php:1263
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:210
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:206
 #: src/Themes/DragDrop/AbstractTheme.php:162
-#: src/Themes/DragDrop/AbstractTheme.php:221 src/Widgets/TabbedWidget.php:131
+#: src/Themes/DragDrop/AbstractTheme.php:221 src/Widgets/TabbedWidget.php:130
 msgid "Email Address"
 msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/FirstName.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/FirstName.php:22
-#: src/Functions/GlobalFunctions.php:1257
+#: src/Functions/GlobalFunctions.php:1259
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:350
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:209
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:461
@@ -1008,7 +1008,7 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/LastName.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/LastName.php:22
-#: src/Functions/GlobalFunctions.php:1258
+#: src/Functions/GlobalFunctions.php:1260
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:383
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:210
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:462
@@ -1022,7 +1022,7 @@ msgid "Remember Login"
 msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Login/RememberLogin.php:27
-#: src/Themes/DragDrop/AbstractTheme.php:208 src/Widgets/TabbedWidget.php:142
+#: src/Themes/DragDrop/AbstractTheme.php:208
 msgid "Remember Me"
 msgstr ""
 
@@ -1030,7 +1030,7 @@ msgstr ""
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/PasswordReset/Userlogin.php:22
 #: src/ShortcodeParser/Builder/PasswordResetBuilder.php:33
 #: src/Themes/DragDrop/AbstractTheme.php:202
-#: src/Themes/DragDrop/AbstractTheme.php:213 src/Widgets/TabbedWidget.php:127
+#: src/Themes/DragDrop/AbstractTheme.php:213 src/Widgets/TabbedWidget.php:126
 msgid "Username or Email"
 msgstr ""
 
@@ -1041,7 +1041,7 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Nickname.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/Nickname.php:22
-#: src/Functions/GlobalFunctions.php:1259
+#: src/Functions/GlobalFunctions.php:1261
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:286
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:300
 #: src/ShortcodeParser/MyAccount/edit-profile.tmpl.php:138
@@ -1197,13 +1197,13 @@ msgstr ""
 
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/UserProfile/Username.php:22
 #: src/Admin/SettingsPages/DragDropBuilder/Fields/Username.php:22
-#: src/Functions/GlobalFunctions.php:1256
+#: src/Functions/GlobalFunctions.php:1258
 #: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:135
 #: src/Themes/DragDrop/AbstractMemberDirectoryTheme.php:463
 #: src/Themes/DragDrop/AbstractTheme.php:159
 #: src/Themes/DragDrop/AbstractTheme.php:218
 #: src/Themes/DragDrop/UserProfile/DefaultTemplate.php:105
-#: src/Widgets/TabbedWidget.php:124
+#: src/Widgets/TabbedWidget.php:123
 msgid "Username"
 msgstr ""
 
@@ -1448,7 +1448,7 @@ msgid "New User Admin Notification"
 msgstr ""
 
 #: src/Admin/SettingsPages/EmailSettings/EmailSettingsPage.php:80
-#: src/Functions/GlobalFunctions.php:722 src/RegisterActivation/Base.php:89
+#: src/Functions/GlobalFunctions.php:724 src/RegisterActivation/Base.php:89
 msgid "[%s] New User Registration"
 msgstr ""
 
@@ -1708,7 +1708,7 @@ msgstr ""
 #: src/Classes/AjaxHandler.php:53 src/NavigationMenuLinks/Backend.php:34
 #: src/ShortcodeParser/Builder/GlobalShortcodes.php:235
 #: src/Themes/DragDrop/AbstractBuildScratch.php:180
-#: src/Widgets/TabbedWidget.php:107
+#: src/Widgets/TabbedWidget.php:106
 msgid "Login"
 msgstr ""
 
@@ -1996,7 +1996,7 @@ msgid "Redirection Settings"
 msgstr ""
 
 #: src/Admin/SettingsPages/GeneralSettings.php:231
-#: src/Widgets/TabbedWidget.php:217
+#: src/Widgets/TabbedWidget.php:212
 msgid "Log out"
 msgstr ""
 
@@ -2163,6 +2163,193 @@ msgstr ""
 
 #: src/Admin/SettingsPages/IDUserColumn.php:20
 msgid "ID"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:51
+msgid "There was an error while performing your request."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:63
+msgid "Could not install plugin. Please download and install manually."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:63
+msgid ""
+"Could not install addon. Please download from wpforms.com and install "
+"manually."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:131
+msgid "Plugin installed."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:131
+msgid "Addon installed."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:141
+msgid "Plugin installed & activated."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:141
+msgid "Addon installed & activated."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:157
+msgid "Plugin activation is disabled for you on this site."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:166
+msgid "Plugin activated."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:170
+msgid "Could not activate plugin. Please activate from the Plugins page."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:178
+msgid "Popups & Optins"
+msgstr ""
+
+#. translators: %s - Lite plugin download URL.
+#: src/Admin/SettingsPages/MailOptin.php:209
+msgid ""
+"Could not install plugin. Please <a href=\"%s\">download</a> and install "
+"manually."
+msgstr ""
+
+#. translators: %s - Lite plugin download URL.
+#: src/Admin/SettingsPages/MailOptin.php:221
+msgid ""
+"Could not activate plugin. Please activate from the <a href=\"%s\">Plugins "
+"page</a>."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:232
+msgid "Installing..."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:233
+msgid "Activating..."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:234
+#: src/Admin/SettingsPages/MailOptin.php:596
+msgid "MailOptin Installed & Activated"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:235
+msgid "Install Now"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:236
+msgid "Activate Now"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:237
+msgid "Download Now"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:238
+msgid "Go to Plugins page"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:243
+msgid "Go to MailOptin Settings"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:472
+msgid "ProfilePress ♥ MailOptin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:473
+msgid "#1 Popup, Optin Forms & Marketing Automation Plugin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:474
+msgid ""
+"MailOptin lets you create popups and newsletter opt-in forms that integrates "
+"with Mailchimp, Aweber, Constant Contact, Active Campaign & more."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:497
+msgid "MailOptin screenshot"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:498
+msgid ""
+"Automatically notify your subscribers every time you publish a new post."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:499
+msgid ""
+"Keep your subscribers engaged with daily, weekly and monthly email digest of "
+"published posts."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:500
+msgid ""
+"Different types of opt-in form including Popup, notification bar, inline, "
+"scroll box, slide ins, sidebar forms."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:501
+msgid ""
+"Page-level targeting and optin triggers to build hyper segmented email list."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:502
+msgid ""
+"Analytics with actionable reporting & insights to improve your lead-"
+"generation strategy."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:530
+msgid "Step 1"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:531
+msgid "Install and Activate MailOptin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:532
+msgid "Install MailOptin from the WordPress.org plugin repository."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:565
+msgid "Step 2"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:566
+msgid "Set Up MailOptin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:567
+msgid "Configure and create your first optin form."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:588
+msgid "Install MailOptin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:596
+msgid "Activate MailOptin"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:614
+msgid "Start Setup"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:620
+msgid "Go to MailOptin settings"
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:641
+msgid "You do not have permission."
+msgstr ""
+
+#: src/Admin/SettingsPages/MailOptin.php:651
+msgid "Plugin unavailable."
 msgstr ""
 
 #: src/Admin/SettingsPages/MemberDirectories.php:35
@@ -2530,41 +2717,41 @@ msgstr ""
 msgid "Uploaded file is greater than the allowed sized of %s"
 msgstr ""
 
-#: src/Classes/FileUploader.php:94
+#: src/Classes/FileUploader.php:96
 msgid "appears to be of an invalid file format. Please try again."
 msgstr ""
 
-#: src/Classes/FileUploader.php:125
+#: src/Classes/FileUploader.php:127
 msgid "Unable to save %s, please try again."
 msgstr ""
 
-#: src/Classes/FileUploader.php:152
+#: src/Classes/FileUploader.php:154
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: src/Classes/FileUploader.php:155
+#: src/Classes/FileUploader.php:157
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: src/Classes/FileUploader.php:158
+#: src/Classes/FileUploader.php:160
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
-#: src/Classes/FileUploader.php:161
+#: src/Classes/FileUploader.php:163
 msgid "No file was uploaded"
 msgstr ""
 
-#: src/Classes/FileUploader.php:164
+#: src/Classes/FileUploader.php:166
 msgid "Missing a temporary folder"
 msgstr ""
 
-#: src/Classes/FileUploader.php:167
+#: src/Classes/FileUploader.php:169
 msgid "Failed to write file to disk"
 msgstr ""
 
-#: src/Classes/FileUploader.php:170
+#: src/Classes/FileUploader.php:172
 msgid "File upload stopped by extension"
 msgstr ""
 
@@ -2573,7 +2760,7 @@ msgid "You must be logged in to preview a form."
 msgstr ""
 
 #: src/Classes/FormRepository.php:166 src/Themes/DragDrop/AbstractTheme.php:124
-#: src/Widgets/TabbedWidget.php:87
+#: src/Widgets/TabbedWidget.php:86
 msgid "Processing"
 msgstr ""
 
@@ -2598,7 +2785,7 @@ msgid "%s is greater than the allowed sized of %s"
 msgstr ""
 
 #: src/Classes/ImageUploader.php:83
-msgid "Uploaded file not an image."
+msgid "Uploaded file is not an image."
 msgstr ""
 
 #: src/Classes/ImageUploader.php:119
@@ -2654,33 +2841,33 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:209
+#: src/Classes/RegistrationAuth.php:211
 msgid "%s field is required"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:218
+#: src/Classes/RegistrationAuth.php:220
 msgid ""
 "<strong>ERROR</strong>: This username is invalid because it uses illegal "
 "characters. Please enter a valid username."
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:222
+#: src/Classes/RegistrationAuth.php:224
 msgid "Email address is not valid"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:226
+#: src/Classes/RegistrationAuth.php:228
 msgid "Passwords do not match"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:230
+#: src/Classes/RegistrationAuth.php:232
 msgid "Email addresses do not match"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:234
+#: src/Classes/RegistrationAuth.php:236
 msgid "Password is not strong"
 msgstr ""
 
-#: src/Classes/RegistrationAuth.php:393
+#: src/Classes/RegistrationAuth.php:402
 #: src/Themes/DragDrop/AbstractTheme.php:110
 msgid "Registration successful."
 msgstr ""
@@ -2984,43 +3171,60 @@ msgid "Redirect URL"
 msgstr ""
 
 #. translators: %s: User login.
-#: src/Functions/GlobalFunctions.php:792
+#: src/Functions/GlobalFunctions.php:794
 msgid "Username: %s"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:793
+#: src/Functions/GlobalFunctions.php:795
 msgid "To set your password, visit the following address:"
 msgstr ""
 
 #. translators: Login details notification email subject. %s: Site title.
-#: src/Functions/GlobalFunctions.php:801
+#: src/Functions/GlobalFunctions.php:803
 msgid "[%s] Login Details"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1087
+#: src/Functions/GlobalFunctions.php:1089
 msgid ""
 "It must be unique for each field, not a reserve text, in lowercase letters "
 "only with an underscore ( _ ) separating words e.g job_title"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1208
+#: src/Functions/GlobalFunctions.php:1210
 msgid "%s (WooCommerce Billing Address)"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1212
+#: src/Functions/GlobalFunctions.php:1214
 msgid "%s (WooCommerce Shipping Address)"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1254
+#: src/Functions/GlobalFunctions.php:1256
 msgid "First and Last Names"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1255
+#: src/Functions/GlobalFunctions.php:1257
 msgid "Last and First Names"
 msgstr ""
 
-#: src/Functions/GlobalFunctions.php:1263
+#: src/Functions/GlobalFunctions.php:1265
 msgid "Registration Date"
+msgstr ""
+
+#: src/Functions/GlobalFunctions.php:1382
+msgid "There was an problem while verifying your file."
+msgstr ""
+
+#: src/Functions/GlobalFunctions.php:1387
+msgid "Sorry, this file extension is not permitted for security reasons."
+msgstr ""
+
+#: src/Functions/GlobalFunctions.php:1391
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr ""
+
+#: src/Functions/GlobalFunctions.php:1395
+#: src/Functions/GlobalFunctions.php:1399
+msgid "Error: The file you uploaded is not accepted on our website."
 msgstr ""
 
 #: src/Functions/custom-settings-api.php:855
@@ -4024,8 +4228,8 @@ msgid "Zimbabwe"
 msgstr ""
 
 #: src/NavigationMenuLinks/Backend.php:29 src/RegisterActivation/Base.php:155
-#: src/ShortcodeParser/Builder/LoginFormBuilder.php:165
-#: src/Themes/DragDrop/AbstractTheme.php:104 src/Widgets/TabbedWidget.php:88
+#: src/ShortcodeParser/Builder/LoginFormBuilder.php:166
+#: src/Themes/DragDrop/AbstractTheme.php:104 src/Widgets/TabbedWidget.php:87
 msgid "Log In"
 msgstr ""
 
@@ -4037,9 +4241,9 @@ msgid "Log Out"
 msgstr ""
 
 #: src/NavigationMenuLinks/Backend.php:31 src/RegisterActivation/Base.php:159
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1001
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1015
 #: src/ShortcodeParser/Builder/GlobalShortcodes.php:172
-#: src/Widgets/TabbedWidget.php:89
+#: src/Widgets/TabbedWidget.php:88
 msgid "Sign Up"
 msgstr ""
 
@@ -4220,11 +4424,11 @@ msgstr ""
 msgid "custom field not defined"
 msgstr ""
 
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1071
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1085
 msgid "Delete Avatar"
 msgstr ""
 
-#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1107
+#: src/ShortcodeParser/Builder/FieldsShortcodeCallback.php:1121
 msgid "Delete Cover Image"
 msgstr ""
 
@@ -4250,7 +4454,7 @@ msgstr ""
 
 #: src/ShortcodeParser/Builder/PasswordResetBuilder.php:103
 #: src/ShortcodeParser/Builder/PasswordResetBuilder.php:335
-#: src/Widgets/TabbedWidget.php:90
+#: src/Widgets/TabbedWidget.php:89
 msgid "Get New Password"
 msgstr ""
 
@@ -4270,23 +4474,23 @@ msgstr ""
 msgid "Authentication failed. Please try again"
 msgstr ""
 
-#: src/ShortcodeParser/FrontendProfileTag.php:83
+#: src/ShortcodeParser/FrontendProfileTag.php:87
 msgid ""
 "This content is available to members only. Please <a href=\"%1$s\">login</a> "
 "or <a href=\"%2$s\">register</a> to view this area."
 msgstr ""
 
-#: src/ShortcodeParser/FrontendProfileTag.php:90
+#: src/ShortcodeParser/FrontendProfileTag.php:94
 msgid "You are not authorized to access this area."
 msgstr ""
 
-#: src/ShortcodeParser/FrontendProfileTag.php:128
+#: src/ShortcodeParser/FrontendProfileTag.php:132
 msgid ""
 "Form class not found. Please check if this user profile actually exist in "
 "ProfilePress."
 msgstr ""
 
-#: src/ShortcodeParser/FrontendProfileTag.php:193
+#: src/ShortcodeParser/FrontendProfileTag.php:197
 #: src/Themes/DragDrop/UserProfile/Dixon.php:121
 msgid "Profile"
 msgstr ""
@@ -4481,7 +4685,7 @@ msgid "Lost your password?"
 msgstr ""
 
 #: src/Themes/DragDrop/AbstractBuildScratch.php:179
-#: src/Themes/DragDrop/AbstractTheme.php:109 src/Widgets/TabbedWidget.php:110
+#: src/Themes/DragDrop/AbstractTheme.php:109 src/Widgets/TabbedWidget.php:109
 msgid "Register"
 msgstr ""
 
@@ -5007,7 +5211,7 @@ msgid "See all Posts"
 msgstr ""
 
 #: src/Themes/DragDrop/UserProfile/DefaultTemplate.php:378
-#: src/Widgets/TabbedWidget.php:214
+#: src/Widgets/TabbedWidget.php:209
 msgid "Edit your profile"
 msgstr ""
 
@@ -5095,63 +5299,63 @@ msgstr ""
 msgid "A tabbed login, registration and lost password widget"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:113
+#: src/Widgets/TabbedWidget.php:112
 msgid "Forgot?"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:211 src/Widgets/UserPanel.php:50
+#: src/Widgets/TabbedWidget.php:206 src/Widgets/UserPanel.php:50
 msgid "Welcome %s"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:231
+#: src/Widgets/TabbedWidget.php:226
 msgid "Login / Sign up"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:237
+#: src/Widgets/TabbedWidget.php:232
 msgid "Have an account?"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:243
+#: src/Widgets/TabbedWidget.php:238
 msgid "Don't have an account?"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:249
+#: src/Widgets/TabbedWidget.php:244
 msgid "Forgot Password?"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:472
+#: src/Widgets/TabbedWidget.php:467
 msgid "Login text:"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:477
+#: src/Widgets/TabbedWidget.php:472
 msgid "Registration text:"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:482
+#: src/Widgets/TabbedWidget.php:477
 msgid "Lost-password text:"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:488
+#: src/Widgets/TabbedWidget.php:483
 msgid "Automatically login user after successful registration"
 msgstr ""
 
-#: src/Widgets/TabbedWidget.php:494
+#: src/Widgets/TabbedWidget.php:489
 msgid "Widget CSS:"
 msgstr ""
 
-#: src/Widgets/TabbedWidgetDependency.php:26
+#: src/Widgets/TabbedWidgetDependency.php:25
 msgid "Unable to log in. Please try again"
 msgstr ""
 
-#: src/Widgets/TabbedWidgetDependency.php:44
+#: src/Widgets/TabbedWidgetDependency.php:43
 msgid "Check your email for further instructions."
 msgstr ""
 
-#: src/Widgets/TabbedWidgetDependency.php:51
+#: src/Widgets/TabbedWidgetDependency.php:50
 msgid "Unexpected error, please try again"
 msgstr ""
 
-#: src/Widgets/TabbedWidgetDependency.php:106
+#: src/Widgets/TabbedWidgetDependency.php:105
 msgid "Required form field is missing"
 msgstr ""
 
@@ -5189,9 +5393,9 @@ msgstr ""
 msgid "ProfilePress"
 msgstr ""
 
-#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.3)  #-#-#-#-#
+#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.4)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.3)  #-#-#-#-#
+#. #-#-#-#-#  wp-user-avatar.pot (ProfilePress 3.1.4)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "https://profilepress.net"
 msgstr ""

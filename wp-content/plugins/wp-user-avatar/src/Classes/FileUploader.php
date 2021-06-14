@@ -85,12 +85,14 @@ class FileUploader
             return ! empty($value);
         });
 
+        if ( ! is_array($allowed_extensions) || empty($allowed_extensions)) $allowed_extensions = [];
+
         $filename = $file['name'];
 
-        // get the file extension
-        $fileExtension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        $mime_check = ppress_check_type_and_ext($file, [], $allowed_extensions);
 
-        if ( ! empty($allowed_extensions) && ! in_array($fileExtension, $allowed_extensions)) {
+        if (is_wp_error($mime_check)) {
+
             return new WP_Error('invalid_file', $filename . ' ' . apply_filters('ppress_invalid_file_error', esc_html__('appears to be of an invalid file format. Please try again.', 'wp-user-avatar'), $field_key));
         }
 

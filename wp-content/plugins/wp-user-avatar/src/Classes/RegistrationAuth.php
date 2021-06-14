@@ -91,10 +91,12 @@ class RegistrationAuth
      * @param bool $is_melange
      * @param string $no_login_redirect
      *
-     * @return string
+     * @return string|void
      */
     public static function register_new_user($post, $form_id = 0, $redirect = '', $is_melange = false, $no_login_redirect = '')
     {
+        if ( ! get_option('users_can_register')) return;
+
         $files = $_FILES;
 
         // create an array of acceptable userdata for use by wp_insert_user
@@ -236,12 +238,19 @@ class RegistrationAuth
 
         // get the data for use by update_meta
         $custom_usermeta = array();
-        // loop over the $_POST data and create an array of the invalid userdata/ custom usermeta
-        foreach ($post as $key => $value) {
-            if ($key == 'reg_submit' || in_array($key, ppress_reserved_field_keys())) continue;
 
-            if ( ! in_array($key, $valid_userdata)) {
-                $custom_usermeta[$key] = is_array($value) ? array_map('sanitize_text_field', $value) : sanitize_text_field($value);
+        if (ExtensionManager::is_premium()) {
+            // loop over the $_POST data and create an array of the invalid userdata/ custom usermeta
+            foreach ($post as $key => $value) {
+
+                if ($key == 'reg_submit' || in_array($key, ppress_reserved_field_keys())) continue;
+
+                if ( ! in_array($key, $valid_userdata)) {
+
+                    if (in_array($key, array_keys(ppress_custom_fields_key_value_pair(true)))) {
+                        $custom_usermeta[$key] = is_array($value) ? array_map('sanitize_text_field', $value) : sanitize_text_field($value);
+                    }
+                }
             }
         }
 

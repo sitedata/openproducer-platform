@@ -13,13 +13,12 @@ class TabbedWidgetDependency
      *
      * @param $username         string      login username
      * @param $password         string      login password
-     * @param $remember_login   bool        remember login
      *
      * @return string
      */
-    static function login($username, $password, $remember_login)
+    static function login($username, $password)
     {
-        $login_status = LoginAuth::login_auth($username, $password, $remember_login);
+        $login_status = LoginAuth::login_auth($username, $password);
 
         if (isset($login_status)) return $login_status->get_error_message();
 

@@ -5,6 +5,7 @@ namespace ProfilePress\Core;
 use ProfilePress\Core\Admin\SettingsPages\AdminFooter;
 use ProfilePress\Core\Admin\SettingsPages\ExtensionsSettingsPage;
 use ProfilePress\Core\Admin\SettingsPages\IDUserColumn;
+use ProfilePress\Core\Admin\SettingsPages\MailOptin;
 use ProfilePress\Core\Admin\SettingsPages\MemberDirectories;
 use ProfilePress\Core\Admin\SettingsPages\ToolsSettingsPage;
 use ProfilePress\Core\Classes\GlobalSiteAccess;
@@ -222,6 +223,7 @@ class Base
 
         Forms::get_instance();
         MemberDirectories::get_instance();
+        MailOptin::get_instance();
         ExtensionsSettingsPage::get_instance();
 
         AdminNotices::get_instance();

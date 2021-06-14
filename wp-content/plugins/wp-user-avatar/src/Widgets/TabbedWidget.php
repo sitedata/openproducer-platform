@@ -31,8 +31,7 @@ class TabbedWidget extends \WP_Widget
         if (isset($_POST['tabbed_login_submit'])) {
             $this->widget_status = @TabbedWidgetDependency::login(
                 trim($_POST['tabbed-login-name']),
-                $_POST['tabbed-login-password'],
-                sanitize_text_field($_POST['tabbed-login-remember-me'])
+                $_POST['tabbed-login-password']
             );
         }
 
@@ -136,10 +135,6 @@ class TabbedWidget extends \WP_Widget
                             </li>
                             <li>
                                 <input name="tabbed-login-password" value="<?php echo(isset($_POST['tabbed-login-password']) ? $_POST['tabbed-login-password'] : ''); ?>" type="password" placeholder="Password" required/>
-                            </li>
-                            <li class="remember-login">
-                                <input id="remember-login" name="tabbed-login-remember-me" type="checkbox" value="true">
-                                <label for="remember-login" class="css-label lite-cyan-check"><?= esc_html__('Remember Me', 'wp-user-avatar'); ?></label>
                             </li>
                             <li>
                                 <input data-pp-submit-label="<?= $login_btn_label ?>" data-pp-processing-label="<?= $processing_label ?>" name="tabbed_login_submit" type="submit" value="<?= $login_btn_label ?>" class="tb-button"/>

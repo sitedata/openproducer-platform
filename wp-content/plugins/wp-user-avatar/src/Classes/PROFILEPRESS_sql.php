@@ -119,19 +119,12 @@ class PROFILEPRESS_sql
      */
     public static function get_profile_custom_fields()
     {
-        static $cache = false;
+        global $wpdb;
 
-        if (false === $cache) {
-
-            global $wpdb;
-
-            $cache = $wpdb->get_results(
-                sprintf("SELECT * FROM %s ORDER BY id", Base::profile_fields_db_table()),
-                'ARRAY_A'
-            );
-        }
-
-        return $cache;
+        return $wpdb->get_results(
+            sprintf("SELECT * FROM %s ORDER BY id", Base::profile_fields_db_table()),
+            'ARRAY_A'
+        );
     }
 
     /**

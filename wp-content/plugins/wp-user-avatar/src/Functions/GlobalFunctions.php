@@ -1,6 +1,7 @@
 <?php
 /** List of ProfilePress global helper functions */
 
+use ProfilePress\Core\Admin\SettingsPages\MailOptin;
 use ProfilePress\Core\Base;
 use ProfilePress\Core\Classes\ExtensionManager as EM;
 use ProfilePress\Core\Classes\FormRepository as FR;
@@ -495,7 +496,8 @@ function ppress_is_admin_page()
         PPRESS_FORMS_SETTINGS_SLUG,
         PPRESS_MEMBER_DIRECTORIES_SLUG,
         PPRESS_CONTENT_PROTECTION_SETTINGS_SLUG,
-        PPRESS_EXTENSIONS_SETTINGS_SLUG
+        PPRESS_EXTENSIONS_SETTINGS_SLUG,
+        MailOptin::SLUG
     ];
 
     return (isset($_GET['page']) && in_array($_GET['page'], $pp_builder_pages)) ||
@@ -1358,4 +1360,44 @@ function ppress_recursive_trim($item)
     }
 
     return trim($item);
+}
+
+function ppress_check_type_and_ext($file, $accepted_mime_types = [], $accepted_file_ext = [])
+{
+
+    if (empty($file_name)) {
+        $file_name = $file['name'];
+    }
+
+    $tmp_name = $file['tmp_name'];
+
+    $wp_filetype = wp_check_filetype_and_ext($tmp_name, $file_name);
+
+    $ext             = $wp_filetype['ext'];
+    $type            = $wp_filetype['type'];
+    $proper_filename = $wp_filetype['proper_filename'];
+
+    // When a proper_filename value exists, it could be a security issue if it's different than the original file name.
+    if ($proper_filename && strtolower($proper_filename) !== strtolower($file_name)) {
+        return new WP_Error('invalid_file', esc_html__('There was an problem while verifying your file.', 'wp-user-avatar'));
+    }
+
+    // If either $ext or $type are empty, WordPress doesn't like this file and we should bail.
+    if ( ! $ext) {
+        return new WP_Error('illegal_extension', esc_html__('Sorry, this file extension is not permitted for security reasons.', 'wp-user-avatar'));
+    }
+
+    if ( ! $type) {
+        return new WP_Error('illegal_type', esc_html__('Sorry, this file type is not permitted for security reasons.', 'wp-user-avatar'));
+    }
+
+    if ( ! empty($accepted_mime_types) && ! in_array($type, $accepted_mime_types)) {
+        return new WP_Error('illegal_type', esc_html__('Error: The file you uploaded is not accepted on our website.', 'wp-user-avatar'));
+    }
+
+    if ( ! empty($accepted_file_ext) && ! in_array($ext, $accepted_file_ext)) {
+        return new WP_Error('illegal_type', esc_html__('Error: The file you uploaded is not accepted on our website.', 'wp-user-avatar'));
+    }
+
+    return true;
 }
